@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="../../css/simplebar.css">
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/datepicker-ko.js"></script>
+</head>
+<body class="scroll-hidden"> <!-- 팝업 나왔을때 scroll-hidden 추가-->
+    <div id="root">
+        <div class="container">
+            <div id="header">
+                <div class="header-inner">
+                    <div class="logo-wrap">
+                        <h1><a href="#"><img src="../../img/logo_studio.png" alt=""></a></h1>
+                    </div>
+                    <div class="header-tab-wrap">
+                        <div class="inner"></div>
+                    </div>
+                    <div class="profile-wrap">
+                        <div class="profile-info-wrap">
+                            <div class="academy">현대영어사</div>
+                            <div class="bar"></div>
+                            <div class="user"><strong>김선생</strong> (선생님)</div> 
+                        </div>
+                        <div class="profile-menu-wrap">
+                            <button class="btn-profile-menu"></button>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contents">
+                <div class="contents-inner">
+
+                    <!-- 팝업 -->
+                    <div class="modal-wrap">
+                        <div class="modal-contents-excelUpload">
+                            <div class="modal-title-wrap">
+                                <strong>학생 가입 엑셀 업로드</strong>
+                                <button class="btn-modal-title-close"></button>
+                            </div>
+                            <div class="modal-cont-wrap">
+                                <div class="scroll-wrap" data-simplebar data-simplebar-auto-hide="false">
+                                    <div class="excelUpload-wrap"> 
+                                        <div class="desc">엑셀을 이용하여 여러 학생을 한번에 등록 및 수정할 수 있습니다.</div>
+                                        <div class="file-wrap type2"> <!-- 학생 가입용 엑셀업로드 팝업은 type2 추가-->
+                                            <div class="left-wrap">       
+                                                <div class="subtitle">
+                                                    <strong>Step1.</strong> 아래 템플릿 엑셀을 다운로드 받아 수강생 정보를 입력하세요.
+                                                </div> 
+                                                <div class="btn-wrap">
+                                                    <div class="btnType1 on">
+                                                        <button class="btn-file-download">템플릿 다운로드</button>
+                                                        <button class="btn-file-download">샘플 다운로드</button>
+                                                    </div>
+                                                </div>  
+                                            </div>
+                                            <div class="bar"></div>
+                                            <div class="right-wrap">
+                                                <div class="subtitle">
+                                                    <strong>Step2.</strong> 작성한 엑셀을 업로드하세요.
+                                                </div>
+                                                <form id="excelUploadForm">
+                                                    <div class="input-group-wrap">
+                                                        <div class="half-box-wrap">
+                                                            <div class="input-wrap">
+                                                                <input class="excelFileName" type="text" placeholder="엑셀 파일을 업로드 해 주세요." readonly="" value="test.xlsx">
+                                                                <input id="excelFile" type="file" name="excelFile">
+                                                            </div>
+                                                            <label for="excelFile" class="btn-line-dNavy">파일 찾기</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="btn-wrap">
+                                                        <button type="button" class="btn-file-upload disable">업로드 시작</button> <!-- disable 제거시 활성화 -->
+                                                    </div>  
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                        <div class="upload-progress-wrap">     
+                                            <div class="empty-wrap">
+                                                <p>학생이 입력된 엑셀을 업로드 해주세요.</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer-wrap">
+                                <div class="modal-footer-btn-wrap">
+                                    <button class="btn-line">취소</button>
+                                    <button class="btn-navy disable">저장</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/simplebar.js"></script>
+    <script src="../../js/common.js"></script>
+    <script>
+        // 파일찾기
+        $('#excelUploadForm input[type=file]').on('change', function(){
+            var fileName = $(this)[0].files[0].name;
+            $(this).prev().val(fileName)
+        })
+    </script>
+</body>
+</html>

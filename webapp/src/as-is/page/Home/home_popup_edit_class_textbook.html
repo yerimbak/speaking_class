@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="../../css/simplebar.css">
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/datepicker-ko.js"></script>
+</head>
+<body class="scroll-hidden"> <!-- 팝업 나왔을때 scroll-hidden 추가-->
+    <div id="root">
+        <div class="container">
+            <div id="header">
+                <div class="header-inner">
+                    <div class="logo-wrap">
+                        <h1><a href="#"><img src="../../img/logo_studio.png" alt=""></a></h1>
+                    </div>
+                    <div class="header-tab-wrap">
+                        <div class="inner"></div>
+                    </div>
+                    <div class="profile-wrap">
+                        <div class="profile-info-wrap">
+                            <div class="academy">현대영어사</div>
+                            <div class="bar"></div>
+                            <div class="user"><strong>김선생</strong> (선생님)</div> 
+                        </div>
+                        <div class="profile-menu-wrap">
+                            <button class="btn-profile-menu"></button>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contents">
+                <div class="contents-inner">
+
+                    <!-- 팝업 -->
+                    <div class="modal-wrap">
+                        <div class="modal-create-class modal-edit-class"> <!-- 클래스 수정 팝업은 modal-edit-class 추가 -->
+                            <div class="modal-title-wrap">
+                                <strong>교과서 클래스 편집하기</strong>
+                                <button class="btn-modal-title-close"></button>
+                            </div>
+                            <div class="modal-cont-wrap">
+                                <div class="scroll-wrap">
+                                    <div class="scroll-inner">
+                                        <div class="select-school-wrap">
+                                            <div class="modal-subtitle">학교를 지정해주세요. <span>*</span></div>
+                                            <div class="search-dropdown-wrap">
+                                                <div class="search-input-wrap">
+                                                    <input class="search-input" type="text" placeholder="학교를 선택해 주세요." readonly>
+                                                    <div class="popup-search">
+                                                        <div class="popup-cont-wrap">
+                                                            <div class="search-input-wrap">
+                                                                <input type="text">
+                                                            </div>
+                                                            <div class="search-result-list-wrap">
+                                                                <div class="empty-wrap">
+                                                                    <p>학교명을 검색해 주세요</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="popup-footer-wrap">
+                                                            <button>직접 입력</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="self-input-wrap">
+                                                    <div class="modal-input-wrap">
+                                                        <input class="selct-input" type="text" placeholder="학교명을 입력해 주세요.">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-input-wrap">
+                                            <div class="modal-subtitle">클래스명을 입력해 주세요. <span>*</span></div>
+                                            <input type="text" placeholder="클래스명">
+                                        </div>
+                                        <div class="slect-class-status">
+                                            <div class="modal-subtitle">클래스의 학습 상태를 선택해 주세요.<span>*</span></div>
+                                            <div class="select-division-box-wrap">
+                                                <div class="box"> <!-- 활성화 on -->
+                                                    <div class="box-title">비공개</div>
+                                                    <p>비공개 클래스는<br>수강생에게 공개되지 않습니다.</p>
+                                                </div>
+                                                <div class="bar"></div>
+                                                <div class="box">
+                                                    <div class="box-title">상시 운영</div>
+                                                    <p>기간 제한 없이<br>언제든 학습이 가능합니다.</p>
+                                                </div>
+                                                <div class="bar"></div>
+                                                <div class="box on">
+                                                    <div class="box-title">기간 설정</div>
+                                                    <p>지정된 기간 동안<br>학습이 가능합니다.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="select-thema-color-wrap">
+                                            <div class="modal-subtitle">클래스의 테마 컬러를 선택해 주세요. <span>*</span></div>
+                                            <div class="select-wrap">
+                                                <div class="thema-purple on"></div> <!-- 선택된건 on -->
+                                                <div class="thema-pink"></div>
+                                                <div class="thema-green"></div>
+                                                <div class="thema-orange"></div>
+                                            </div>
+                                        </div>
+                                        <div class="select-pass-standard-wrap">
+                                            <div class="title-wrap">
+                                                <div class="title">통과 기준</div>
+                                                <p>학습 단계 통과하기 위한 발화 평가 기준을  설정해주세요. </p>                                                
+                                            </div>
+                                            <div class="select-division-box-wrap">
+                                                <div class="box"> <!-- 활성화 on -->
+                                                    <div class="box-title">낮음</div>
+                                                    <p>기초 단어를 사용하여 발화<br>AI 음성 인식률 최소 기준에 도달</p>
+                                                </div>
+                                                <div class="bar"></div>
+                                                <div class="box">
+                                                    <div class="box-title">중간</div>
+                                                    <p>의미에 부합하는 단어를 사용하여 발화<br>AI 음성 인식률 중간 기준에 도달</p>
+                                                </div>
+                                                <div class="bar"></div>
+                                                <div class="box on">
+                                                    <div class="box-title">높음</div>
+                                                    <p>문법에 맞춘 정확 문장을 구성하여 발화<br>AI 음성 인식률 높음 기준에 도달</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="select-contents-wrap">
+                                            <div class="title-wrap">
+                                                <div class="title">교과서 콘텐츠</div>
+                                                <p>클래스에서 학습할 콘텐츠를 선택해주세요.</p>
+                                            </div>
+                                            <div class="texbook-list-wrap">
+                                                <div class="box on" style="background-image:url('../../img/logo_textbook_donga.png');"></div>
+                                                <div class="box" style="background-image:url('../../img/logo_textbook_neungyule.png');"></div><!-- 활성화 on -->                                                
+                                            </div>
+                                        </div>
+                                        <div class="modal-selectBox-wrap">
+                                            <div class="modal-subtitle">교과서 <span>*</span></div>
+                                            <div class="half-box-wrap">
+                                                <div class="selectBox-wrap">
+                                                    <select class="placeholder" disabled> <!-- placeholder 클래스 추가시 플레이스 홀더처럼 보임 -->
+                                                        <option value="" disabled selected hidden>교과서 선택</option>
+                                                        <option value="">교과서 1</option>
+                                                        <option value="">교과서 2</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer-wrap">
+                                <div class="btn-delete-wrap">
+                                    <button class="btn-delete">삭제</button>
+                                </div>
+                                <div class="modal-footer-btn-wrap">
+                                    <button class="btn-line">취소</button>
+                                    <button class="btn-navy">완료</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/simplebar.js"></script>
+    <script src="../../js/common.js"></script>
+    <script>
+        // 스크롤 생성 
+        new SimpleBar(document.querySelector('.modal-create-class .modal-cont-wrap > .scroll-wrap'), {autoHide:false});  
+
+        // 스토어 토글버튼 + 셀렉트박스 
+        var checkStoreToggle = 0;     
+        $('.modal-create-class .selecBox-store-big-category select').on('change', function(){
+            checkStoreToggle = 1;
+            $('.modal-create-class .selecBox-store-small-category select').attr('disabled', false);
+        })
+        $('.select-store-wrap .btn-toggle-open').on('click', function(){
+            $(this).toggleClass('on');
+
+            if($(this).hasClass('on')){
+                if(checkStoreToggle == 1){
+                    $('.modal-create-class .select-store-wrap select').attr('disabled', false)
+                }else {
+                    $('.modal-create-class .select-store-wrap .selecBox-store-big-category select').attr('disabled', false)
+                }                
+            }else {
+                $('.modal-create-class .select-store-wrap select').attr('disabled', 'disabled')
+            }
+        })
+
+        // 카테고리 소분류
+        $('.modal-create-class .selecBox-store-small-category select').on('change', function(){
+            var _index = $(this).find('option:selected').index();
+
+            if(_index == 0){
+                $(this).addClass('placeholder');
+            }
+        })        
+
+    </script>
+</body>
+</html>

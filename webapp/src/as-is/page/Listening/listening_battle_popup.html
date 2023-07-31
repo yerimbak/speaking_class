@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../../js/jquery-1.12.4.js"></script>
+	<script src="../../js/jquery-ui.js"></script>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/studio.css">
+	<link rel="stylesheet" href="../../css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="Class.css">
+    <link rel="stylesheet" href="../../css/simplebar.css">
+</head>
+
+<body>
+	<div id="root">
+		<div class="container">
+			<div id="header" class="tab-select">
+				<!-- 탭이 선택되면 tab-select 추가 (밑줄 사라짐)-->
+				<div class="header-inner">
+					<div class="logo-wrap">
+						<h1><a href="#"><img src="../../img/logo_studio.png" alt=""></a></h1>
+					</div>
+					<div class="header-tab-wrap">
+						<div class="inner">
+							<div class="tab on thema-purple">
+								<!-- thema-green, pink, orange, purple 로 색변경 / 활성화된건 on -->
+								<div class="tab-inner">
+									<p>OO초등학교 모둠반</p>
+									<button class="btn-header-tab-close"></button>
+								</div>
+							</div>
+							<div class="tab thema-orange">
+								<div class="tab-inner">
+									<p>OO초등학교 OO반</p>
+									<button class="btn-header-tab-close"></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="profile-wrap">
+						<div class="profile-info-wrap">
+							<div class="academy">OO초등학교</div>
+							<div class="bar"></div>
+							<div class="user"><strong>김선생</strong> (선생님)</div>
+						</div>
+						<div class="profile-menu-wrap">
+							<button class="btn-profile-menu"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="contents" class="thema-purple">
+				<!-- thema-green, pink, orange, purple 로 색변경 -->
+				<div class="contents-inner">
+
+					<div id="edit">
+						<div class="class-info-title-wrap">
+							<div class="title-wrap">
+								<div class="top-wrap">
+									<div class="academy">OOO초등학교</div>
+									<div class="bar"></div>
+									<div class="className text-thema-color">모둠반</div>
+									<button class="btn-edit"></button>
+								</div>
+								<div class="btm-wrap">
+									<div class="type-badge">기본</div>
+									<div class="lang"><strong>상시운영</strong></div>
+									<div class="lang">학습 언어: 영어 - 가이드 언어: 한국어</div>
+									<div class="pass-standard">통과기준(낮음)</div>
+								</div>
+							</div>
+							<!-- <div class="publishing-wrap">
+                                <p>최근 퍼블리싱  <strong>2020-11-11 15:30</strong></p>
+                                <button class="btn-navy">앱 퍼블리싱</button>
+                            </div> -->
+						</div>
+						<div class="edit-cont-wrap">
+							<div class="edit-tab-wrap">
+								<div class="btn-thema-color">학생</div>
+								<div class="btn-thema-color">학습 콘텐츠</div>
+								<div class="btn-thema-color">리포트</div>
+								<div class="btn-thema-color on">배틀</div> <!-- on 추가시 해당 탭 활성화-->
+							</div>
+							<div class="edit-box-wrap">
+								<div class="tab-cont-wrap">
+									<div class="tab-cont"></div>
+									<div class="tab-cont"></div>
+									<div class="tab-cont"></div>
+									<div class="tab-cont on">
+										<!-- on 추가시 해당 탭 활성화-->
+
+										<!-- 배틀 -->
+										<div id="speakingBattle-contents" class="listening-battle">
+											<div class="left-box-wrap">
+												<div class="contents-empty-img-wrap">
+													<img src="../../img/img_speaking_battle_empty.png" alt="">
+													<p><strong>스피킹 & 리스닝 배틀을 등록하세요.</strong>배틀은 게임을 통해 학습 능력을 키울 수 있는
+														즐거운 놀이형 학습입니다. </p>
+													<div class="btn-wrap type-02">
+														<button type="button" class="btn-thema-color">+ 새로운 배틀
+															만들기</button>
+														<button type="button" class="btn-thema-color">+ 운영중인 배틀 순위
+															보기</button>
+													</div>
+												</div>
+											</div>
+											<div class="right-box-wrap">
+												<div class="slide-cont-wrap">
+													<div class="slide-wrap">
+														<div class="swiper-container">
+															<div class="swiper-wrapper">
+																<div class="swiper-slide">
+																	<div class="img-wrap">
+																		<img src="../../img/speakingBattle_01.png"
+																			alt="">
+																	</div>
+																</div>
+																<div class="swiper-slide">
+																	<div class="img-wrap">
+																		<img src="../../img/speakingBattle_02.png"
+																			alt="">
+																	</div>
+																</div>
+																<div class="swiper-slide">
+																	<div class="img-wrap">
+																		<img src="../../img/speakingBattle_03.png"
+																			alt="">
+																	</div>
+																</div>
+																<div class="swiper-slide">
+																	<div class="img-wrap">
+																		<img src="../../img/speakingBattle_04.png"
+																			alt="">
+																	</div>
+																</div>
+															</div>
+															<div class="control_box">
+																<div class="swiper-pagination"></div>
+																<button type="button"
+																	class="swiper-btn-ctrl btn-pause">정지</button>
+																<button type="button" class="swiper-btn-ctrl btn-play"
+																	style="display: none;">시작</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="copyright-wrap">
+							<div class="copyright-link-wrap">
+								<a href="#">이용약관</a>
+								<a href="#"><strong>개인정보처리방침</strong></a>
+								<div class="bar"></div>
+							</div>
+							<p class="copyright">Copyright ©2020 LG CNS. All right reserved.</p>
+						</div>
+					</div>
+
+					<!-- 221103 배틀 순위 팝업 -->
+					<div class="modal-wrap listening-battle" id="speakingBattle-contents">
+						<div class="modal-create-learning type-home left-box-wrap">
+							<div class="modal-title-wrap">
+								<div class="question-title-wrap">
+									<i class="ico_battle"></i>
+									<strong>스벅을 향해 고고</strong>
+								</div>
+								<button class="btn-modal-title-close"></button>
+							</div>
+							<div class="modal-cont-wrap">
+								<div class="scroll-wrap">
+									<div class="report-box">
+										<div class="report-box-wrap">
+											<div class="class-info-wrap">
+												<dl>
+													<dt>운영중인 배틀 : </dt>
+													<dd>스피킹</dd>
+												</dl>
+												<dl>
+													<dt>운영기간 : </dt>
+													<dd>상시운영</dd>
+												</dl>
+											</div>
+										</div>
+									</div>
+									<div class="tab-nav-wrap type-02">
+										<ul>
+											<li>문제 보기</li> <!-- 활성화 on -->
+											<li class="on">결과 순위</li>
+										</ul>
+									</div>
+									<div class="tab-cont-wrap">
+										<div class="tab-cont">
+											<!-- on 추가시 해당 tab-cont 표시 -->
+											<!-- 문제 보기 -->
+											<div class="learning-regist-wrap">
+												<div class="scroll-wrap" data-simplebar data-simplebar-auto-hide="false">
+													<div class="btm-section">
+														<div class="question-list-wrap type-half">
+															<p class="question-title">속도 느림(12개) - 문장이 느린 속도로 내려옵니다.</p>
+															<div class="question-half-wrap">
+																<ul>
+																	<li>
+																		<div class="num">1</div>
+																		<div class="text-wrap">
+																			<div class="top-text">I Want a Cheeseburger.
+																			</div>
+																		</div>
+																	</li>
+																	<li>
+																		<div class="num">2</div>
+																		<div class="text-wrap">
+																			<div class="top-text">I Want a Cheeseburger.
+																			</div>
+																		</div>
+																	</li>
+																	<li>
+																		<div class="num">3</div>
+																		<div class="text-wrap">
+																			<div class="top-text">I Want a Cheeseburger.
+																			</div>
+																		</div>
+																	</li>
+																	<li>
+																		<div class="num">4</div>
+																		<div class="text-wrap">
+																			<div class="top-text">I Want a Cheeseburger.
+																			</div>
+																		</div>
+																	</li>
+																	<li>
+																		<div class="num">5</div>
+																		<div class="text-wrap">
+																			<div class="top-text">I Want a Cheeseburger.
+																			</div>
+																		</div>
+																	</li>
+																</ul>
+																<ul>
+																	<li>
+																		<div class="num">6</div>
+																		<div class="text-wrap">
+																			<div class="top-text">I Want a Cheeseburger.
+																			</div>
+																		</div>
+																	</li>
+																	<li>
+																		<div class="num">7</div>
+																		<div class="text-wrap">
+																			<div class="top-text">I Want a Cheeseburger.
+																			</div>
+																		</div>
+																	</li>
+																	<li>
+																		<div class="num">8</div>
+																		<div class="text-wrap">
+																			<div class="top-text">I Want a Cheeseburger.
+																			</div>
+																		</div>
+																	</li>
+																	<li>
+																		<div class="num">9</div>
+																		<div class="text-wrap">
+																			<div class="top-text">I Want a Cheeseburger.
+																			</div>
+																		</div>
+																	</li>
+																	<li>
+																		<div class="num">10</div>
+																		<div class="text-wrap">
+																			<div class="top-text">I Want a Cheeseburger.
+																			</div>
+																		</div>
+																	</li>
+																</ul>
+															</div>
+														</div>
+														<div class="question-list-wrap type-half">
+															<p class="question-title">속도 보통(08개) - 문장이 보통 속도로 내려옵니다.</p>
+															<div class="question-half-wrap">
+																<ul>
+																	<li>
+																		<div class="num">1</div>
+																		<div class="text-wrap">
+																			<div class="top-text">I Want a Cheeseburger.
+																			</div>
+																		</div>
+																	</li>
+																	<li>
+																		<div class="num">2</div>
+																		<div class="text-wrap">
+																			<div class="top-text">I Want a Cheeseburger.
+																			</div>
+																		</div>
+																	</li>
+																	<li>
+																		<div class="num">3</div>
+																		<div class="text-wrap">
+																			<div class="top-text">I Want a Cheeseburger.
+																			</div>
+																		</div>
+																	</li>
+																	<li>
+																		<div class="num">4</div>
+																		<div class="text-wrap">
+																			<div class="top-text">I Want a Cheeseburger.
+																			</div>
+																		</div>
+																	</li>
+																	<li>
+																		<div class="num">5</div>
+																		<div class="text-wrap">
+																			<div class="top-text">I Want a Cheeseburger.
+																			</div>
+																		</div>
+																	</li>
+																</ul>
+																<ul>
+																	<li>
+																		<div class="num">6</div>
+																		<div class="text-wrap">
+																			<div class="top-text">I Want a Cheeseburger.
+																			</div>
+																		</div>
+																	</li>
+																	<li>
+																		<div class="num">7</div>
+																		<div class="text-wrap">
+																			<div class="top-text">I Want a Cheeseburger.
+																			</div>
+																		</div>
+																	</li>
+																	<li>
+																		<div class="num">8</div>
+																		<div class="text-wrap">
+																			<div class="top-text">I Want a Cheeseburger.
+																			</div>
+																		</div>
+																	</li>
+																	<li>
+																		<div class="num">9</div>
+																		<div class="text-wrap">
+																			<div class="top-text">I Want a Cheeseburger.
+																			</div>
+																		</div>
+																	</li>
+																	<li>
+																		<div class="num">10</div>
+																		<div class="text-wrap">
+																			<div class="top-text">I Want a Cheeseburger.
+																			</div>
+																		</div>
+																	</li>
+																</ul>
+															</div>
+														</div>
+														<div class="question-list-wrap type-half">
+															<p class="question-title">속도 빠름(08개) - 문장이 빠른 속도로 내려옵니다.</p>
+															<div class="question-half-wrap">
+																<ul>
+																	<li>
+																		<div class="num">1</div>
+																		<div class="text-wrap">
+																			<div class="top-text">I Want a Cheeseburger.
+																			</div>
+																		</div>
+																	</li>
+																	<li>
+																		<div class="num">2</div>
+																		<div class="text-wrap">
+																			<div class="top-text">I Want a Cheeseburger.
+																			</div>
+																		</div>
+																	</li>
+																	<li>
+																		<div class="num">3</div>
+																		<div class="text-wrap">
+																			<div class="top-text">I Want a Cheeseburger.
+																			</div>
+																		</div>
+																	</li>
+																	<li>
+																		<div class="num">4</div>
+																		<div class="text-wrap">
+																			<div class="top-text">I Want a Cheeseburger.
+																			</div>
+																		</div>
+																	</li>
+																	<li>
+																		<div class="num">5</div>
+																		<div class="text-wrap">
+																			<div class="top-text">I Want a Cheeseburger.
+																			</div>
+																		</div>
+																	</li>
+																</ul>
+																<ul>
+																	<li>
+																		<div class="num">6</div>
+																		<div class="text-wrap">
+																			<div class="top-text">I Want a Cheeseburger.
+																			</div>
+																		</div>
+																	</li>
+																	<li>
+																		<div class="num">7</div>
+																		<div class="text-wrap">
+																			<div class="top-text">I Want a Cheeseburger.
+																			</div>
+																		</div>
+																	</li>
+																	<li>
+																		<div class="num">8</div>
+																		<div class="text-wrap">
+																			<div class="top-text">I Want a Cheeseburger.
+																			</div>
+																		</div>
+																	</li>
+																	<li>
+																		<div class="num">9</div>
+																		<div class="text-wrap">
+																			<div class="top-text">I Want a Cheeseburger.
+																			</div>
+																		</div>
+																	</li>
+																	<li>
+																		<div class="num">10</div>
+																		<div class="text-wrap">
+																			<div class="top-text">I Want a Cheeseburger.
+																			</div>
+																		</div>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="tab-cont on">
+											<!-- 결과 순위 -->
+											<div class="ranking-wrap type-02">
+												<!-- 220623 : 디자인수정으로 인한 마크업 위치, 클래스 변경 -->
+												<div class="rank-result-wrap">
+													<div class="txt-list-tab-wrap">
+														<ul>
+															<li class="on">스피킹</li>
+															<li>리스닝</li>
+														</ul>
+													</div>
+													<div class="ranking-title-wrap">
+														<!-- <div class="title">참가자 <strong>35</strong>명</div> -->
+														<div class="selectBox-wrap">
+															<div class="selectOption">랭킹순</div>
+															<div class="optionList">
+																<ul>
+																	<li class="on">랭킹순</li> <!-- 선택중인건 on -->
+																	<li>이름순</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+
+													<div class="sort-select-wrap">
+														<div class="title">조회기간 설정</div>
+														<div class="d-flex ml-auto">
+															<div class="select-date-box-wrap">
+																<div class="select-date-box-wrap">
+																	<div class="select-date-box">
+																		<input type="text" class="input-calendar"
+																			placeholder="YYYY-MM-DD" readonly>
+																	</div>
+																	<div class="bar">~</div>
+																	<div class="select-date-box">
+																		<input type="text" class="input-calendar"
+																			placeholder="YYYY-MM-DD" readonly>
+																	</div>
+																</div>
+															</div>
+															<button class="btn-purple btn-sort-search">조회</button>
+														</div>
+													</div>
+												</div>
+												<!-- //220623 : 디자인수정으로 인한 마크업 위치, 클래스 변경 -->
+
+												<!-- 스피킹 & 리스닝 테이블  순위있을때 -->
+
+												<div class="ranking-table-wrap">
+													<div class="header-table">
+														<table>
+															<tr>
+																<th>순위</th>
+																<th>이름</th>
+																<th>아이디</th>
+																<th>참가일</th>
+																<th>소요시간</th>
+																<th>재시도 횟수</th>
+																<th>맞은 개수</th>
+															</tr>
+														</table>
+													</div>
+													<div class="body-table">
+														<div class="scroll-wrap" data-simplebar
+															data-simplebar-auto-hide="false">
+															<table>
+																<tr class="complete">
+																	<!-- 학습 완료된 행은 complete 추가 -->
+																	<td class="num">1</td>
+																	<td class="student-name">가학생</td>
+																	<td class="student-id">student001</td>
+																	<td class="date">2020-10-22 15:20</td>
+																	<td class="time">60초</td>
+																	<td class="retry-count">6</td>
+																	<td class="correct-count">
+																		<strong>30</strong>/30
+																	</td>
+																</tr>
+																<tr class="complete">
+																	<!-- 학습 완료된 행은 complete 추가 -->
+																	<td class="num">2</td>
+																	<td class="student-name">가학생</td>
+																	<td class="student-id">student001</td>
+																	<td class="date">2020-10-22 15:20</td>
+																	<td class="time">60초</td>
+																	<td class="retry-count">6</td>
+																	<td class="correct-count">
+																		<strong>30</strong>/30
+																	</td>
+																</tr>
+																<tr class="complete">
+																	<!-- 학습 완료된 행은 complete 추가 -->
+																	<td class="num">3</td>
+																	<td class="student-name">가학생</td>
+																	<td class="student-id">student001</td>
+																	<td class="date">2020-10-22 15:20</td>
+																	<td class="time">60초</td>
+																	<td class="retry-count">6</td>
+																	<td class="correct-count">
+																		<strong>30</strong>/30
+																	</td>
+																</tr>
+																<tr class="complete">
+																	<!-- 학습 완료된 행은 complete 추가 -->
+																	<td class="num">4</td>
+																	<td class="student-name">가학생</td>
+																	<td class="student-id">student001</td>
+																	<td class="date">2020-10-22 15:20</td>
+																	<td class="time">60초</td>
+																	<td class="retry-count">6</td>
+																	<td class="correct-count">
+																		<strong>30</strong>/30
+																	</td>
+																</tr>
+																<tr class="complete">
+																	<!-- 학습 완료된 행은 complete 추가 -->
+																	<td class="num">5</td>
+																	<td class="student-name">가학생</td>
+																	<td class="student-id">student001</td>
+																	<td class="date">2020-10-22 15:20</td>
+																	<td class="time">60초</td>
+																	<td class="retry-count">6</td>
+																	<td class="correct-count">
+																		<strong>30</strong>/30
+																	</td>
+																</tr>
+																<tr class="complete">
+																	<!-- 학습 완료된 행은 complete 추가 -->
+																	<td class="num">6</td>
+																	<td class="student-name">가학생</td>
+																	<td class="student-id">student001</td>
+																	<td class="date">2020-10-22 15:20</td>
+																	<td class="time">60초</td>
+																	<td class="retry-count">6</td>
+																	<td class="correct-count">
+																		<strong>30</strong>/30
+																	</td>
+																</tr>
+																<tr>
+																	<td class="num">-</td>
+																	<td class="student-name">가학생</td>
+																	<td class="student-id">student001</td>
+																	<td class="date">미완료</td>
+																	<td class="time">-</td>
+																	<td class="retry-count">-</td>
+																	<td class="correct-count">-</td>
+																</tr>
+																<tr>
+																	<td class="num">-</td>
+																	<td class="student-name">가학생</td>
+																	<td class="student-id">student001</td>
+																	<td class="date">미완료</td>
+																	<td class="time">-</td>
+																	<td class="retry-count">-</td>
+																	<td class="correct-count">-</td>
+																</tr>
+																<tr>
+																	<td class="num">-</td>
+																	<td class="student-name">가학생</td>
+																	<td class="student-id">student001</td>
+																	<td class="date">미완료</td>
+																	<td class="time">-</td>
+																	<td class="retry-count">-</td>
+																	<td class="correct-count">-</td>
+																</tr>
+																<tr>
+																	<td class="num">-</td>
+																	<td class="student-name">가학생</td>
+																	<td class="student-id">student001</td>
+																	<td class="date">미완료</td>
+																	<td class="time">-</td>
+																	<td class="retry-count">-</td>
+																	<td class="correct-count">-</td>
+																</tr>
+															</table>
+														</div>
+													</div>
+												</div>
+												<!-- // 스피킹 & 리스닝 테이블 순위있을때 -->
+
+												<div class="contents-empty-img-wrap type-rank" style="display: none;">
+													<!-- 순위가 없을 때 노출 -->
+													<img src="../../img/img_speaking_battle_empty_02.png" alt="">
+													<p><strong>참여한 학생이 없습니다.</strong></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <script src="../../js/simplebar.js"></script>
+	<script src="../../js/common.js"></script>
+	<script src="../../js/swiper-bundle.min.js"></script>
+	<script>
+
+		var swiper = new Swiper('.swiper-container', {
+			speed: 500,
+			autoplay: false,
+			slidesPerView: 1,
+			loop: true,
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false
+			},
+			pagination: {
+				el: '.swiper-pagination'
+			}
+		});
+
+		$('.slide-cont-wrap  .btn-pause').on('click', function (e) {
+			$(this).hide();
+			$('.btn-play').show();
+			swiper.autoplay.stop();
+		});
+		$('.slide-cont-wrap  .btn-play').on('click', function (e) {
+			$(this).hide();
+			$('.btn-pause').show();
+			swiper.autoplay.start();
+		});
+
+		// scroll 
+        new SimpleBar(document.querySelector('#speakingBattle-contents.modal-wrap .scroll-wrap'), {autoHide:false})
+
+        // 문제등록, 결과순위 탭
+        $('#speakingBattle-contents .tab-nav-wrap ul li').on('click', function(){
+            var _index = $(this).index();
+
+            $(this).addClass('on').siblings().removeClass('on');
+            $('#speakingBattle-contents .left-box-wrap .tab-cont-wrap .tab-cont').eq(_index).addClass('on').siblings().removeClass('on');
+        })
+
+        // 결과 순위 내 2뎁스 탭
+        $('.ranking-wrap .txt-list-tab-wrap ul li').on('click', function(){
+            $(this).addClass('on').siblings().removeClass('on');
+        })
+
+	</script>
+</body>
+
+</html>

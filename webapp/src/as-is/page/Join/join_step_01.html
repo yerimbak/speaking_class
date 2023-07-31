@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="Join.css">
+</head>
+<body>
+    <div id="root">
+        <div class="container">
+                    
+            <div id="contents">
+                <div class="contents-inner bg-gray">
+                    <div class="join-wrap">
+                        
+                        <div class="user-info-box-wrap">
+                            <div class="logo">
+                                <img src="../../img/img_login_logo_new.png" alt="스피킹클래스 AI Tutor Platform">
+                                <p class="logo-text">쉽게 만들고 재미있게 학습하는 영어 말하기</p>
+                            </div>
+                            <div class="box-wrap">
+                                <ol class="user-info-box-step">
+                                    <!-- D : 활성화 클래스 - on, 완료 클래스 - finish -->
+                                    <li class="on"><span class="num">1</span><span class="title">휴대폰 인증</span></li>
+                                    <li><span class="num">2</span><span class="title">정보 입력</span></li>
+                                </ol>
+                                <div class="join-form">
+                                    <div class="input-underline-wrap">
+                                        <div class="input-title">휴대폰 번호 <span>*</span></div>
+                                        <div class="input-wrap">
+                                            <input type="text" placeholder="숫자만 입력해주세요.">
+                                            <button class="btn-line">인증</button>
+                                        </div>
+                                        <p class="warning show">Validaion 영역</p>
+                                        <p class="confirm show">Validaion 영역</p>
+                                    </div>
+                                    <div class="input-underline-wrap">
+                                        <div class="input-title">인증 번호 <span>*</span></div>
+                                        <div class="input-wrap">
+                                            <input type="text" placeholder="인증번호를 입력해주세요.">
+                                            <span class="certify-number">03:00</span>
+                                            <!-- D 0518 : 활성화시 disable 클래스 제거 -->
+                                            <button type="button" class="btn-line disable">확인</button>
+                                        </div>
+                                        <p class="warning show">인증번호가 일치하지 않습니다. 다시 입력해주세요.</p>
+                                        <p class="warningX show">인증되었습니다.</p>
+                                    </div>
+                                </div>
+
+                                <div class="btn-wrap type-bottom">
+                                    <button class="btn-mint disable"><span>다음</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                    
+        </div>
+    </div>
+    <script src="../../js/common.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>

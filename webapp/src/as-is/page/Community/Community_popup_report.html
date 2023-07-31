@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="Community.css">
+    <link rel="stylesheet" href="../../css/simplebar.css">
+</head>
+<body>
+    <div id="root">
+        <div class="container">
+            <div id="header">
+                <div class="header-inner">
+                    <div class="logo-wrap">
+                        <h1><a href="#"><img src="../../img/logo_studio.png" alt=""></a></h1>
+                    </div>
+                    <div class="header-title-wrap">
+                        <div class="title-wrap">
+                            <div class="title">커뮤니티</div>
+                        </div>
+                    </div>
+                    <div class="profile-wrap">
+                        <div class="profile-info-wrap">
+                            <div class="academy">현대영어사</div>
+                            <div class="bar"></div>
+                            <div class="user"><strong>김선생</strong> (선생님)</div> 
+                        </div>
+                        <div class="profile-menu-wrap">
+                            <button class="btn-profile-menu"></button>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contents" class="theme-community"> <!-- theme-community 로 색변경 -->
+                <div class="contents-inner">
+
+                    <div id="Community">
+                        
+                    </div>
+
+                    
+                    <div class="modal-wrap">
+                        <div class="modal-community-report">
+                            <div class="modal-title-wrap">
+                                <strong>신고 사유</strong>
+                                <button class="btn-modal-title-close"></button>
+                            </div>
+                            <div class="modal-cont-wrap">
+                                <div class="report-list-wrap">
+                                    <div class="list-wrap">
+                                        <ul>
+                                            <li>
+                                                <div class="inner">
+                                                    <span>성적인 콘텐츠</span>
+                                                    <div class="checkBox-wrap">
+                                                        <input type="checkbox" id="community-report-check-1">
+                                                        <label for="community-report-check-1"></label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="inner">
+                                                    <span>사기 또는 거짓</span>
+                                                    <div class="checkBox-wrap">
+                                                        <input type="checkbox" id="community-report-check-2">
+                                                        <label for="community-report-check-2"></label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="inner">
+                                                    <span>스팸</span>
+                                                    <div class="checkBox-wrap">
+                                                        <input type="checkbox" id="community-report-check-3">
+                                                        <label for="community-report-check-3"></label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="inner">
+                                                    <span>혐오 발언 또는 상징</span>
+                                                    <div class="checkBox-wrap">
+                                                        <input type="checkbox" id="community-report-check-4">
+                                                        <label for="community-report-check-4"></label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="inner">
+                                                    <span>폭력 또는 위험한 단체</span>
+                                                    <div class="checkBox-wrap">
+                                                        <input type="checkbox" id="community-report-check-5">
+                                                        <label for="community-report-check-5"></label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="inner">
+                                                    <span>불법 또는 규제 상품 판매</span>
+                                                    <div class="checkBox-wrap">
+                                                        <input type="checkbox" id="community-report-check-6">
+                                                        <label for="community-report-check-6"></label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="inner">
+                                                    <span>따돌림 또는 괴롭힘</span>
+                                                    <div class="checkBox-wrap">
+                                                        <input type="checkbox" id="community-report-check-7">
+                                                        <label for="community-report-check-7"></label>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="inner">
+                                                    <span>직접 입력</span>
+                                                    <div class="checkBox-wrap">
+                                                        <input type="checkbox" id="community-report-check-8" class="selfInput">
+                                                        <label for="community-report-check-8"></label>
+                                                    </div>
+                                                </div>                                       
+                                                <div class="modal-input-wrap" style="display:none;">
+                                                    <input type="text" placeholder="사유를 입력해주세요.">
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p class="desc">신고하신 댓글은 운영정책에 따라 처리되며, 허위 신고 시 이용에 제한을 받을 수 있습니다.</p>
+                                </div>
+                            </div>
+                            <div class="modal-footer-wrap">
+                                <div class="modal-footer-btn-wrap">
+                                    <button class="btn-deepBlue">신고하기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/simplebar.js"></script>
+    <script src="../../js/common.js"></script>
+    <script> 
+        $('.modal-community-report .selfInput').on('change', function(){
+            var _checked = $(this).is(":checked");
+
+            if(_checked == true){
+                $(this).parents('li').find('.modal-input-wrap').show();
+            }else {
+                $(this).parents('li').find('.modal-input-wrap').hide();
+            }
+        })
+    </script>
+</body>
+</html>

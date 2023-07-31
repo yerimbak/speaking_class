@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="Home.css">
+</head>
+<body>
+    <div id="root">
+        <div class="container">
+            <div id="header">
+                <div class="header-inner">
+                    <div class="logo-wrap">
+                        <h1><a href="#"><img src="../../img/logo_studio_img_new.png" alt=""></a></h1>
+                    </div>
+                    <div class="header-tab-wrap">
+                        <div class="inner"></div>
+                    </div>
+                    <div class="profile-wrap">
+                        <div class="profile-info-wrap">
+                            <div class="academy">창문여자중학교</div>
+                            <div class="bar"></div>
+                            <div class="user email-certification-warning"><strong>김선생</strong> (선생님)</div>
+                        </div>
+                        <div class="home-btn-wrap">
+                            <button class="btn-home">홈</button>                          
+                        </div>
+                        <!-- 커뮤니티 버튼 추가 -->
+                        <div class="community-btn-wrap">
+                            <button class="btn-community">커뮤니티</button>
+                        </div><!-- 커뮤니티 버튼 추가 -->
+                        <div class="profile-menu-wrap">
+                            <button class="btn-profile-menu"></button>                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contents">
+                <div class="contents-inner">
+                    
+                    <div id="home">
+                        <div class="home-inner"> <!-- 클래스가 없으면 empy 클래스 추가-->
+                            <div class="header-wrap">
+                                <div class="sort-wrap">
+                                    <button class="on"><i class="ico-home-1"></i>전체</button> <!-- 활성화 된건 on -->
+                                    <button><i class="ico-home-2"></i>운영중</button>
+                                    <button><i class="ico-home-3"></i>미운영중</button>
+                                    <button><i class="ico-home-4"></i>휴지통</button>
+                                </div>
+                                <div class="btn-wrap">
+                                    <button class="btn-deepBlue btn-addClass">클래스 만들기</button>
+                                    <button class="btn-navy btn-joinStudent">학생 가입시키기</button>
+                                </div>
+                            </div>
+                            <div class="class-card-wrap">
+                                <div class="card-wrap">
+                                    <div class="card thema-orange" onclick="javascript:btn2('카드')">
+                                        <i class="drag-handle"></i>
+                                        <div class="card-inner">
+                                            <div class="info-wrap">
+                                                <div class="type-badge">일반</div>
+                                                <div class="info-academy">서울반원초등학교</div>
+                                                <div class="info-className">2022년 서울 반원 초등학교 A반 왕초보 스피킹클래스</div>
+                                            </div>
+											<ul class="right-count">
+												<li>
+													<span>레슨</span><span>30</span>
+												</li>
+												<li>
+													<span>학습</span><span>78</span>
+												</li>
+											</ul>
+                                            <div class="card_bottom">
+                                                <div class="class-status">
+                                                    <strong>50명</strong>
+                                                    <strong class="pass-standard">상시운영</strong>
+                                                </div>
+                                                <div class="card-btn-wrap">
+                                                    <button onclick="javascript:btn('복사')" class="btn btn-copy">복사</button>
+                                                    <button onclick="javascript:btn('삭제')" class="btn btn-card-delete">삭제</button>
+                                                </div>
+                                            </div>
+											<div class="btm_date">
+                                                <span>2022-01-06</span>
+                                                <span class="pass-standard">통과기준(낮음)</span>
+                                            </div>
+                                        </div>
+                                    </div>                                   
+                                </div>
+								<div class="card-wrap">
+									<div class="card thema-green">
+										<i class="drag-handle"></i>
+										<div class="card-inner">
+											<div class="info-wrap">
+												<div class="type-badge">기본</div>
+												<div class="info-academy">현대영어사</div>
+												<div class="info-className">생활회화 A반</div>
+											</div>
+											<ul class="right-count">
+												<li>
+													<span>레슨</span><span>30</span>
+												</li>
+												<li>
+													<span>학습</span><span>78</span>
+												</li>
+											</ul>
+											<div class="card_bottom">
+                                                <div class="class-status">
+                                                    <strong>50명</strong>
+                                                    <strong class="pass-standard">상시운영</strong>
+                                                </div>
+                                                <div class="card-btn-wrap">
+                                                    <button class="btn btn-copy">복사</button>
+                                                    <button class="btn btn-card-delete">삭제</button>
+                                                </div>
+                                            </div>
+											<div class="btm_date">
+                                                <span>2022-01-06</span>
+                                                <span class="pass-standard">통과기준(낮음)</span>
+                                            </div>											
+										</div>
+									</div>
+                                    <!-- 복사한 클래스 툴팁 -->
+                                    <div class="new-card-bubble">
+                                        <strong>클래스가 복사되었습니다.</strong>
+                                        <p>학생을 등록하세요.</p>
+                                        <button class="bnt-bubble-close"></button>
+                                    </div><!-- 복사한 클래스 툴팁 -->
+								</div>
+                                <div class="card-wrap">
+                                    <div class="card thema-pink">
+                                        <i class="drag-handle"></i>
+                                        <div class="card-inner">
+                                            <div class="info-wrap">
+                                                <div class="type-badge">기본</div>
+                                                <div class="info-academy">현대영어사</div>
+                                                <div class="info-className">생활회화 A반</div>
+                                            </div>
+                                            <ul class="right-count">
+												<li>
+													<span>레슨</span><span>30</span>
+												</li>
+												<li>
+													<span>스터디</span><span>78</span>
+												</li>
+											</ul>
+											<div class="card_bottom">
+                                                <div class="class-status">
+                                                    <strong>50명</strong>
+                                                    <strong class="pass-standard">상시운영</strong>
+                                                </div>
+                                                <div class="card-btn-wrap">
+                                                    <button class="btn btn-copy">복사</button>
+                                                    <button class="btn btn-card-delete">삭제</button>
+                                                </div>
+                                            </div>
+											<div class="btm_date">
+                                                <span>2022-01-06</span>
+                                                <span class="pass-standard">통과기준(낮음)</span>
+                                            </div>                                        </div>
+                                    </div>
+                                    <div class="new-card-bubble">
+                                        <strong>새 클래스가 개설되었습니다.</strong>
+                                        <p>클래스에 입장하여 학습과 수강생을 등록해 주세요.</p>
+                                        <button class="bnt-bubble-close"></button>
+                                    </div>
+                                </div>
+                                <div class="card-wrap"> 
+                                    <div class="card thema-green timeout"> <!-- 운영종료 : timeout-->
+                                        <i class="drag-handle"></i>
+                                        <div class="card-inner">
+                                            <div class="info-wrap">
+                                                <div class="type-badge">교과서</div>
+                                                <div class="info-academy">현대영어사</div>   
+                                                <div class="info-className">왕초보 스피킹 A반</div>
+                                            </div>
+											<ul class="right-count">
+												<li>
+													<span>레슨</span><span>30</span>
+												</li>
+												<li>
+													<span>학습</span><span>78</span>
+												</li>
+											</ul>
+                                            <div class="card_bottom">
+                                                <div class="class-status">
+                                                    <strong>운영종료</strong>
+                                                </div>
+                                                <div class="card-btn-wrap">
+                                                    <button class="btn btn-copy">복사</button>
+                                                    <button class="btn btn-card-delete">삭제</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                                <div class="card-wrap">
+                                    <div class="card thema-orange">
+                                        <i class="drag-handle"></i>
+                                        <div class="card-inner">
+                                            <div class="info-wrap">
+                                                <div class="type-badge">교과서</div>
+                                                <div class="info-academy">현대영어사</div>   
+                                                <div class="info-className">왕초보 스피킹 A반</div>
+                                            </div>
+											<ul class="right-count">
+												<li>
+													<span>레슨</span><span>30</span>
+												</li>
+												<li>
+													<span>학습</span><span>78</span>
+												</li>
+											</ul>
+                                            <div class="card_bottom">
+                                                <div class="class-status">
+                                                    <strong>50명</strong>
+                                                    <strong class="pass-standard">상시운영</strong>
+                                                </div>
+                                                <div class="card-btn-wrap">
+                                                    <button class="btn btn-copy">복사</button>
+                                                    <button class="btn btn-card-delete">삭제</button>
+                                                </div>
+                                            </div>
+											<div class="btm_date">
+                                                <span>2022-01-06</span>
+                                                <span class="pass-standard">통과기준(낮음)</span>
+                                            </div>                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-wrap">
+                                    <div class="card thema-purple private"> <!-- 비공개 : private -->
+                                        <i class="drag-handle"></i>
+                                        <div class="card-inner">
+                                            <div class="info-wrap">
+                                                <div class="type-badge">교과서</div>
+                                                <div class="info-academy">현대영어사</div>   
+                                                <div class="info-className">왕초보 스피킹 A반</div>
+                                            </div>
+											<ul class="right-count">
+												<li>
+													<span>레슨</span><span>30</span>
+												</li>
+												<li>
+													<span>학습</span><span>78</span>
+												</li>
+											</ul>
+                                            <div class="card_bottom">
+                                                <div class="class-status">
+                                                    <div class="status-date">
+                                                        <strong>비공개</strong>
+                                                    </div>
+                                                </div>
+                                                <div class="card-btn-wrap">
+                                                    <button class="btn btn-copy">복사</button>
+                                                    <button class="btn btn-card-delete">삭제</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="copyright">Copyright &copy;2020 LG CNS. All right reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/common.js"></script>
+    <script>
+
+        //클래스 카드와 버튼(복사,삭제,복원) 영역 수정 22-04-20
+        $(document).on("click", '.card-btn-wrap .btn', function(e){
+            e.stopImmediatePropagation()
+        });
+
+        $( ".home-inner:not(.empty) .class-card-wrap").sortable({
+            placeholder:"drag-enter-bg", // 드래그 들어왔을때 영역 표시
+            over:function(){
+                // 드래그해서 안에 들어왔을 때 (손 안땜)
+            },            
+            out:function(){
+                // 드래그했다 나갔을 때 (손 안땜)
+            },
+            update:function(event, ui){
+                // 영역에 드랍
+            },
+            receive: function (event, ui) {
+                // 드래그 했던 대상
+            }
+        }); 
+    </script>
+</body>
+</html>

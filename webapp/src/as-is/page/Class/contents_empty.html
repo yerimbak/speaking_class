@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="Class.css">
+    <link rel="stylesheet" href="../../css/simplebar.css">
+</head>
+<body>
+    <div id="root">
+        <div class="container">
+            <div id="header" class="tab-select"> <!-- 탭이 선택되면 tab-select 추가 (밑줄 사라짐)-->
+                <div class="header-inner">
+                    <div class="logo-wrap">
+                        <h1><a href="#"><img src="../../img/logo_studio.png" alt=""></a></h1>
+                    </div>
+                    <div class="header-tab-wrap">
+                        <div class="inner"></div>
+                    </div>
+                    <div class="profile-wrap">
+                        <div class="profile-info-wrap">
+                            <div class="academy">창문여자중학교</div>
+                            <div class="bar"></div>
+                            <div class="user"><strong>김선생</strong> (선생님)</div>
+                        </div>
+                        <div class="profile-menu-wrap">
+                            <button class="btn-profile-menu"></button>                   
+                            <div class="profile-side-menu-wrap">
+                                <div class="menu-wrap">
+                                    <ul>
+                                        <li><a href="#">클래스 만들기</a></li>
+                                        <li><a href="#">학생 가입시키기</a></li>
+                                        <li><a href="#">학생 관리하기</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="#">커뮤니티</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="#">내정보</a></li>
+                                        <li><a href="#">비밀번호 변경</a></li>
+                                        <li><a href="#">로그아웃</a></li>
+                                    </ul>
+                                </div>
+                                <div class="email-certification-wrap">
+                                    <div class="certification-inner">
+                                        <p>공직자 미인증 선생님이십니다.<br><strong>공직자 통합메일 또는<br>교육청 이메일</strong>로 인증해주세요.</p>
+                                        <button>이메일 인증하기</button>
+                                    </div>
+                                </div>
+                            </div>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contents" class="thema-purple"> <!-- thema-green, pink, orange, purple 로 색변경 -->
+                <div class="contents-inner">
+
+                    <div id="edit">
+                        <div class="class-info-title-wrap">
+                            <div class="title-wrap">
+                                <div class="top-wrap">
+                                    <div class="academy">현대영어사</div>
+                                    <div class="bar"></div>
+                                    <div class="className text-thema-color">생활회화 A반</div>
+                                    <button class="btn-edit"></button>
+                                </div>
+                                <div class="btm-wrap">
+                                    <div class="type-badge">기본</div>
+                                    <div class="lang">학습 언어: 영어 - 가이드 언어: 한국어</div>
+                                    <div class="date">2020-09-01 ~ 2020-12-31</div>
+                                    <div class="pass-standard">통과기준(낮음)</div>
+                                    <button class="btn-invite-code btn-thema-color">초대코드 <strong>123456</strong></button>
+                                </div>
+                            </div>
+                            <div class="publishing-wrap">
+                                <button class="btn-navy disable">앱 퍼블리싱 </button>
+                            </div>
+                        </div>
+                        <div class="edit-cont-wrap">
+                            <div class="edit-tab-wrap">
+                                <div class="btn-thema-color">수강생</div>
+                                <div class="btn-thema-color on">학습 콘텐츠</div>
+                                <div class="btn-thema-color">리포트</div>
+                            </div>
+                            <div class="edit-box-wrap">
+                                <div class="tab-cont-wrap">
+                                    <div class="tab-cont"></div>
+                                    <div class="tab-cont on">
+                                        <!-- 학습 콘텐츠 -->
+                                        <div id="edit-learning-contents">
+                                            <div class="edit-lesson-wrap box-wrap">
+                                                <div class="tab-title-wrap">
+                                                    레슨 <strong>0개</strong> / 학습 <strong>0개</strong>
+                                                    <button class="btn-edit hide">편집</button>   
+                                                </div>
+                                                <div class="lesson-list-cont-wrap">
+                                                    <div class="scroll-wrap" data-simplebar data-simplebar-auto-hide="false">
+                                                        <div class="lesson-resist-wrap">
+                                                            <input type="text" placeholder="레슨명">
+                                                            <button class="btn-thema-color">+ 레슨 등록</button>
+                                                        </div>
+                                                        <div class="lesson-list-wrap">                                                    
+                                                            <div class="contents-empty-img-wrap">
+                                                                <img src="../../img/img_lesson_contents_empty.png" alt="">
+                                                                <p><strong>수강생들이 학습할 레슨을 등록하세요.</strong>레슨을 생성하여 학습을 담으면 학습 목차가 구성됩니다.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="common-edit-data-list-wrap box-wrap">
+                                                <div class="top-title-wrap">
+                                                    <strong>학습 라이브러리</strong>
+                                                    <div class="btn-wrap">
+                                                        <button class="btn-thema-color">직접 등록</button>
+                                                        <button class="btn-thema-color">엑셀 등록</button>
+                                                        <button class="btn-deepBlue">스토어 가져오기</button>
+                                                    </div>
+                                                </div>
+                                                <div class="data-list-wrap">
+                                                    <div class="contents-empty-img-wrap">
+                                                        <img src="../../img/img_dataList_contents_empty.png" alt="">
+                                                        <p><strong>AI 튜터와 대화할 학습을 만들어 보세요.</strong>학습은 라이브러리에 저장되어<br>여러 레슨에 추가할 수 있습니다.</p>
+                                                    </div>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+                                    <div class="tab-cont"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="copyright-wrap">
+                            <div class="copyright-link-wrap">
+                                <a href="#">이용약관</a>
+                                <a href="#"><strong>개인정보처리방침</strong></a>
+                                <div class="bar"></div>
+                            </div>
+                            <p class="copyright">Copyright ©2020 LG CNS. All right reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/simplebar.js"></script>
+    <script src="../../js/common.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>

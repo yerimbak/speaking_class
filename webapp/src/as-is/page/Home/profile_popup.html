@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="Home.css">
+</head>
+<body class="scroll-hidden">
+    <div id="root">
+        <div class="container">
+            <div id="header" class="tab-select">
+                <div class="header-inner">
+                    <div class="logo-wrap">
+                        <h1><a href="#"><img src="../../img/logo_studio.png" alt=""></a></h1>
+                    </div>
+                    <div class="header-tab-wrap">
+                        <div class="inner"></div>
+                    </div>
+                    <div class="profile-wrap">
+                        <div class="profile-info-wrap">
+                            <div class="academy">현대영어사</div>
+                            <div class="bar"></div>
+                            <div class="user"><strong>김선생</strong> (선생님)</div> 
+                        </div>
+                        <div class="profile-menu-wrap">
+                            <button class="btn-profile-menu"></button>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contents">
+                <div class="contents-inner">
+
+                    <div class="modal-wrap">
+                        <div class="modal-profile">
+                            <div class="modal-title-wrap">
+                                <strong>내 정보</strong>
+                                <button class="btn-modal-title-close"></button>
+                            </div>
+                            <div class="modal-cont-wrap">
+                                <div class="user-info-box-wrap">
+                                    <div class="box-wrap">
+                                        <div class="inner">
+                                            <form action="">
+                                                <div class="input-cont-wrap">
+                                                    <div class="input-underline-wrap">
+                                                        <div class="input-title">아이디 <span>*</span></div>
+                                                        <input type="text" placeholder="아이디" value="teacher001" readonly>
+                                                    </div>
+                                                    <div class="academyName-wrap">
+                                                        <div class="input-underline-wrap">
+                                                            <div class="input-title">학원명 <span>*</span></div>
+                                                            <div class="input-wrap">
+                                                                <input type="text" placeholder="국문 학원명 (10자 이하의 한글)" value="윤선생">
+                                                                <button class="btn-line">중복확인</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="input-underline-wrap">
+                                                            <div class="input-wrap">
+                                                                <input type="text" placeholder="영문 학원명 (20자 이하의 영문)" value="yoons">
+                                                                <button class="btn-line">중복확인</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="input-underline-wrap">
+                                                        <div class="input-title">이름 <span>*</span></div>
+                                                        <input type="text" placeholder="10자 이하의 한글" value="김원장">
+                                                    </div>
+                                                    <div class="input-underline-wrap">
+                                                        <div class="input-title">이메일 <span>*</span></div>
+                                                        <input type="text" placeholder="이메일" value="teacher001@aitutor.com">
+                                                    </div>
+                                                </div>
+                                                <button class="btn-secession">회원 탈퇴</button>
+                                                <button class="btn-deepBlue btn-confirm disable">정보 수정</button> <!-- disable 추가시 비활성화 -->                                                
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 탈퇴 확인 -->
+                    <div class="modal-wrap">
+                        <div class="modal-confirm">
+                            <div class="title-wrap">
+                                <strong>회원 탈퇴</strong>
+                                <button class="btn-modal-title-close"></button>
+                            </div>
+                            <div class="text-wrap">
+                                <p>회원 탈퇴를 진행하시겠습니까?<br>
+                                    SClass Studio를 탈퇴하시면 모든 클래스가 삭제되며 다시 복구할 수 없습니다.</p>
+                            </div>
+                            <div class="modal-footer-btn-wrap">
+                                <button class="btn-line">취소</button>
+                                <button class="btn-navy">탈퇴</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+    <script src="../../js/common.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="Class.css">
+    <link rel="stylesheet" href="../../css/simplebar.css">
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+</head>
+<body class="scroll-hidden"> <!-- 팝업 나왔을때 scroll-hidden 추가-->
+    <div id="root">
+        <div class="container">
+            <div id="header" class="tab-select"> <!-- 탭이 선택되면 tab-select 추가 (밑줄 사라짐)-->
+                <div class="header-inner">
+                    <div class="logo-wrap">
+                        <h1><a href="#"><img src="../../img/logo_studio.png" alt=""></a></h1>
+                    </div>
+                    <div class="header-tab-wrap">
+                        <div class="inner">
+                            <div class="tab on thema-purple"> <!-- thema-green, pink, orange, purple 로 색변경 / 활성화된건 on -->
+                                <div class="tab-inner">
+                                    <p>생활회화 A반 생활회화 A반</p>
+                                    <button class="btn-header-tab-close"></button>
+                                </div>
+                            </div>
+                            <div class="tab thema-orange">
+                                <div class="tab-inner">
+                                    <p>생활회화 A반 생활회화 A반</p>
+                                    <button class="btn-header-tab-close"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-wrap">
+                        <div class="profile-info-wrap">
+                            <div class="academy">현대영어사</div>
+                            <div class="bar"></div>
+                            <div class="user"><strong>김선생</strong> (선생님)</div> 
+                        </div>
+                        <div class="profile-menu-wrap">
+                            <button class="btn-profile-menu"></button>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contents" class="thema-purple"> <!-- thema-green, pink, orange, purple 로 색변경 -->
+                <div class="contents-inner">
+
+                    <div id="edit">
+                        <div class="class-info-title-wrap">
+                            <div class="title-wrap">
+                                <div class="top-wrap">
+                                    <div class="academy">현대영어사</div>
+                                    <div class="bar"></div>
+                                    <div class="className text-thema-color">생활회화 A반</div>
+                                    <button class="btn-edit"></button>
+                                </div>
+                                <div class="btm-wrap">
+                                    <div class="lang">학습 언어: 영어 - 가이드 언어: 한국어</div>
+                                    <div class="date">2020-09-01 ~ 2020-12-31</div>
+                                </div>
+                            </div>
+                            <div class="publishing-wrap">
+                                <p>최근 퍼블리싱  <strong>2020-11-11 15:30</strong></p>
+                                <button class="btn-navy">앱 퍼블리싱</button>
+                            </div>
+                        </div>
+                        <div class="edit-cont-wrap">
+                            <div class="edit-tab-wrap">
+                                <div class="btn-thema-color">수강생</div>
+                                <div class="btn-thema-color on">학습 콘텐츠</div>
+                                <div class="btn-thema-color">리포트</div>
+                            </div>
+                            <div class="edit-box-wrap">
+                                <div class="tab-cont-wrap">
+                                    <div class="tab-cont on">
+                                        
+                                    </div>
+                                    <div class="tab-cont">
+                                        
+                                    </div>
+                                    <div class="tab-cont"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="copyright-wrap">
+                            <div class="copyright-link-wrap">
+                                <a href="#">이용약관</a>
+                                <a href="#"><strong>개인정보처리방침</strong></a>
+                                <div class="bar"></div>
+                            </div>
+                            <p class="copyright">Copyright ©2020 LG CNS. All right reserved.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 팝업 -->
+                    <div class="modal-wrap">
+                        <div class="modal-edit-learning">
+                            <div class="modal-title-wrap">
+                                <div class="badge type1">대화</div>
+                                <strong>학습 편집하기</strong>
+                                <button class="btn-modal-title-close"></button>
+                            </div>
+                            <div class="modal-cont-wrap">
+                                <div class="learning-info-wrap">
+                                    <div class="info-item info-add">
+                                        <dl>
+                                            <dt>등록일시</dt>
+                                            <dd>
+                                                <span>2020-09-01 15:00</span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    <div class="info-item info-edit">
+                                        <dl>
+                                            <dt>수정일시</dt>
+                                            <dd>
+                                                <span>2020-09-01 18:00</span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    <div class="info-item info-service">
+                                        <dl>
+                                            <dt>서비스 상태</dt>
+                                            <dd>
+                                                <span>서비스 대기</span>
+                                                <!-- <span class="on">서비스 중</span> -->
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    <div class="info-item info-class">
+                                        <dl>
+                                            <dt>등록된 클래스</dt>
+                                            <dd>
+                                                <span>60개</span>
+                                                <button class="btn-line">등록된 클래스에서 제외</button>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="select-division-box-wrap">
+                                    <div class="box on"> <!-- 활성화 on -->
+                                        <div class="box-title">표지만 편집</div>
+                                        <p>학습명, 이미지, 학습 목표<br>등 표지의 기본 정보만 편집합니다.</p>
+                                    </div>
+                                    <div class="bar"></div>
+                                    <div class="box"> 
+                                        <div class="box-title">대화 내용 편집</div>
+                                        <p>대화 내용이 수정되었다면,<br>대화 및 학습 방법,<br>힌트 전체를 편집합니다.</p>
+                                    </div>
+                                    <div class="bar"></div>
+                                    <div class="box"> 
+                                        <div class="box-title">학습 편집</div>
+                                        <p>기본 대화의 변경 없이<br>학습 방법 및 힌트를 편집합니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer-wrap">
+                                <div class="btn-delete-wrap">
+                                    <button class="btn-delete disable">삭제</button> <!-- disable 시 비활성화-->
+                                    <p class="warning show">클래스에 등록된 학습은 삭제할 수 없습니다.</p> <!-- show 추가시 보임-->
+                                </div>
+                                <div class="modal-footer-btn-wrap">
+                                    <button class="btn-deepBlue btn-next">다음</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 팝업 -->
+                    <div class="modal-wrap">
+                        <div class="modal-class-except">
+                            <div class="modal-title-wrap">
+                                <strong>등록된 클래스에서 제외</strong>
+                                <button class="btn-modal-title-close"></button>
+                            </div>
+                            <div class="modal-cont-wrap">
+                                <div class="class-list-wrap">
+                                    <div class="scroll-wrap" data-simplebar data-simplebar-auto-hide="false">
+                                        <div class="list">
+                                            <div class="checkAll">
+                                                <div class="checkBox-wrap label-right">
+                                                    <input type="checkbox" id="classList-all">
+                                                    <label for="classList-all">전체 선택</label>
+                                                </div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <span>생활회화 A반 생활회화 A반 생활회화 A반 생활회화 A반 생활회화 A반 생활회화 A반 생활회화 A반 </span>
+                                                    <div class="checkBox-wrap">
+                                                        <input type="checkbox" id="classList-1">
+                                                        <label for="classList-1"></label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <span>생활회화 A반 생활회화 A반 생활회화 A반 생활회화 A반 생활회화 A반 생활회화 A반 생활회화 A반 </span>
+                                                    <div class="checkBox-wrap">
+                                                        <input type="checkbox" id="classList-2">
+                                                        <label for="classList-2"></label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <span>생활회화 A반</span>
+                                                    <div class="checkBox-wrap">
+                                                        <input type="checkbox" id="classList-3">
+                                                        <label for="classList-3"></label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <span>생활회화 A반</span>
+                                                    <div class="checkBox-wrap">
+                                                        <input type="checkbox" id="classList-4">
+                                                        <label for="classList-4"></label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <span>생활회화 A반</span>
+                                                    <div class="checkBox-wrap">
+                                                        <input type="checkbox" id="classList-5">
+                                                        <label for="classList-5"></label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <span>생활회화 A반</span>
+                                                    <div class="checkBox-wrap">
+                                                        <input type="checkbox" id="classList-6">
+                                                        <label for="classList-6"></label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <span>생활회화 A반</span>
+                                                    <div class="checkBox-wrap">
+                                                        <input type="checkbox" id="classList-7">
+                                                        <label for="classList-7"></label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <span>생활회화 A반</span>
+                                                    <div class="checkBox-wrap">
+                                                        <input type="checkbox" id="classList-8">
+                                                        <label for="classList-8"></label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <span>생활회화 A반</span>
+                                                    <div class="checkBox-wrap">
+                                                        <input type="checkbox" id="classList-9">
+                                                        <label for="classList-9"></label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <span>생활회화 A반</span>
+                                                    <div class="checkBox-wrap">
+                                                        <input type="checkbox" id="classList-10">
+                                                        <label for="classList-10"></label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer-wrap">
+                                <div class="modal-footer-btn-wrap">
+                                    <button class="btn-line">취소</button>
+                                    <button class="btn-navy">제외</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/simplebar.js"></script>
+    <script src="../../js/common.js"></script>
+    <script>
+
+        // 전체 체크되는 체크박스
+        var checkBoxAll = $('.modal-class-except #classList-all');
+        checkBoxAll.change(function () {
+            var $this = $(this);
+            var checked = $this.prop('checked');
+            $('.modal-class-except .list ul li input').prop('checked', checked);
+        });
+
+        // 각 리스트별 체크박스
+        var listCheckBox = $('.modal-class-except .list ul li input');
+        listCheckBox.change(function () {
+
+            var boxLength = listCheckBox.length;
+            var checkedLength = $('.modal-class-except .list ul li input:checked').length;
+            var selectAll = (boxLength == checkedLength);
+
+            checkBoxAll.prop('checked', selectAll);
+            
+        });
+    </script>
+</body>
+</html>

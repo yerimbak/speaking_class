@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="Class.css">
+    <link rel="stylesheet" href="../../css/simplebar.css">
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+</head>
+<body class="scroll-hidden"> <!-- 팝업 나왔을때 scroll-hidden 추가-->
+    <div id="root">
+        <div class="container">
+            <div id="header" class="tab-select"> <!-- 탭이 선택되면 tab-select 추가 (밑줄 사라짐)-->
+                <div class="header-inner">
+                    <div class="logo-wrap">
+                        <h1><a href="#"><img src="../../img/logo_studio.png" alt=""></a></h1>
+                    </div>
+                    <div class="header-tab-wrap">
+                        <div class="inner">
+                            <div class="tab on thema-purple"> <!-- thema-green, pink, orange, purple 로 색변경 / 활성화된건 on -->
+                                <div class="tab-inner">
+                                    <p>생활회화 A반 생활회화 A반</p>
+                                    <button class="btn-header-tab-close"></button>
+                                </div>
+                            </div>
+                            <div class="tab thema-orange">
+                                <div class="tab-inner">
+                                    <p>생활회화 A반 생활회화 A반</p>
+                                    <button class="btn-header-tab-close"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-wrap">
+                        <div class="profile-info-wrap">
+                            <div class="academy">현대영어사</div>
+                            <div class="bar"></div>
+                            <div class="user"><strong>김선생</strong> (선생님)</div> 
+                        </div>
+                        <div class="profile-menu-wrap">
+                            <button class="btn-profile-menu"></button>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contents" class="thema-purple"> <!-- thema-green, pink, orange, purple 로 색변경 -->
+                <div class="contents-inner">
+
+                    <div id="edit">
+                        <div class="class-info-title-wrap">
+                            <div class="title-wrap">
+                                <div class="top-wrap">
+                                    <div class="academy">현대영어사</div>
+                                    <div class="bar"></div>
+                                    <div class="className text-thema-color">생활회화 A반</div>
+                                    <button class="btn-edit"></button>
+                                </div>
+                                <div class="btm-wrap">
+                                    <div class="lang">학습 언어: 영어 - 가이드 언어: 한국어</div>
+                                    <div class="date">2020-09-01 ~ 2020-12-31</div>
+                                </div>
+                            </div>
+                            <div class="publishing-wrap">
+                                <p>최근 퍼블리싱  <strong>2020-11-11 15:30</strong></p>
+                                <button class="btn-navy">앱 퍼블리싱</button>
+                            </div>
+                        </div>
+                        <div class="edit-cont-wrap">
+                            <div class="edit-tab-wrap">
+                                <div class="btn-thema-color">수강생</div>
+                                <div class="btn-thema-color on">학습 콘텐츠</div>
+                                <div class="btn-thema-color">리포트</div>
+                            </div>
+                            <div class="edit-box-wrap">
+                                <div class="tab-cont-wrap">
+                                    <div class="tab-cont on">
+                                        
+                                    </div>
+                                    <div class="tab-cont">
+                                        
+                                    </div>
+                                    <div class="tab-cont">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="copyright-wrap">
+                            <div class="copyright-link-wrap">
+                                <a href="#">이용약관</a>
+                                <a href="#"><strong>개인정보처리방침</strong></a>
+                                <div class="bar"></div>
+                            </div>
+                            <p class="copyright">Copyright ©2020 LG CNS. All right reserved.</p>
+                        </div>
+                    </div>
+
+                    <!-- 팝업 -->
+                    <div class="modal-wrap">
+                        <div class="modal-bringStore step1"> <!-- 1/2는 step1 -->
+                            <div class="modal-title-wrap">
+                                <strong>스토어에서 가져오기 1/2</strong>
+                                <button class="btn-modal-title-close"></button>
+                            </div>
+                            <div class="modal-cont-wrap">
+                                <div class="left-wrap">
+                                    <div class="scroll-wrap">
+                                        <div class="class-list-wrap">
+                                            <div class="list-wrap">
+                                                <div class="accordion-wrap"> <!-- close 추가시 닫힘 -->
+                                                    <div class="accordion-title">초등<span class="totalCount">999</span></div>
+                                                    <div class="accordion-cont-wrap">
+                                                        <ul>
+                                                            <li>전체<span class="count">999</span></li>
+                                                            <li class="selected">1학년<span class="count">30</span></li> <!-- 선택된건 selected 클래스 추가 -->
+                                                            <li class="disable">2학년<span class="count">0</span></li> <!-- count가 0인건 disable 클래스 추가 -->
+                                                            <li>3학년<span class="count">11</span></li>
+                                                            <li>4학년<span class="count">888</span></li>
+                                                            <li>5학년<span class="count">88</span></li>
+                                                            <li>6학년<span class="count">23</span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-wrap close">
+                                                    <div class="accordion-title">중등<span class="totalCount">999</span></div>
+                                                    <div class="accordion-cont-wrap">
+                                                        <ul>
+                                                            <li>전체<span class="count">999</span></li>
+                                                            <li>1학년<span class="count">2</span></li>
+                                                            <li>2학년<span class="count">2</span></li>
+                                                            <li>3학년<span class="count">2</span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-wrap close">
+                                                    <div class="accordion-title">고등<span class="totalCount">999</span></div>
+                                                    <div class="accordion-cont-wrap">
+                                                        <ul>
+                                                            <li>전체<span class="count">999</span></li>
+                                                            <li>1학년<span class="count">2</span></li>
+                                                            <li>2학년<span class="count">2</span></li>
+                                                            <li>3학년<span class="count">2</span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-wrap close">
+                                                    <div class="accordion-title">성인<span class="totalCount">999</span></div>
+                                                    <div class="accordion-cont-wrap">
+                                                        <ul>
+                                                            <li>전체<span class="count">999</span></li>
+                                                            <li>비즈니스<span class="count">2</span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right-wrap">
+                                    <div class="scroll-wrap">
+                                        <div class="class-list-detail-wrap">
+                                            <div class="title-wrap">
+                                                <div class="title">초등<span class="bar"></span>1학년<span class="count">30</span></div>
+                                            </div>
+                                            <div class="func-wrap">
+                                                <div class="selectBox-wrap">
+                                                    <div class="selectOption">학교 이름</div>
+                                                    <div class="optionList">
+                                                        <ul>
+                                                            <li class="on">학교 이름</li> <!-- 선택중인건 on -->
+                                                            <li>클래스 이름</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="search-wrap">
+                                                    <div class="search">
+                                                        <input type="text" placeholder="학교명, 클래스명을 검색하세요.">
+                                                        <button class="btn-search-delete"></button> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="data-list-wrap">
+                                                <div class="data-item">
+                                                    <div class="top-text">
+                                                        <span>윤선생</span>
+                                                        <div class="bar"></div>
+                                                        <span>생활회화 A반</span>
+                                                    </div>
+                                                    <div class="btm-text">
+                                                        <span>상시운영</span>
+                                                        <div class="bar"></div>
+                                                        <span>학습언어: 영어 - 가이드 언어:한국어</span>
+                                                        <div class="bar"></div>
+                                                        <span>선생님: 홍길동</span>
+                                                    </div>
+                                                    <div class="detail-count">
+                                                        <dl>
+                                                            <dt>레슨</dt>
+                                                            <dd>2개</dd>
+                                                        </dl>
+                                                        <div class="slash">/</div>
+                                                        <dl>
+                                                            <dt>학습</dt>
+                                                            <dd>1개</dd>
+                                                        </dl>
+                                                    </div>
+                                                </div>
+                                                <div class="data-item">
+                                                    <div class="top-text">
+                                                        <span>윤선생</span>
+                                                        <div class="bar"></div>
+                                                        <span>생활회화 B반</span>
+                                                    </div>
+                                                    <div class="btm-text">
+                                                        <span>상시운영</span>
+                                                        <div class="bar"></div>
+                                                        <span>학습언어: 영어 - 가이드 언어:한국어</span>
+                                                        <div class="bar"></div>
+                                                        <span>선생님: 홍길동</span>
+                                                    </div>
+                                                    <div class="detail-count">
+                                                        <dl>
+                                                            <dt>레슨</dt>
+                                                            <dd>2개</dd>
+                                                        </dl>
+                                                        <div class="slash">/</div>
+                                                        <dl>
+                                                            <dt>학습</dt>
+                                                            <dd>1개</dd>
+                                                        </dl>
+                                                    </div>
+                                                </div>
+                                                <div class="data-item">
+                                                    <div class="top-text">
+                                                        <span>EBS</span>
+                                                        <div class="bar"></div>
+                                                        <span>최고의 회화 대화문 1</span>
+                                                    </div>
+                                                    <div class="btm-text">
+                                                        <span>2021-09-01 ~ 2021-12-31</span>
+                                                        <div class="bar"></div>
+                                                        <span>학습언어: 영어 - 가이드 언어:한국어</span>
+                                                        <div class="bar"></div>
+                                                        <span>선생님: 김태연</span>
+                                                    </div>
+                                                    <div class="detail-count">
+                                                        <dl>
+                                                            <dt>레슨</dt>
+                                                            <dd>2개</dd>
+                                                        </dl>
+                                                        <div class="slash">/</div>
+                                                        <dl>
+                                                            <dt>학습</dt>
+                                                            <dd>1개</dd>
+                                                        </dl>
+                                                    </div>
+                                                </div>
+                                                <div class="data-item">
+                                                    <div class="top-text">
+                                                        <span>윤선생</span>
+                                                        <div class="bar"></div>
+                                                        <span>생활회화 C반</span>
+                                                    </div>
+                                                    <div class="btm-text">
+                                                        <span class="end">운영 종료</span> <!-- 운영 종료는 end 클래스 추가 -->
+                                                        <div class="bar"></div>
+                                                        <span>학습언어: 영어 - 가이드 언어:한국어</span>
+                                                        <div class="bar"></div>
+                                                        <span>선생님: 홍길동</span>
+                                                    </div>
+                                                    <div class="detail-count">
+                                                        <dl>
+                                                            <dt>레슨</dt>
+                                                            <dd>2개</dd>
+                                                        </dl>
+                                                        <div class="slash">/</div>
+                                                        <dl>
+                                                            <dt>학습</dt>
+                                                            <dd>1개</dd>
+                                                        </dl>
+                                                    </div>
+                                                </div>
+                                                <div class="data-item">
+                                                    <div class="top-text">
+                                                        <span>윤선생</span>
+                                                        <div class="bar"></div>
+                                                        <span>생활회화 B반</span>
+                                                    </div>
+                                                    <div class="btm-text">
+                                                        <span class="end">운영 종료</span> <!-- 운영 종료는 end 클래스 추가 -->
+                                                        <div class="bar"></div>
+                                                        <span>학습언어: 영어 - 가이드 언어:한국어</span>
+                                                        <div class="bar"></div>
+                                                        <span>선생님: 홍길동</span>
+                                                    </div>
+                                                    <div class="detail-count">
+                                                        <dl>
+                                                            <dt>레슨</dt>
+                                                            <dd>2개</dd>
+                                                        </dl>
+                                                        <div class="slash">/</div>
+                                                        <dl>
+                                                            <dt>학습</dt>
+                                                            <dd>1개</dd>
+                                                        </dl>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer-wrap">
+                                <div class="modal-footer-btn-wrap">
+                                    <button class="btn-line">취소</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/simplebar.js"></script>
+    <script src="../../js/common.js"></script>
+    <script>
+        var bringStoreStep1_LeftScroll = new SimpleBar(document.querySelector('.modal-bringStore.step1 .left-wrap .scroll-wrap'), {autoHide:false});
+        var bringStoreStep1_RightScroll = new SimpleBar(document.querySelector('.modal-bringStore.step1 .right-wrap .scroll-wrap'), {autoHide:false});
+        bringStoreStep1_LeftScroll.getScrollElement().scrollTop = 0; // 스크롤 최상단으로 (팝업 띄울때 호출)
+        bringStoreStep1_RightScroll.getScrollElement().scrollTop = 0; // 스크롤 최상단으로 (팝업 띄울때 호출)
+
+        // 팝업 검색 input - 텍스트 입력되면 삭제버튼 나오게
+        $('.modal-bringStore .class-list-detail-wrap .func-wrap .search-wrap input').on('keyup', function(){
+            var _val = $(this).val()
+
+            if(_val == ''){
+                $(this).next('.btn-search-delete').hide();
+            }else {
+                $(this).next('.btn-search-delete').show();
+            }
+        })
+
+        // 팝업 검색 input 삭제버튼 
+        $('.modal-bringStore .class-list-detail-wrap .func-wrap .search-wrap .btn-search-delete').on('click', function(){
+            $(this).hide();
+            $(this).prev('input').val('');
+        })
+    </script>
+</body>
+</html>

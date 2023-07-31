@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="../../css/wbz.css">
+    <link rel="stylesheet" href="../../css/simplebar.css">
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css">
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/datepicker-ko.js"></script>
+</head>
+<body> <!-- 팝업 나왔을때 scroll-hidden 추가-->
+    <div id="root">
+        <div class="container type-auto"><!-- 내용 스크롤 안생기게 container 높이 auto-->
+            <div id="header">
+                <div class="header-inner">
+                    <div class="logo-wrap">
+                        <h1><a href="#"><img src="../../img/logo_studio.png" alt=""></a></h1>
+                    </div>
+                    <div class="header-tab-wrap">
+                        <div class="inner"></div>
+                    </div>
+                    <div class="profile-wrap">
+                        <div class="profile-info-wrap">
+                            <div class="academy">현대영어사</div>
+                            <div class="bar"></div>
+                            <div class="user"><strong>김선생</strong> (선생님)</div> 
+                        </div>
+                        <div class="profile-menu-wrap">
+                            <button class="btn-profile-menu"></button>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contents" class="thema-purple"><!-- thema-green, pink, orange, purple 로 색변경( 220316 blue 추가 ) -->
+                <div class="contents-inner">
+                    <!-- 220316 wbz 클래스 만들기 페이지로 변경, 0318 추가 수정 -->
+                    <div class="create-class-wrap">
+                        <div class="title-wrap">
+                            <strong>클래스 만들기</strong>
+                        </div>
+                        <div class="create-cont-wrap">
+                            <div class="create-box-wrap left">
+                                <div class="select-school-wrap">
+                                    <div class="subtitle">학교(학원, 교습소를) 지정해 주세요. <span>*</span></div>
+                                    <div class="search-dropdown-wrap">
+                                        <div class="search-input-wrap">
+                                            <input class="search-input" type="text" placeholder="학교를 선택해 주세요." readonly>
+                                            <div class="popup-search">
+                                                <div class="popup-cont-wrap">
+                                                    <div class="search-input-wrap">
+                                                        <input type="text">
+                                                    </div>
+                                                    <div class="search-result-list-wrap">
+                                                        <div class="empty-wrap">
+                                                            <p>학교명을 검색해 주세요</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="popup-footer-wrap">
+                                                    <button>직접 입력</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="self-input-wrap">
+                                            <div class="modal-input-wrap">
+                                                <input class="selct-input" type="text" placeholder="학교명을 입력해 주세요.">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="create-input-wrap">
+                                    <div class="subtitle">클래스명을 입력해 주세요. <span>*</span></div>
+                                    <input type="text" placeholder="클래스명">
+                                </div>
+                                <div class="select-thema-color-wrap">
+                                    <div class="subtitle type-02">클래스의 테마 컬러를 선택해 주세요. <span>*</span></div>
+                                    <div class="select-wrap">
+                                        <div class="thema-purple on"></div> <!-- 선택된건 on -->
+                                        <div class="thema-pink"></div>
+                                        <div class="thema-green"></div>
+                                        <div class="thema-orange"></div>
+                                        <div class="thema-yellow"></div>
+                                        <div class="thema-coralred"></div>
+                                        <div class="thema-red"></div>
+                                        <div class="thema-lightgreen"></div>
+                                        <div class="thema-deepgree"></div>
+                                        <div class="thema-lightbrown"></div>
+                                        <div class="thema-brown"></div>
+                                        <div class="thema-skyblue"></div>
+                                        <div class="thema-ultrablue"></div>
+                                        <div class="thema-cobaltblue"></div>
+                                        <div class="thema-cobaltblue"></div>
+                                    </div>
+                                </div>
+                                <div class="select-pass-standard-wrap">
+                                    <div class="title-wrap">
+                                        <div class="subtitle">통과 기준 <span>*</span></div>
+                                        <p>학습 단계를 통화하기 위한 평가 기준을 설정해주세요.</p>                                                
+                                    </div>
+                                    <div class="select-division-box-wrap">
+                                        <div class="box on"> <!-- 활성화 on -->
+                                            <div class="box-title">Lv. 낮음</div>
+                                            <p>기초 단어만 사용하여 말해도<br>된답니다.</p>
+                                            <strong>원어민과 발음이 30% 유사해요!</strong>
+                                        </div>
+                                        <div class="bar"></div>
+                                        <div class="box">
+                                            <div class="box-title">Lv. 중간</div>
+                                            <p>의미에 부합하는 단어를 적절히 활용하여 말하여 보세요.</p>
+                                            <strong>원어민과 발음이 60% 유사해요!</strong>
+                                        </div>
+                                        <div class="bar"></div>
+                                        <div class="box">
+                                            <div class="box-title">Lv. 높음</div>
+                                            <p>문장을 문법과 어휘를 정확하게 구성하여 말하여 보세요.</p>
+                                            <strong>원어민과 발음이 90% 유사해요!</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="create-box-wrap">
+                                <div class="add-tag-wrap">
+                                    <div class="subtitle">클래스를 설정하는 태그를 추가해주세요. <span>*</span></div>
+                                    <!-- wbz 0406 태그 입력 방식 변경 -->
+                                    <div class="add-tag-cont-wrap">
+                                        <div class="tag">
+                                            <div class="tag-text" contenteditable="false">#영어</div>  <!-- 읽기 전용은 contenteditable="false" -->
+                                            <button class="btn-tag-box-close"></button>
+                                        </div>
+                                        <button class="btn-tag-plus"></button>
+                                    </div>
+                                    <!-- wbz 0406 태그 입력 방식 변경 -->
+                                    <p class="modal-input-warning">7자 미만의 한글을 입력해 주세요.</p> <!-- show 추가시 보임 -->
+                                </div>
+                                <!-- 교과서 선택 -->
+                                <div class="select-contents-wrap">
+                                    <div class="subtitle-wrap">
+                                        <div class="subtitle">교과서 콘텐츠 <span>*</span></div>
+                                        <p>클래스에서 학습할 콘텐츠를 선택해주세요.</p>
+                                    </div>
+                                    <!-- 220325 슬라이드 수정 -->
+                                    <div class="slide-wrap texbook-list-wrap">
+                                        <div class="swiper-container">
+                                            <ul class="swiper-wrapper">
+                                                <li class="swiper-slide"><!-- 출판사 6개 이상일때 슬라이드 버튼 생김 -->
+                                                    <a href="#" class="box on" style="background-image:url('../../img/logo_textbook_donga.png');"></a>
+                                                </li>
+                                                <li class="swiper-slide">
+                                                    <a href="#" class="box" style="background-image:url('../../img/logo_textbook_neungyule.png');"></a>
+                                                </li>
+                                                <li class="swiper-slide">
+                                                    <a href="#" class="box" style="background-image:url('../../img/logo_textbook_donga.png');"></a>
+                                                </li>
+                                                <li class="swiper-slide">
+                                                    <a href="#" class="box" style="background-image:url('../../img/logo_textbook_donga.png');"></a>
+                                                </li>
+                                                <li class="swiper-slide">
+                                                    <a href="#" class="box" style="background-image:url('../../img/logo_textbook_donga.png');"></a>
+                                                </li>
+                                                <li class="swiper-slide">
+                                                    <a href="#" class="box" style="background-image:url('../../img/logo_textbook_donga.png');"></a>
+                                                </li>  
+                                                <li class="swiper-slide">
+                                                    <a href="#" class="box" style="background-image:url('../../img/logo_textbook_donga.png');"></a>
+                                                </li>  
+                                                <li class="swiper-slide">
+                                                    <a href="#" class="box" style="background-image:url('../../img/logo_textbook_donga.png');"></a>
+                                                </li>                                                    
+                                            </ul>
+                                        </div>
+                                        <div class="swiper-button-prev btn">이전</div>
+                                        <div class="swiper-button-next btn">다음</div>
+                                        <p class="select-desc">* YBM 요청으로 리딩 본문은 제외되었습니다.</p> <!-- ybm 선택시 추가 -->
+                                    </div>
+                                    <!-- 220325 슬라이드 수정 -->
+                                </div>
+                                <div class="create-input-wrap">
+                                    <div class="subtitle">교과서 <span>*</span></div>
+                                    <div class="half-box-wrap">
+                                        <div class="selectBox-wrap">
+                                            <select class="placeholder"> <!-- placeholder 클래스 추가시 플레이스 홀더처럼 보임 -->
+                                                <option value="" disabled="" selected="" hidden="">교과서 선택</option>
+                                                <option value="">교과서 1</option>
+                                                <option value="">교과서 2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 교과서 선택 -->
+                            </div>
+                            <div class="box-btm-wrap">
+                                <button class="btn-line">취소</button>
+                                <button class="btn-navy">완료</button>
+                            </div>
+                        </div>
+                    </div> <!-- 220316 wbz 클래스 만들기 페이지로 변경 -->
+                    <div class="copyright-wrap">
+                        <div class="copyright-link-wrap">
+                            <a href="#">이용약관</a>
+                            <a href="#"><strong>개인정보처리방침</strong></a>
+                            <div class="bar"></div>
+                        </div>
+                        <p class="copyright">Copyright ©2020 LG CNS. All right reserved.</p>
+                    </div>                
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/simplebar.js"></script>
+    <script src="../../js/swiper-bundle.min.js"></script>
+    <script src="../../js/common.js"></script>
+    <script>
+
+        // 스토어 토글버튼 + 셀렉트박스 
+        var checkStoreToggle = 0;     
+        $('.create-cont-wrap .selecBox-store-big-category select').on('change', function(){
+            checkStoreToggle = 1;
+            $('.create-cont-wrap .selecBox-store-small-category select').attr('disabled', false);
+        })
+        $('.select-store-wrap .btn-toggle-open').on('click', function(){
+            $(this).toggleClass('on');
+            
+            if($(this).hasClass('on')){
+                if(checkStoreToggle == 1){
+                    $('.create-cont-wrap .select-store-wrap select').attr('disabled', false)
+                }else {
+                    $('.create-cont-wrap .select-store-wrap .selecBox-store-big-category select').attr('disabled', false)
+                }                
+            }else {
+                $('.create-cont-wrap .select-store-wrap select').attr('disabled', 'disabled')
+            }
+        })
+        
+        // 카테고리 소분류
+        $('.create-cont-wrap .selecBox-store-small-category select').on('change', function(){
+            var _index = $(this).find('option:selected').index();
+            
+            if(_index == 0){
+                $(this).addClass('placeholder');
+            }
+        })        
+        
+        //0331 기본 노출 슬라이드 갯수 6로 수정
+        var $num_pop = $('.swiper-wrapper > li').length; //li 개수를 불러옴
+            if($num_pop < 7){ // 출판사 7개 이상일때 슬라이드 버튼 생김
+                $('.texbook-list-wrap .btn').hide();
+        };
+
+        var swiper = new Swiper(".texbook-list-wrap .swiper-container", {
+        slidesPerView: 6,
+        spaceBetween: 8,
+        loop: false,
+        speed: 500,
+        navigation: {
+            nextEl: '.texbook-list-wrap .swiper-button-next',
+            prevEl: '.texbook-list-wrap .swiper-button-prev',
+        },
+        touchRatio: 0,
+        //0331 기본 노출 슬라이드 갯수 6로 수정
+    });
+    </script>
+</body>
+</html>

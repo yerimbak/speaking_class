@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="Class.css">
+    <link rel="stylesheet" href="../../css/simplebar.css">
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+</head>
+<body class="scroll-hidden"> <!-- 팝업 나왔을때 scroll-hidden 추가-->
+    <div id="root">
+        <div class="container">
+            <div id="header" class="tab-select"> <!-- 탭이 선택되면 tab-select 추가 (밑줄 사라짐)-->
+                <div class="header-inner">
+                    <div class="logo-wrap">
+                        <h1><a href="#"><img src="../../img/logo_studio.png" alt=""></a></h1>
+                    </div>
+                    <div class="header-tab-wrap">
+                        <div class="inner">
+                            <div class="tab on thema-purple"> <!-- thema-green, pink, orange, purple 로 색변경 / 활성화된건 on -->
+                                <div class="tab-inner">
+                                    <p>생활회화 A반 생활회화 A반</p>
+                                    <button class="btn-header-tab-close"></button>
+                                </div>
+                            </div>
+                            <div class="tab thema-orange">
+                                <div class="tab-inner">
+                                    <p>생활회화 A반 생활회화 A반</p>
+                                    <button class="btn-header-tab-close"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-wrap">
+                        <div class="profile-info-wrap">
+                            <div class="academy">현대영어사</div>
+                            <div class="bar"></div>
+                            <div class="user"><strong>김선생</strong> (선생님)</div> 
+                        </div>
+                        <div class="profile-menu-wrap">
+                            <button class="btn-profile-menu"></button>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contents" class="thema-purple"> <!-- thema-green, pink, orange, purple 로 색변경 -->
+                <div class="contents-inner">
+
+                    <div id="edit">
+                        <div class="class-info-title-wrap">
+                            <div class="title-wrap">
+                                <div class="top-wrap">
+                                    <div class="academy">현대영어사</div>
+                                    <div class="bar"></div>
+                                    <div class="className text-thema-color">생활회화 A반</div>
+                                    <button class="btn-edit"></button>
+                                </div>
+                                <div class="btm-wrap">
+                                    <div class="lang">학습 언어: 영어 - 가이드 언어: 한국어</div>
+                                    <div class="date">2020-09-01 ~ 2020-12-31</div>
+                                </div>
+                            </div>
+                            <div class="publishing-wrap">
+                                <p>최근 퍼블리싱  <strong>2020-11-11 15:30</strong></p>
+                                <button class="btn-navy">앱 퍼블리싱</button>
+                            </div>
+                        </div>
+                        <div class="edit-cont-wrap">
+                            <div class="edit-tab-wrap">
+                                <div class="btn-thema-color">수강생</div>
+                                <div class="btn-thema-color on">학습 콘텐츠</div>
+                                <div class="btn-thema-color">리포트</div>
+                            </div>
+                            <div class="edit-box-wrap">
+                                <div class="tab-cont-wrap">
+                                    <div class="tab-cont on">
+                                        
+                                    </div>
+                                    <div class="tab-cont">
+                                        
+                                    </div>
+                                    <div class="tab-cont"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="copyright-wrap">
+                            <div class="copyright-link-wrap">
+                                <a href="#">이용약관</a>
+                                <a href="#"><strong>개인정보처리방침</strong></a>
+                                <div class="bar"></div>
+                            </div>
+                            <p class="copyright">Copyright ©2020 LG CNS. All right reserved.</p>
+                        </div>
+                    </div>
+
+                    <!-- 팝업 -->
+                    <div class="modal-wrap"> 
+                        <div class="modal-create-conversation-learning type-conversation type-readOnly"> <!-- 스토어에서 가져온 학습은 type-readOnly 클래스 추가, 220318 대화 스크립트 보기는 type-s 클래스 추가 -->
+                            <div class="modal-title-wrap">
+                                <strong>대화 스크립트 보기</strong>
+                                <div class="selectBox-wrap"><!-- lesson 선택 셀렉트박스 추가 -->
+                                    <select>
+                                        <option value="">Lesson 1</option>
+                                        <option value="">Lesson 2</option>
+                                        <option value="">Lesson 3</option>
+                                    </select>
+                                </div>
+                                <button class="btn-modal-title-close"></button>
+                            </div>
+                            <div class="modal-cont-wrap">
+                                <div class="create-step-wrap type-l">
+                                    <div class="scroll-wrap" data-simplebar data-simplebar-auto-hide="false">
+
+                                        <!-- 대화 스크립트 -->
+                                        <div class="step-wrap step-total-converstaion half-type">
+                                            <p class="notice-title">컨텐츠 명 : 국적 묻기</p> <!-- 대화 스크립트 컨텐츠 명 표시는 notice-title 클래스 -->
+                                            <div class="conversation-cont-box-wrap"> <!-- 대화 스크립트 레이아웃 5:5로 변경 -->
+                                                <div class="half-box"><!-- 대화 1 ~ 4 -->
+                                                    <div class="box-item">
+                                                        <div class="box-title">대화 1 <span>*</span></div>
+                                                        <div class="box-wrap">
+                                                            <div class="text-group-wrap">
+                                                                <div class="group-title type-question">AI</div>
+                                                                <div class="text-wrap">
+                                                                    <div class="top-text-wrap">
+                                                                        <p>Where are you from?</p>
+                                                                    </div>
+                                                                    <div class="btm-text-wrap">
+                                                                        <p>너는 어디서 왔니?</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="text-group-wrap">
+                                                                <div class="group-title type-answer">학습자</div>
+                                                                <div class="text-wrap">
+                                                                    <div class="top-text-wrap">
+                                                                        <p>I'm from Korea.</p>
+                                                                    </div>
+                                                                    <div class="btm-text-wrap">
+                                                                        <p>나는 한국에서 왔어</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-item">
+                                                        <div class="box-title">대화 2 <span>*</span></div>
+                                                        <div class="box-wrap">
+                                                            <div class="text-group-wrap">
+                                                                <div class="group-title type-question">AI</div>
+                                                                <div class="text-wrap">
+                                                                    <div class="top-text-wrap">
+                                                                        <p>Where are you from?</p>
+                                                                    </div>
+                                                                    <div class="btm-text-wrap">
+                                                                        <p>너는 어디서 왔니?</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="text-group-wrap">
+                                                                <div class="group-title type-answer">학습자</div>
+                                                                <div class="text-wrap">
+                                                                    <div class="top-text-wrap">
+                                                                        <p>I'm from Korea.</p>
+                                                                    </div>
+                                                                    <div class="btm-text-wrap">
+                                                                        <p>나는 한국에서 왔어</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-item">
+                                                        <div class="box-title">대화 3 <span>*</span></div>
+                                                        <div class="box-wrap">
+                                                            <div class="text-group-wrap">
+                                                                <div class="group-title type-question">AI</div>
+                                                                <div class="text-wrap">
+                                                                    <div class="top-text-wrap">
+                                                                        <p>Where are you from?</p>
+                                                                    </div>
+                                                                    <div class="btm-text-wrap">
+                                                                        <p>너는 어디서 왔니?</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="text-group-wrap">
+                                                                <div class="group-title type-answer">학습자</div>
+                                                                <div class="text-wrap">
+                                                                    <div class="top-text-wrap">
+                                                                        <p>I'm from Korea.</p>
+                                                                    </div>
+                                                                    <div class="btm-text-wrap">
+                                                                        <p>나는 한국에서 왔어</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-item">
+                                                        <div class="box-title">대화 4 <span>*</span></div>
+                                                        <div class="box-wrap">
+                                                            <div class="text-group-wrap">
+                                                                <div class="group-title type-question">AI</div>
+                                                                <div class="text-wrap">
+                                                                    <div class="top-text-wrap">
+                                                                        <p>Where are you from?</p>
+                                                                    </div>
+                                                                    <div class="btm-text-wrap">
+                                                                        <p>너는 어디서 왔니?</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="text-group-wrap">
+                                                                <div class="group-title type-answer">학습자</div>
+                                                                <div class="text-wrap">
+                                                                    <div class="top-text-wrap">
+                                                                        <p>I'm from Korea.</p>
+                                                                    </div>
+                                                                    <div class="btm-text-wrap">
+                                                                        <p>나는 한국에서 왔어</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="half-line"></div>
+                                                <div class="half-box"><!-- 대화 5 ~ 8 -->        
+                                                    <div class="box-item">
+                                                        <div class="box-title">대화 5 <span>*</span></div>
+                                                        <div class="box-wrap">
+                                                            <div class="text-group-wrap">
+                                                                <div class="group-title type-question">AI</div>
+                                                                <div class="text-wrap">
+                                                                    <div class="top-text-wrap">
+                                                                        <p>Where are you from?</p>
+                                                                    </div>
+                                                                    <div class="btm-text-wrap">
+                                                                        <p>너는 어디서 왔니?</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="text-group-wrap">
+                                                                <div class="group-title type-answer">학습자</div>
+                                                                <div class="text-wrap">
+                                                                    <div class="top-text-wrap">
+                                                                        <p>I'm from Korea.</p>
+                                                                    </div>
+                                                                    <div class="btm-text-wrap">
+                                                                        <p>나는 한국에서 왔어</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>                                          
+                                                    <div class="box-item">
+                                                        <div class="box-title">대화 6 <span>*</span></div>
+                                                        <div class="box-wrap">
+                                                            <div class="text-group-wrap">
+                                                                <div class="group-title type-question">AI</div>
+                                                                <div class="text-wrap">
+                                                                    <div class="top-text-wrap">
+                                                                        <p>Where are you from?</p>
+                                                                    </div>
+                                                                    <div class="btm-text-wrap">
+                                                                        <p>너는 어디서 왔니?</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="text-group-wrap">
+                                                                <div class="group-title type-answer">학습자</div>
+                                                                <div class="text-wrap">
+                                                                    <div class="top-text-wrap">
+                                                                        <p>I'm from Korea.</p>
+                                                                    </div>
+                                                                    <div class="btm-text-wrap">
+                                                                        <p>나는 한국에서 왔어</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-item">
+                                                        <div class="box-title">대화 7 <span>*</span></div>
+                                                        <div class="box-wrap">
+                                                            <div class="text-group-wrap">
+                                                                <div class="group-title type-question">AI</div>
+                                                                <div class="text-wrap">
+                                                                    <div class="top-text-wrap">
+                                                                        <p>Where are you from?</p>
+                                                                    </div>
+                                                                    <div class="btm-text-wrap">
+                                                                        <p>너는 어디서 왔니?</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="text-group-wrap">
+                                                                <div class="group-title type-answer">학습자</div>
+                                                                <div class="text-wrap">
+                                                                    <div class="top-text-wrap">
+                                                                        <p>I'm from Korea.</p>
+                                                                    </div>
+                                                                    <div class="btm-text-wrap">
+                                                                        <p>나는 한국에서 왔어</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-item">
+                                                        <div class="box-title">대화 8 <span>*</span></div>
+                                                        <div class="box-wrap">
+                                                            <div class="text-group-wrap">
+                                                                <div class="group-title type-question">AI</div>
+                                                                <div class="text-wrap">
+                                                                    <div class="top-text-wrap">
+                                                                        <p>Where are you from?</p>
+                                                                    </div>
+                                                                    <div class="btm-text-wrap">
+                                                                        <p>너는 어디서 왔니?</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="text-group-wrap">
+                                                                <div class="group-title type-answer">학습자</div>
+                                                                <div class="text-wrap">
+                                                                    <div class="top-text-wrap">
+                                                                        <p>I'm from Korea.</p>
+                                                                    </div>
+                                                                    <div class="btm-text-wrap">
+                                                                        <p>나는 한국에서 왔어</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pagination-wrap">
+                                                <button class="btn-page-prev disable"></button> <!-- 비활성화는 disable 추가 -->
+                                                <span class="on">1</span>
+                                                <span>/</span>
+                                                <span class="all">5</span>
+                                                <button class="btn-page-next"></button> <!-- 비활성화는 disable 추가 -->
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer-wrap">
+                                <div class="modal-footer-btn-wrap"><!-- 이전, 다음 학습 버튼 추가-->
+                                    <button class="btn-line btn-prev">이전 학습</button>
+                                    <button class="btn-line btn-next">다음 학습</button>
+                                    <button class="btn-deepBlue">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/simplebar.js"></script>
+    <script src="../../js/common.js"></script>
+    <script>
+
+        // 전체 대화 만들기 > 답변 추가
+        $.each($('.step-total-converstaion .add-answer-wrap'), function(index, item){
+            var _parents = $(this);
+            var _limitCount = $(this).find('.input-wrap').length;
+            var _btnAddAnswer;
+
+            if(_limitCount == 2){
+                $(this).find('.btn-add-answer').addClass('disable')
+            }
+
+            // 답변추가 버튼
+            $(this).find($('.btn-add-answer')).on('click', function(){
+                _btnAddAnswer = $(this);
+                console.log('aa')
+
+                var input_html = '<div class="input-wrap"><textarea oninput="textareaAutoHeight(this)" placeholder="학습자 모범 발화(영어)를 입력해 주세요. (선택)"></textarea><button class="btn-delete-question"></button></div>';
+                
+                if(_limitCount < 2){
+                    _btnAddAnswer.parent().before(input_html)
+                    _limitCount++;
+
+                    // 새로 만들어진 인풋에 포커스 이동
+                    $(this).parents('.add-answer-wrap').find('.input-wrap').last().find('textarea').focus();
+                }
+                
+                if (_limitCount == 2){
+                    $(this).addClass('disable')
+                }               
+
+            })
+
+            // 삭제 버튼
+            $(this).on('click', '.btn-delete-question', function(){
+                $(this).parent().remove();
+                _limitCount--;    
+                if (_limitCount < 2){
+                    _parents.find('.btn-add-answer').removeClass('disable')
+                }
+            })            
+        })          
+
+        // 챗봇 학습자 위치변경
+        $('.conversation-cont-box-wrap .btn-order').on('click', function(){
+            var _this = $(this);
+            var boxWrap = _this.parents('.box-item').find('.box-wrap');
+            var chatBotClone = boxWrap.find('.group-chatbot').clone();
+
+            boxWrap.find('.group-chatbot').remove();
+
+            if(_this.hasClass('on')){
+                boxWrap.prepend(chatBotClone);
+                _this.prev().text('챗봇 발화 우선');
+            }else {
+                boxWrap.append(chatBotClone);
+                _this.prev().text('학습자 발화 우선');
+            }
+
+            _this.toggleClass('on');
+        })      
+        
+    </script>
+</body>
+</html>

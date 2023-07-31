@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="../../css/simplebar.css">
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/datepicker-ko.js"></script>
+</head>
+<body class="scroll-hidden"> <!-- 팝업 나왔을때 scroll-hidden 추가-->
+    <div id="root">
+        <div class="container">
+            <div id="header">
+                <div class="header-inner">
+                    <div class="logo-wrap">
+                        <h1><a href="#"><img src="../../img/logo_studio.png" alt=""></a></h1>
+                    </div>
+                    <div class="header-tab-wrap">
+                        <div class="inner"></div>
+                    </div>
+                    <div class="profile-wrap">
+                        <div class="profile-info-wrap">
+                            <div class="academy">현대영어사</div>
+                            <div class="bar"></div>
+                            <div class="user"><strong>김선생</strong> (선생님)</div> 
+                        </div>
+                        <div class="profile-menu-wrap">
+                            <button class="btn-profile-menu"></button>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contents">
+                <div class="contents-inner">
+
+                    <!-- 팝업 -->
+                    <div class="modal-wrap">
+                        <div class="modal-join-student">
+                            <div class="modal-title-wrap">
+                                <strong>학생 간편 가입</strong>
+                                <button class="btn-modal-title-close"></button>
+                            </div>
+                            <div class="modal-cont-wrap">
+                                <div class="top-wrap">                                    
+                                    <div class="desc">선생님이 직접 학생을 Speaking Class 수강생으로 가입시키고 클래스에 지정할 수 있습니다.</div>
+                                    <div class="pwd-desc">초기 비밀번호는 1234로 일괄 제공됩니다.</div>
+                                    <!-- 220310 wbz 년도, 학년, 반 정보 추가 -->
+                                    <div class="input-line">
+                                        <div class="input-group-wrap">                                        
+                                            <div class="selectBox-wrap">
+                                                <select>
+                                                    <option value="">2022</option>
+                                                    <option value="">2021</option>
+                                                    <option value="">2020</option>
+                                                </select>
+                                            </div>
+                                            <div class="selectBox-wrap">
+                                                <select>
+                                                    <option value="">학년</option>
+                                                    <option value="">학년</option>
+                                                    <option value="">학년</option>
+                                                </select>
+                                            </div>
+                                            <div class="modal-input-wrap">
+                                                <input placeholder="반">
+                                            </div>
+                                        </div>
+                                    </div><!-- 220310 wbz 년도, 학년, 반 정보 추가 -->
+                                    <div class="input-line">
+                                        <div class="input-group-wrap">                                        
+                                            <div class="modal-input-wrap">
+                                                <input placeholder="아이디/이메일"> 
+                                            </div>
+                                            <div class="modal-input-wrap">
+                                                <input placeholder="학생 이름">
+                                            </div>
+                                        </div>
+                                        <div class="warning show">이미 가입된 수강생 아이디입니다.</div> <!-- show 추가시 보임 -->
+                                    </div>
+                                    <div class="input-line">
+                                        <div class="input-group-wrap">
+                                            <div class="selectBox-wrap">
+                                                <select>
+                                                    <option value="">클래스 지정 안함</option>
+                                                    <option value="">생활회화 B반</option>
+                                                    <option value="">생활회화 C반</option>
+                                                </select>
+                                            </div>
+                                            <div class="modal-input-wrap">
+                                                <input placeholder="태그는 #키워드 형식으로 입력해주세요. (선택)"> 
+                                            </div>
+                                            <div class="btn-wrap">
+                                                <button class="btn-deepBlue">추가</button>
+                                            </div>
+                                        </div>     
+                                    </div>                               
+                                </div> 
+                                <div class="btm-wrap">
+                                    <div class="scroll-wrap" data-simplebar data-simplebar-auto-hide="false">
+                                        <!-- 220310 wbz 테이블 년도, 학년, 반 정보 추가 -->
+                                        <div class="table-wrap">
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>No.</th>
+                                                        <th>아이디/이메일</th>
+                                                        <th>이름</th>
+                                                        <th>년도</th>
+                                                        <th>학년</th>
+                                                        <th>반</th>
+                                                        <th>클래스</th>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1.</td>
+                                                        <td>studentA</td>
+                                                        <td>김학생</td>
+                                                        <td>2022</td>
+                                                        <td>2</td>
+                                                        <td>8</td>
+                                                        <td>생활회화 A반</td>
+                                                        <td>
+                                                            <button class="btn-line-delete"></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2.</td>
+                                                        <td>j989@naver.com</td>
+                                                        <td>김학생</td>
+                                                        <td>2022</td>
+                                                        <td>2</td>
+                                                        <td>8</td>
+                                                        <td>생활회화 A반</td>
+                                                        <td>
+                                                            <button class="btn-line-delete"></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3.</td>
+                                                        <td>studentA</td>
+                                                        <td>김학생</td>
+                                                        <td>2022</td>
+                                                        <td>2</td>
+                                                        <td>8</td>
+                                                        <td>생활회화 A반</td>
+                                                        <td>
+                                                            <button class="btn-line-delete"></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4.</td>
+                                                        <td>j989@naver.com</td>
+                                                        <td>김학생</td>
+                                                        <td>2022</td>
+                                                        <td>2</td>
+                                                        <td>8</td>
+                                                        <td>생활회화 A반</td>
+                                                        <td>
+                                                            <button class="btn-line-delete"></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5.</td>
+                                                        <td>studentA</td>
+                                                        <td>김학생</td>
+                                                        <td>2022</td>
+                                                        <td>2</td>
+                                                        <td>8</td>
+                                                        <td>생활회화 A반</td>
+                                                        <td>
+                                                            <button class="btn-line-delete"></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6.</td>
+                                                        <td>j989@naver.com</td>
+                                                        <td>김학생</td>
+                                                        <td>2022</td>
+                                                        <td>2</td>
+                                                        <td>8</td>
+                                                        <td>생활회화 A반</td>
+                                                        <td>
+                                                            <button class="btn-line-delete"></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7.</td>
+                                                        <td>studentA</td>
+                                                        <td>김학생</td>
+                                                        <td>2022</td>
+                                                        <td>2</td>
+                                                        <td>8</td>
+                                                        <td>생활회화 A반</td>
+                                                        <td>
+                                                            <button class="btn-line-delete"></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8.</td>
+                                                        <td>j989@naver.com</td>
+                                                        <td>김학생</td>
+                                                        <td>2022</td>
+                                                        <td>2</td>
+                                                        <td>8</td>
+                                                        <td>생활회화 A반</td>
+                                                        <td>
+                                                            <button class="btn-line-delete"></button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div><!-- 220310 wbz 테이블 년도, 학년, 반 정보 추가 -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer-wrap">
+                                <div class="modal-footer-btn-wrap">
+                                    <button class="btn-line">취소</button>
+                                    <button class="btn-navy">저장</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/simplebar.js"></script>
+    <script src="../../js/common.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>

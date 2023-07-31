@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="Class.css">
+    <link rel="stylesheet" href="../../css/simplebar.css">
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+</head>
+<body class="scroll-hidden"> <!-- 팝업 나왔을때 scroll-hidden 추가-->
+    <div id="root">
+        <div class="container">
+            <div id="header" class="tab-select"> <!-- 탭이 선택되면 tab-select 추가 (밑줄 사라짐)-->
+                <div class="header-inner">
+                    <div class="logo-wrap">
+                        <h1><a href="#"><img src="../../img/logo_studio.png" alt=""></a></h1>
+                    </div>
+                    <div class="header-tab-wrap">
+                        <div class="inner">
+                            <div class="tab on thema-purple"> <!-- thema-green, pink, orange, purple 로 색변경 / 활성화된건 on -->
+                                <div class="tab-inner">
+                                    <p>생활회화 A반 생활회화 A반</p>
+                                    <button class="btn-header-tab-close"></button>
+                                </div>
+                            </div>
+                            <div class="tab thema-orange">
+                                <div class="tab-inner">
+                                    <p>생활회화 A반 생활회화 A반</p>
+                                    <button class="btn-header-tab-close"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-wrap">
+                        <div class="profile-info-wrap">
+                            <div class="academy">현대영어사</div>
+                            <div class="bar"></div>
+                            <div class="user"><strong>김선생</strong> (선생님)</div> 
+                        </div>
+                        <div class="profile-menu-wrap">
+                            <button class="btn-profile-menu"></button>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contents" class="thema-purple"> <!-- thema-green, pink, orange, purple 로 색변경 -->
+                <div class="contents-inner">
+
+                    <div id="edit">
+                        <div class="class-info-title-wrap">
+                            <div class="title-wrap">
+                                <div class="top-wrap">
+                                    <div class="academy">현대영어사</div>
+                                    <div class="bar"></div>
+                                    <div class="className text-thema-color">생활회화 A반</div>
+                                    <button class="btn-edit"></button>
+                                </div>
+                                <div class="btm-wrap">
+                                    <div class="lang">학습 언어: 영어 - 가이드 언어: 한국어</div>
+                                    <div class="date">2020-09-01 ~ 2020-12-31</div>
+                                </div>
+                            </div>
+                            <div class="publishing-wrap">
+                                <p>최근 퍼블리싱  <strong>2020-11-11 15:30</strong></p>
+                                <button class="btn-navy">앱 퍼블리싱</button>
+                            </div>
+                        </div>
+                        <div class="edit-cont-wrap">
+                            <div class="edit-tab-wrap">
+                                <div class="btn-thema-color">수강생</div>
+                                <div class="btn-thema-color on">학습 콘텐츠</div>
+                                <div class="btn-thema-color">리포트</div>
+                            </div>
+                            <div class="edit-box-wrap">
+                                <div class="tab-cont-wrap">
+                                    <div class="tab-cont on">
+                                        
+                                    </div>
+                                    <div class="tab-cont">
+                                        
+                                    </div>
+                                    <div class="tab-cont"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="copyright-wrap">
+                            <div class="copyright-link-wrap">
+                                <a href="#">이용약관</a>
+                                <a href="#"><strong>개인정보처리방침</strong></a>
+                                <div class="bar"></div>
+                            </div>
+                            <p class="copyright">Copyright ©2020 LG CNS. All right reserved.</p>
+                        </div>
+                    </div>
+
+                    <!-- 팝업 -->
+                    <div class="modal-wrap">
+                        <div class="modal-create-conversation-learning type-pattern"> <!-- 패턴학습이면 type-pattern 추가-->
+                            <div class="modal-title-wrap">
+                                <div class="badge type3">패턴</div>
+                                <strong>학습 콘텐츠 편집하기</strong>
+                                <button class="btn-modal-title-close" tabindex="-1"></button>
+                            </div>
+                            <div class="modal-cont-wrap">
+                                <div class="create-step-wrap">
+                                    <div class="scroll-wrap" data-simplebar data-simplebar-auto-hide="false">
+
+                                        <!-- 학습 콘텐츠 만들기 -->
+                                        <div class="step-wrap step-total-converstaion">
+                                            <p class="notice-text">핵심 패턴과 패턴을 활용하여 학습할 예문을 만들어 주세요. 추가적으로 패턴을 활용한 대화학습을 진행하시려면 대화를 만들어 주세요.</p>
+                                            <div class="conversation-cont-box-wrap">
+                                                <div class="box-item">
+                                                    <div class="box-title">패턴 <span>*</span></div>
+                                                    <div class="box-wrap">
+                                                        <div class="input-group-wrap">
+                                                            <div class="group-title type-pattern">패턴</div>
+                                                            <div class="input-wrap">
+                                                                <textarea oninput="textareaAutoHeight(this)" placeholder="패턴(영어)을 입력해 주세요."></textarea>
+                                                            </div>
+                                                            <div class="input-wrap">
+                                                                <textarea oninput="textareaAutoHeight(this)" placeholder="패턴(한국어)을 입력해 주세요."></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="box-item">
+                                                    <div class="box-title">예문 <span>*</span></div>
+                                                    <div class="box-wrap">
+                                                        <div class="input-group-wrap">
+                                                            <div class="group-title type-example">대표</div>
+                                                            <div class="input-wrap">
+                                                                <textarea oninput="textareaAutoHeight(this)" placeholder="대표 예문(영어)을 입력해 주세요."></textarea>
+                                                            </div>
+                                                            <div class="input-wrap">
+                                                                <textarea oninput="textareaAutoHeight(this)" placeholder="대표 예문(한국어)을 입력해 주세요."></textarea>
+                                                            </div>
+                                                            <div class="add-answer-wrap type-example">
+                                                                <div class="add-text-wrap">
+                                                                    <p>응용 예문을 최대 5개까지 등록할 수 있습니다. 수강생은 배우고 싶은 예문을 선택하여 학습합니다.</p>
+                                                                    <button class="btn-line-dNavy btn-add-answer" style="width:132px;">응용 예문 추가</button>  <!-- disable 추가시 비활성 -->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="box-item">
+                                                    <div class="box-title">대화</div>
+                                                    <div class="box-toggle-display"> <!-- on 추가시 활성화-->
+                                                        <p>패턴대화 학습 없음</p>
+                                                        <button class="btn-toggle-display"></button>
+                                                    </div>
+                                                    <div class="box-wrap">
+                                                        <div class="input-group-wrap">
+                                                            <div class="group-title type-question">질문1</div>
+                                                            <div class="input-wrap">
+                                                                <textarea oninput="textareaAutoHeight(this)" placeholder="질문(영어)을 입력해 주세요."></textarea>
+                                                            </div>
+                                                            <div class="input-wrap">
+                                                                <textarea oninput="textareaAutoHeight(this)" placeholder="질문(한국어)을 입력해 주세요."></textarea>
+                                                            </div>
+                                                        </div>    
+                                                        <div class="input-group-wrap">                                                                
+                                                            <div class="group-title type-answer">답변1</div>
+                                                            <div class="input-wrap">
+                                                                <textarea oninput="textareaAutoHeight(this)" placeholder="모범 답변(영어)을 입력해 주세요."></textarea>
+                                                            </div>
+                                                            <div class="input-wrap">
+                                                                <textarea oninput="textareaAutoHeight(this)" placeholder="모범 답변 해석(한국어)을 입력해 주세요."></textarea>
+                                                            </div>
+                                                            <div class="add-answer-wrap type-conv">
+                                                                <div class="add-text-wrap">
+                                                                    <p>패턴대화를 최대 5개까지 등록할 수 있습니다. 수강생은 등록된 대화를 모두 학습합니다.</p>
+                                                                    <button class="btn-line-dNavy btn-add-answer">대화 추가</button>  <!-- disable 추가시 비활성 -->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="sample-play-wrap">
+                                    <div class="tab-nav-wrap">
+                                        <ul>
+                                            <li>표지</li> <!-- 활성화 on -->
+                                            <li class="on">패턴소개</li>
+                                            <li>패턴연습</li>
+                                            <li>패턴대화</li>
+                                        </ul>
+                                    </div>
+                                    <div class="play-area">
+                                        <!-- 활성화 on -->
+                                        <div class="play-item">
+                                            <img src="../../img/img_create_pattern_play_1.png" alt="">
+                                        </div>
+                                        <div class="play-item on">
+                                            <img src="../../img/img_create_pattern_play_2.png" alt="">
+                                        </div>
+                                        <div class="play-item">
+                                            <img src="../../img/img_create_pattern_play_3.gif" alt="">
+                                        </div>
+                                        <div class="play-item">
+                                            <img src="../../img/img_create_pattern_play_4.gif" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer-wrap">
+                                <div class="modal-footer-btn-wrap">
+                                    <button class="btn-deepBlue btn-next">다음</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/simplebar.js"></script>
+    <script src="../../js/common.js"></script>
+    <script>
+        
+        // 전체 대화 만들기 > 예문 추가
+        $.each($('.step-total-converstaion .add-answer-wrap.type-example'), function(index, item){
+            var _parents = $(this);
+            var _limitCount = $(this).find('.input-wrap').length;
+            var _btnAddAnswer;
+
+            if(_limitCount == 2){
+                $(this).find('.btn-add-answer').addClass('disable')
+            }
+
+            // 답변추가 버튼
+            $(this).find($('.btn-add-answer')).on('click', function(){
+                _btnAddAnswer = $(this);
+                var html = ''
+
+                html += '<div class="add-input-group-wrap">'
+                html += '<div class="group-title type-example">응용' + (_limitCount+1) + '</div>'
+                html += '<div class="input-wrap">'
+                html += '<textarea oninput="textareaAutoHeight(this)" placeholder="응용 예문(영어)을 입력해 주세요."></textarea>'
+                html += '</div>'
+                html += '<div class="input-wrap">'
+                html += '<textarea oninput="textareaAutoHeight(this)" placeholder="응용 예문(한국어)을 입력해 주세요."></textarea>'
+                html += '</div>'
+                html += '<button class="btn-delete-question"></button>'                
+                html += '</div>'
+
+                var input_html = html;
+                
+                if(_limitCount < 5){
+                    _btnAddAnswer.parent().before(input_html)
+                    _limitCount++;
+
+                    // 새로 만들어진 인풋에 포커스 이동
+                    $(this).parents('.add-answer-wrap.type-example').find('.add-input-group-wrap').last().find('.input-wrap').first().find('textarea').focus();
+                }
+                
+                if (_limitCount == 5){
+                    $(this).addClass('disable')
+                }
+            })
+
+            // 삭제 버튼
+            $(this).on('click', '.btn-delete-question', function(){
+                $(this).parent().remove();
+                _limitCount--;    
+                if (_limitCount < 5){
+                    _parents.find('.btn-add-answer').removeClass('disable')
+                }
+
+                $('.add-answer-wrap.type-example .add-input-group-wrap').each(function(i){
+                    $(this).find('.group-title').html('응용'+ (i+1));
+                })
+            })
+            
+        })
+
+        // 전체 대화 만들기 > 대화 추가
+        $.each($('.step-total-converstaion .add-answer-wrap.type-conv'), function(index, item){
+            var _parents = $(this);
+            var _limitCount = $(this).find('.input-wrap').length;
+            var _btnAddAnswer;
+
+            if(_limitCount == 2){
+                $(this).find('.btn-add-answer').addClass('disable')
+            }
+
+            // 답변추가 버튼
+            $(this).find($('.btn-add-answer')).on('click', function(){
+                _btnAddAnswer = $(this);
+                var html = ''
+
+                html += '<div class="add-input-group-wrap2">'
+                html += '<div class="add-input-group-wrap">'
+                html += '<div class="group-title type-question">질문' + (_limitCount+2) + '</div>'
+                html += '<div class="input-wrap">'
+                html += '<textarea oninput="textareaAutoHeight(this)" placeholder="질문(영어)을 입력해 주세요."></textarea>'
+                html += '</div>'
+                html += '<div class="input-wrap">'
+                html += '<textarea oninput="textareaAutoHeight(this)" placeholder="질문(한국어)을 입력해 주세요."></textarea>'
+                html += '</div>'
+                html += '</div>'
+                html += '<div class="add-input-group-wrap">'
+                html += '<div class="group-title type-answer">답변' + (_limitCount+2) + '</div>'
+                html += '<div class="input-wrap">'
+                html += '<textarea oninput="textareaAutoHeight(this)" placeholder="모범 답변(영어)을 입력해 주세요."></textarea>'
+                html += '</div>'
+                html += '<div class="input-wrap">'
+                html += '<textarea oninput="textareaAutoHeight(this)" placeholder="모범 답변 해석(한국어)을 입력해 주세요."></textarea>'
+                html += '</div>'
+                html += '</div>'
+                html += '<button class="btn-delete-question"></button>'
+                html += '</div>'
+
+                var input_html = html;
+                
+                if(_limitCount < 4){
+                    _btnAddAnswer.parent().before(input_html)
+                    _limitCount++;
+
+                    // 새로 만들어진 인풋에 포커스 이동
+                    $(this).parents('.add-answer-wrap.type-conv').find('.add-input-group-wrap2').last().find('.add-input-group-wrap').first().find('.input-wrap').first().find('textarea').focus();
+                }
+                
+                if (_limitCount == 4){
+                    $(this).addClass('disable')
+                }
+            })
+
+            // 삭제 버튼
+            $(this).on('click', '.btn-delete-question', function(){
+                $(this).parent().remove();
+                _limitCount--;    
+                if (_limitCount < 4){
+                    _parents.find('.btn-add-answer').removeClass('disable')
+                }
+
+                $('.add-answer-wrap.type-conv .add-input-group-wrap2').each(function(i){
+                    $(this).find('.group-title.type-question').html('질문'+ (i+2));
+                    $(this).find('.group-title.type-answer').html('답변'+ (i+2));
+                })
+            })
+            
+        })
+        
+
+        // 대화 토글
+        $('.box-toggle-display button').on('click', function(){
+            $(this).parent().toggleClass('on');
+        })
+        
+    </script>
+</body>
+</html>

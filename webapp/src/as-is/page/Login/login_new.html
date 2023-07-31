@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+    <div id="root">
+        <div class="container">
+                    
+            <div id="contents">
+                <div class="contents-inner">
+                    <!-- 로그인 리뉴얼 | login-new 추가 -->
+                    <div id="login" class="login-new">
+                        <div class="login-cont-wrap">
+                            <div class="slide-cont-wrap">
+                                <div class="bg-circle"></div>
+                                <div class="slide-wrap">
+                                    <!-- 로그인 리뉴얼 | main-slide 클래스추가 -->
+                                    <div class="swiper-container main-slide">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="img-wrap">
+                                                    <img src="../../img/img_login_slide1.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="img-wrap">
+                                                    <img src="../../img/img_login_slide2.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="img-wrap">
+                                                    <img src="../../img/img_login_slide3.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                    <a class="btn-detail" href="#">알아보기</a>
+                                </div>
+                                <div class="count-wrap">
+                                    <dl class="type-class">
+                                        <dt>전체 클래스</dt>
+                                        <dd class="countUp" data-count="8445"></dd>
+                                    </dl>
+                                    <div class="bar"></div>
+                                    <dl class="type-contents">
+                                        <dt>전체 콘텐츠</dt>
+                                        <dd class="countUp" data-count="20811"></dd>
+                                    </dl>
+                                    <div class="bar"></div>
+                                    <dl class="type-students">
+                                        <dt>총 학생수</dt>
+                                        <dd class="countUp" data-count="59741"></dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="login-box-wrap">
+                                <div class="inner">
+                                    <!-- 로그인 리뉴얼 | 이미지 변경 -->
+                                    <img src="../../img/studio_login_logo_new.png" alt="">
+                                    <!-- 로그인 리뉴얼 | p태그 문구 추가 -->
+                                    <p class="login-box-text">쉽게 만들고 즐겁게 학습하는 영어 말하기</p>
+                                    <form action="">
+                                        <div class="input-underline-wrap">
+                                            <!-- 로그인 리뉴얼 | placeholder 변경 -->
+                                            <input type="text" placeholder="아이디 (ex : sclass2021)">
+                                            <p class="warning ">아이디를 입력해 주세요.</p>
+                                        </div>
+                                        <div class="input-underline-wrap">
+                                            <input type="password" placeholder="비밀번호">
+                                            <p class="warning ">비밀번호를 입력해 주세요.</p>
+                                        </div>
+                                        <div class="checkBox-wrap">
+                                            <input type="checkbox" id="login-remember-id">
+                                            <label for="login-remember-id">아이디 기억하기</label>
+                                        </div>
+                                        <p class="warning ">등록되지 않은 계정이거나 아이디 또는 비밀번호를 잘못 입력하였습니다.<br>확인 후 다시 시도해 주세요.</p> <!-- show 추가시 보임 -->
+                                        <button class="btn-deepBlue btn-login">로그인</button>
+                                    </form>
+                                    <!-- 로그인 리뉴얼 | a태그 문구 변경 -->
+                                    <div class="link-wrap">
+                                        <a href="#">이메일로 가입</a>
+                                        <div class="bar"></div>
+                                        <a href="#">휴대폰 번호로 가입</a>
+                                        <div class="bar"></div>
+                                        <a href="#">비밀번호 찾기</a>
+                                    </div>
+                                    <!-- 로그인 리뉴얼 | 인증 이메일 재발송 버튼 제거 -->
+                                    <!-- 로그인 리뉴얼 | 간편하게 가입 / 로그인 추가 -->
+                                    <div class="simply-join-wrap">
+                                        <div class="simply-join-title"><span>간편하게 가입 / 로그인</span></div>
+                                        <div class="simply-join-list">
+                                            <a href="#" class="btn kakao">카카오톡</a>
+                                            <a href="#" class="btn naver">네이버</a>
+                                            <!-- <a href="#" class="btn google">구글</a> -->
+                                        </div>
+                                    </div>
+                                    <!-- 로그인 리뉴얼 | AppDownloadBanner 제거 -->
+
+                                    <!-- 로그인 리뉴얼 | 이용약관 개인정보처리방침 카피라이트 제거 및 이용약관 strong태그 감쌈 -->
+                                    <div class="copyright-wrap">
+                                        <div class="copyright-link-wrap">
+                                            <a href="#"><strong>이용약관</strong></a>
+                                            <div class="bar"></div>
+                                            <a href="#"><strong>개인정보처리방침</strong></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 로그인 리뉴얼 | 배너 변경 -->
+                            <div class="aside-banner-wrap">
+                                <div class="banner">
+                                    <img src="../../img/banner_first_class.png" alt="">
+                                    <a href="#" id="allManual" class="btn-area n1"></a>
+                                    <a href="#" id="showService" class="btn-area n2"></a>
+                                </div>
+                                <div class="banner youtube">
+                                    <!-- D : ?autoplay=1&mute=1  자동플레이 하려면 URL 뒤에 넣어주세요 -->
+                                    <iframe width="160" height="137" src="https://www.youtube.com/embed/md8yzYg7OSA?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  autoplay allowfullscreen></iframe>
+                                </div>
+                                
+                                <!-- 220822 | 배너 수정 및 추가 -->
+                                <div class="banner slide">
+                                    <div class="swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="img-wrap">
+                                                    <a href=""><img src="../../img/banner_slide_01.png" alt=""></a>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="img-wrap">
+                                                    <a href=""><img src="../../img/banner_slide_02.png" alt=""></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                </div>
+                                <!-- //220822 | 배너 수정 및 추가 -->
+                            </div>
+                            <!-- 로그인 리뉴얼 | 배너 변경 -->
+                        </div>
+                        <!-- 로그인 리뉴얼 | AppDownloadBanner 제거 -->
+
+                        <!-- 로그인 리뉴얼 | pc학습, 앱학습 하기 추가 -->
+                        <div class="learning-mode-wrap">
+                            <div class="learning-mode-item">
+                                <div class="title">PC 버전으로 학습하기</div>
+                                <button type="button" class="btn pc-download">PC 버전 다운로드<i></i></button>
+                            </div>
+                            <div class="learning-mode-item">
+                                <div class="title">앱으로 학습하기</div>
+                                <div class="qr-wrap">
+                                    <div class="qr-item android">
+                                        <img src="../../img/qr_android.png" alt="">
+                                    </div>
+                                    <div class="qr-item ios">
+                                        <img src="../../img/qr_ios.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="associate-wrap">
+                            <dl class="associate-wrap-p">
+                                <dt>제휴 출판사</dt>
+                                <dd>
+                                    <img src="../../img/associate_p_donga.png" alt="">
+                                    <img src="../../img/associate_p_neungyule.png" alt="">
+                                    <img src="../../img/associate_p_daekyo.png" alt="">
+                                    <img src="../../img/associate_p_visang.png" alt="">
+                                    <img src="../../img/associate_p_chenjae.png" alt="">
+                                    <img src="../../img/associate_p_ybm.png" alt="">
+                                    <img src="../../img/associate_p_miraen.png" alt="">
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>제휴 교육청</dt>
+                                <dd>
+                                    <img src="../../img/associate_e_seoul.png" alt="">
+                                    <img src="../../img/associate_e_busan.png" alt="">
+                                    <img src="../../img/associate_e_daegu.png" alt="">
+                                    <img src="../../img/associate_e_incheon.png" alt="">
+                                    <img src="../../img/associate_e_gyeonggi.png" alt="">
+                                    <img src="../../img/associate_e_jeollanamdo.png" alt="">
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+                    
+        </div>
+    </div>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/swiper-bundle.min.js"></script>
+    <script>
+        //로그인 리뉴얼 | 배너 스와이퍼
+        var swiperBanner = new Swiper('.banner.slide .swiper-container', {
+            speed: 500,
+            autoplay:false, 
+            slidesPerView: 1,
+            loop: false,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: '.banner.slide .swiper-pagination'
+            }
+        });
+        //로그인 리뉴얼 | main-slide 클래스 추가
+        var swiper = new Swiper('.swiper-container.main-slide', {
+            speed: 500,
+            autoplay:false, 
+            slidesPerView: 1,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: '.main-slide .swiper-pagination'
+            }
+        });
+
+        // 카운트
+        $('.countUp').each(function() {
+            var _this = $(this),
+                countData = _this.attr('data-count');
+
+            $({countText: _this.text()}).animate({
+                    countText: countData
+                },{
+                    duration: 1500,
+                    easing:'linear',
+                    step: function() {
+                        if(!isNaN(Math.floor(this.countText))){
+                            _this.text(addCommas(Math.floor(this.countText)));
+                        }                        
+                    },
+                    complete: function() {
+                        _this.text(addCommas(this.countText));
+                    }
+                }
+            );
+        });
+        // 카운트 콤마
+        function addCommas(number){
+            return number.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+        }
+    </script>
+</body>
+</html>

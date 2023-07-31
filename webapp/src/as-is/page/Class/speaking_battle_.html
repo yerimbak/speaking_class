@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="Class.css">
+    <link rel="stylesheet" href="../../css/simplebar.css">
+</head>
+<body>
+    <div id="root">
+        <div class="container">
+            <div id="header" class="tab-select"> <!-- 탭이 선택되면 tab-select 추가 (밑줄 사라짐)-->
+                <div class="header-inner">
+                    <div class="logo-wrap">
+                        <h1><a href="#"><img src="../../img/logo_studio.png" alt=""></a></h1>
+                    </div>
+                    <div class="header-tab-wrap">
+                        <div class="inner">
+                            <div class="tab on thema-purple"> <!-- thema-green, pink, orange, purple 로 색변경 / 활성화된건 on -->
+                                <div class="tab-inner">
+                                    <p>생활회화 A반 생활회화 A반</p>
+                                    <button class="btn-header-tab-close"></button>
+                                </div>
+                            </div>
+                            <div class="tab thema-orange">
+                                <div class="tab-inner">
+                                    <p>생활회화 A반 생활회화 A반</p>
+                                    <button class="btn-header-tab-close"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-wrap">
+                        <div class="profile-info-wrap">
+                            <div class="academy">현대영어사</div>
+                            <div class="bar"></div>
+                            <div class="user"><strong>김선생</strong> (선생님)</div> 
+                        </div>
+                        <div class="profile-menu-wrap">
+                            <button class="btn-profile-menu"></button>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contents" class="thema-purple"> <!-- thema-green, pink, orange, purple 로 색변경 -->
+                <div class="contents-inner">
+
+                    <div id="edit">
+                        <div class="class-info-title-wrap">
+                            <div class="title-wrap">
+                                <div class="top-wrap">
+                                    <div class="academy">현대영어사</div>
+                                    <div class="bar"></div>
+                                    <div class="className text-thema-color">생활회화 A반</div>
+                                    <button class="btn-edit"></button>
+                                </div>
+                                <div class="btm-wrap">
+                                    <div class="lang">학습 언어: 영어 - 가이드 언어: 한국어</div>
+                                    <div class="date">2020-09-01 ~ 2020-12-31</div>
+                                </div>
+                            </div>
+                            <div class="publishing-wrap">
+                                <p>최근 퍼블리싱  <strong>2020-11-11 15:30</strong></p>
+                                <button class="btn-navy">앱 퍼블리싱</button>
+                            </div>
+                        </div>
+                        <div class="edit-cont-wrap">
+                            <div class="edit-tab-wrap">
+                                <div class="btn-thema-color">수강생</div>
+                                <div class="btn-thema-color">학습 콘텐츠</div>
+                                <div class="btn-thema-color">리포트</div>
+                                <div class="btn-thema-color on">스피킹 배틀</div> <!-- on 추가시 해당 탭 활성화-->
+                            </div>
+                            <div class="edit-box-wrap">
+                                <div class="tab-cont-wrap">
+                                    <div class="tab-cont"></div>
+                                    <div class="tab-cont"></div>
+                                    <div class="tab-cont"></div>
+                                    <div class="tab-cont on"> <!-- on 추가시 해당 탭 활성화-->
+
+                                        <!-- 스피킹 배틀 -->
+                                        <div id="speakingBattle-contents">
+                                            <div class="left-box-wrap">
+                                                <div class="tab-nav-wrap">
+                                                    <ul>
+                                                        <li class="on">문제 등록</li> <!-- 활성화 on -->
+                                                        <li>결과 순위</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="tab-cont-wrap">
+                                                    <div class="tab-cont on"> <!-- on 추가시 해당 tab-cont 표시 -->
+                                                        <!-- 문제 등록 -->
+                                                        <div class="learning-regist-wrap">
+                                                            <div class="scroll-wrap" data-simplebar data-simplebar-auto-hide="false"> 
+                                                                <div class="top-section">
+                                                                    <div class="section-title">스피킹 배틀</div>
+                                                                    <div class="self-questions-wrap">
+                                                                        <strong>예시문제 직접 출제</strong>
+                                                                        <p>아래 등록한 출제 문제 30개로 게임이 진행됩니다.</p>
+                                                                        <button class="btn-self-questions"></button> <!-- off 클래스 추가시 off로 바뀜 -->
+                                                                    </div>
+                                                                </div>
+                                                                <div class="btm-section"> <!-- type-off 추가시 아래의 off-wrap만 표시 -->                                                                     
+                                                                    <div class="section-title">직접출제 문제 관리</div>
+                                                                    <div class="select-edit-type-wrap">
+                                                                        <ul>
+                                                                            <li class="on"> <!-- 선택된 항목은 on 클래스 추가-->
+                                                                                <dl>
+                                                                                    <dt>새로 등록 하기</dt>
+                                                                                    <dd>
+                                                                                        문제를 새로 등록 합니다. 등록된 문제가<br>있는 경우, 기존 문제는 삭제됩니다.
+                                                                                    </dd>
+                                                                                </dl>
+                                                                            </li> 
+                                                                            <li>
+                                                                                <dl>
+                                                                                    <dt>문제 전체 편집</dt>
+                                                                                    <dd>
+                                                                                        문제 전체를 편집합니다.<br>기존 힌트는 삭제됩니다.
+                                                                                    </dd>
+                                                                                </dl>
+                                                                            </li> 
+                                                                            <li>
+                                                                                <dl>
+                                                                                    <dt>힌트만 편집</dt>
+                                                                                    <dd>
+                                                                                        힌트만 편집합니다.
+                                                                                    </dd>
+                                                                                </dl>
+                                                                            </li> 
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="question-list-wrap">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <div class="num">1</div>
+                                                                                <div class="text-wrap">
+                                                                                    <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    <div class="btm-text">치즈버거 하나 주세요.</div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="num">2</div>
+                                                                                <div class="text-wrap">
+                                                                                    <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    <div class="btm-text">치즈버거 하나 주세요.</div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="num">3</div>
+                                                                                <div class="text-wrap">
+                                                                                    <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    <div class="btm-text">치즈버거 하나 주세요.</div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="num">4</div>
+                                                                                <div class="text-wrap">
+                                                                                    <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    <div class="btm-text">치즈버거 하나 주세요.</div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="num">5</div>
+                                                                                <div class="text-wrap">
+                                                                                    <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    <div class="btm-text">치즈버거 하나 주세요.</div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="num">6</div>
+                                                                                <div class="text-wrap">
+                                                                                    <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    <div class="btm-text">치즈버거 하나 주세요.</div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="num">7</div>
+                                                                                <div class="text-wrap">
+                                                                                    <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    <div class="btm-text">치즈버거 하나 주세요.</div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="num">8</div>
+                                                                                <div class="text-wrap">
+                                                                                    <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    <div class="btm-text">치즈버거 하나 주세요.</div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="num">9</div>
+                                                                                <div class="text-wrap">
+                                                                                    <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    <div class="btm-text">치즈버거 하나 주세요.</div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="num">10</div>
+                                                                                <div class="text-wrap">
+                                                                                    <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    <div class="btm-text">치즈버거 하나 주세요.</div>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="off-wrap">
+                                                                        <img src="../../img/icon_self_questions_off.png" alt="">
+                                                                        <p>
+                                                                            <strong>스피킹 배틀의 문제가 자동 출제 됩니다.</strong>
+                                                                            스피킹클래스에서 준비한 30개의 문장이 랜덤하게 출제됩니다.
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="box-btm-wrap">
+                                                                <button class="btn-deepBlue btn-next">다음</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-cont">
+                                                        <!-- 결과 순위 -->
+                                                        <div class="ranking-wrap">
+                                                            <div class="ranking-title-wrap">
+                                                                <div class="title">참가자 <strong>35명</strong></div>
+                                                                <div class="bar"></div>
+                                                                <div class="selectBox-wrap">
+                                                                    <div class="selectOption">랭킹순</div>
+                                                                    <div class="optionList">
+                                                                        <ul>
+                                                                            <li class="on">랭킹순</li> <!-- 선택중인건 on -->
+                                                                            <li>이름순</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="search-date-wrap">
+                                                                    <div class="title">조회기간 설정</div>
+                                                                    <div class="select-date-box-wrap">
+                                                                        <div class="select-date-box">
+                                                                            <input type="text" class="input-calendar" placeholder="시작 기간 선택" readonly="">
+                                                                        </div>
+                                                                        <p>~</p>
+                                                                        <div class="select-date-box">
+                                                                            <input type="text" class="input-calendar" placeholder="종료 기간 선택" readonly="">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="btn-wrap">
+                                                                        <button class="btn-thema-color btn-date-search">조회</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ranking-table-wrap">
+                                                                <div class="header-table">
+                                                                    <table>
+                                                                        <tr>
+                                                                            <th></th>
+                                                                            <th>수강생 (아이디)</th>
+                                                                            <th>참가일</th>
+                                                                            <th>구분</th>
+                                                                            <th>소요시간</th>
+                                                                            <th>맞은 개수</th>
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
+                                                                <div class="body-table">
+                                                                    <div class="scroll-wrap" data-simplebar data-simplebar-auto-hide="false"> 
+                                                                        <table>
+                                                                            <tr class="complete"> <!-- 학습 완료된 행은 complete 추가 -->
+                                                                                <td class="num">1</td>
+                                                                                <td class="student-info">
+                                                                                    <strong>김학 생</strong>
+                                                                                    <span>student01</span>
+                                                                                </td>
+                                                                                <td class="date">2020-10-22 15:20</td>
+                                                                                <td class="division">완료</td>
+                                                                                <td class="time">28:55</td>
+                                                                                <td class="correct-count">
+                                                                                    <strong>30</strong>/30
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr class="complete"> <!-- 학습 완료된 행은 complete 추가 -->
+                                                                                <td class="num">2</td>
+                                                                                <td class="student-info">
+                                                                                    <strong>김학 생</strong>
+                                                                                    <span>student01</span>
+                                                                                </td>
+                                                                                <td class="date">2020-10-22 15:20</td>
+                                                                                <td class="division">완료</td>
+                                                                                <td class="time">28:55</td>
+                                                                                <td class="correct-count">
+                                                                                    <strong>30</strong>/30
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr class="complete"> <!-- 학습 완료된 행은 complete 추가 -->
+                                                                                <td class="num">3</td>
+                                                                                <td class="student-info">
+                                                                                    <strong>김학 생</strong>
+                                                                                    <span>student01</span>
+                                                                                </td>
+                                                                                <td class="date">2020-10-22 15:20</td>
+                                                                                <td class="division">완료</td>
+                                                                                <td class="time">28:55</td>
+                                                                                <td class="correct-count">
+                                                                                    <strong>30</strong>/30
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr class="complete"> <!-- 학습 완료된 행은 complete 추가 -->
+                                                                                <td class="num">4</td>
+                                                                                <td class="student-info">
+                                                                                    <strong>김학 생</strong>
+                                                                                    <span>student01</span>
+                                                                                </td>
+                                                                                <td class="date">2020-10-22 15:20</td>
+                                                                                <td class="division">완료</td>
+                                                                                <td class="time">28:55</td>
+                                                                                <td class="correct-count">
+                                                                                    <strong>30</strong>/30
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr class="complete"> <!-- 학습 완료된 행은 complete 추가 -->
+                                                                                <td class="num">5</td>
+                                                                                <td class="student-info">
+                                                                                    <strong>김학 생</strong>
+                                                                                    <span>student01</span>
+                                                                                </td>
+                                                                                <td class="date">2020-10-22 15:20</td>
+                                                                                <td class="division">완료</td>
+                                                                                <td class="time">28:55</td>
+                                                                                <td class="correct-count">
+                                                                                    <strong>30</strong>/30
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr class="complete"> <!-- 학습 완료된 행은 complete 추가 -->
+                                                                                <td class="num">6</td>
+                                                                                <td class="student-info">
+                                                                                    <strong>김학 생</strong>
+                                                                                    <span>student01</span>
+                                                                                </td>
+                                                                                <td class="date">2020-10-22 15:20</td>
+                                                                                <td class="division">완료</td>
+                                                                                <td class="time">28:55</td>
+                                                                                <td class="correct-count">
+                                                                                    <strong>30</strong>/30
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="num">-</td>
+                                                                                <td class="student-info">
+                                                                                    <strong>김학 생</strong>
+                                                                                    <span>student01</span>
+                                                                                </td>
+                                                                                <td class="date">2020-10-22 15:20</td>
+                                                                                <td class="division">미완료</td>
+                                                                                <td class="time">-</td>
+                                                                                <td class="correct-count">
+                                                                                    -
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="num">-</td>
+                                                                                <td class="student-info">
+                                                                                    <strong>김학 생</strong>
+                                                                                    <span>student01</span>
+                                                                                </td>
+                                                                                <td class="date">2020-10-22 15:20</td>
+                                                                                <td class="division">미완료</td>
+                                                                                <td class="time">-</td>
+                                                                                <td class="correct-count">
+                                                                                    -
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="num">-</td>
+                                                                                <td class="student-info">
+                                                                                    <strong>김학 생</strong>
+                                                                                    <span>student01</span>
+                                                                                </td>
+                                                                                <td class="date">2020-10-22 15:20</td>
+                                                                                <td class="division">미완료</td>
+                                                                                <td class="time">-</td>
+                                                                                <td class="correct-count">
+                                                                                    -
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="num">-</td>
+                                                                                <td class="student-info">
+                                                                                    <strong>김학 생</strong>
+                                                                                    <span>student01</span>
+                                                                                </td>
+                                                                                <td class="date">2020-10-22 15:20</td>
+                                                                                <td class="division">미완료</td>
+                                                                                <td class="time">-</td>
+                                                                                <td class="correct-count">
+                                                                                    -
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="right-box-wrap">
+                                                <div class="gif-wrap">
+                                                    <img src="../../img/img_speakingBattle.gif" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="copyright-wrap">
+                            <div class="copyright-link-wrap">
+                                <a href="#">이용약관</a>
+                                <a href="#"><strong>개인정보처리방침</strong></a>
+                                <div class="bar"></div>
+                            </div>
+                            <p class="copyright">Copyright ©2020 LG CNS. All right reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/simplebar.js"></script>
+    <script src="../../js/common.js"></script>
+    <script>
+
+        // 문제등록, 결과순위 탭
+        $('#speakingBattle-contents .tab-nav-wrap ul li').on('click', function(){
+            var _index = $(this).index();
+
+            $(this).addClass('on').siblings().removeClass('on');
+            $('#speakingBattle-contents .left-box-wrap .tab-cont-wrap .tab-cont').eq(_index).addClass('on').siblings().removeClass('on');
+        })
+
+        // 예시문제 직접 출제
+        $('#speakingBattle-contents .btn-self-questions').on('click', function(){
+            $(this).toggleClass('off');
+
+            if($(this).hasClass('off')){
+                $('#speakingBattle-contents .btm-section').addClass('type-off');
+                $('#speakingBattle-contents .learning-regist-wrap .box-btm-wrap').hide();
+            }else {
+                $('#speakingBattle-contents .btm-section').removeClass('type-off');                
+                $('#speakingBattle-contents .learning-regist-wrap .box-btm-wrap').show();
+            }
+        })
+
+        //  직접출제 문제 관리
+        $('#speakingBattle-contents .select-edit-type-wrap ul li').on('click', function(){
+            $(this).addClass('on').siblings().removeClass('on');
+        })
+    </script>
+</body>
+</html>

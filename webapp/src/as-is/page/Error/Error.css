@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+#error {display:flex;position:absolute;top:0;left:0;width:100%;height:100%;min-height:608px;overflow:hidden;}
+#error .error-bg {position:absolute;background-size:100%;}
+#error .error-bg.bg1 {top:142px;left:0;width:506px;height:202px;background-image:url('../../img/bg_error_cloud.png');}
+#error .error-bg.bg2 {bottom:0;right:0;width:732px;height:472px;background-image:url('../../img/bg_error_people.png');}
+#error .text-wrap {position:relative;margin:auto;text-align:center;letter-spacing:-0.04em;z-index:2;}
+#error .text-wrap strong {display:block;color:#3F5062;font-size:24px;line-height:28px;}
+#error .text-wrap p {margin:16px 0 0 0;}
+#error .btn-wrap {margin:34px 0 0 0;font-size:0;}
+#error .btn-wrap button {margin:0 8px;width:auto;height:32px;padding:0 20px;border-radius:8px;font-size:14px;line-height:34px;}
+#error .btn-wrap .btn-prev {padding:0 12px;}
+#error .btn-wrap .btn-prev:before {content:'';display:inline-block;width:20px;height:20px;margin:-2px 4px 0 0;background:url('../../img/icon_btn_prev_arr.png');background-size:100%;vertical-align:middle;}

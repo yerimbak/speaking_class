@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="Class.css">
+    <link rel="stylesheet" href="../../css/simplebar.css">
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+</head>
+<body class="scroll-hidden"> <!-- 팝업 나왔을때 scroll-hidden 추가-->
+    <div id="root">
+        <div class="container">
+            <div id="header" class="tab-select"> <!-- 탭이 선택되면 tab-select 추가 (밑줄 사라짐)-->
+                <div class="header-inner">
+                    <div class="logo-wrap">
+                        <h1><a href="#"><img src="../../img/logo_studio.png" alt=""></a></h1>
+                    </div>
+                    <div class="header-tab-wrap">
+                        <div class="inner">
+                            <div class="tab on thema-purple"> <!-- thema-green, pink, orange, purple 로 색변경 / 활성화된건 on -->
+                                <div class="tab-inner">
+                                    <p>생활회화 A반 생활회화 A반</p>
+                                    <button class="btn-header-tab-close"></button>
+                                </div>
+                            </div>
+                            <div class="tab thema-orange">
+                                <div class="tab-inner">
+                                    <p>생활회화 A반 생활회화 A반</p>
+                                    <button class="btn-header-tab-close"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-wrap">
+                        <div class="profile-info-wrap">
+                            <div class="academy">현대영어사</div>
+                            <div class="bar"></div>
+                            <div class="user"><strong>김선생</strong> (선생님)</div> 
+                        </div>
+                        <div class="profile-menu-wrap">
+                            <button class="btn-profile-menu"></button>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contents" class="thema-purple"> <!-- thema-green, pink, orange, purple 로 색변경 -->
+                <div class="contents-inner">
+
+                    <div id="edit">
+                        <div class="class-info-title-wrap">
+                            <div class="title-wrap">
+                                <div class="top-wrap">
+                                    <div class="academy">현대영어사</div>
+                                    <div class="bar"></div>
+                                    <div class="className text-thema-color">생활회화 A반</div>
+                                    <button class="btn-edit"></button>
+                                </div>
+                                <div class="btm-wrap">
+                                    <div class="lang">학습 언어: 영어 - 가이드 언어: 한국어</div>
+                                    <div class="date">2020-09-01 ~ 2020-12-31</div>
+                                </div>
+                            </div>
+                            <div class="publishing-wrap">
+                                <p>최근 퍼블리싱  <strong>2020-11-11 15:30</strong></p>
+                                <button class="btn-navy">앱 퍼블리싱</button>
+                            </div>
+                        </div>
+                        <div class="edit-cont-wrap">
+                            <div class="edit-tab-wrap">
+                                <div class="btn-thema-color">수강생</div>
+                                <div class="btn-thema-color on">학습 콘텐츠</div>
+                                <div class="btn-thema-color">리포트</div>
+                            </div>
+                            <div class="edit-box-wrap">
+                                <div class="tab-cont-wrap">
+                                    <div class="tab-cont on">
+                                        
+                                    </div>
+                                    <div class="tab-cont">
+                                        
+                                    </div>
+                                    <div class="tab-cont"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="copyright-wrap">
+                            <div class="copyright-link-wrap">
+                                <a href="#">이용약관</a>
+                                <a href="#"><strong>개인정보처리방침</strong></a>
+                                <div class="bar"></div>
+                            </div>
+                            <p class="copyright">Copyright ©2020 LG CNS. All right reserved.</p>
+                        </div>
+                    </div>
+
+                    <!-- 팝업 -->
+                    <div class="modal-wrap"> 
+                        <div class="modal-create-conversation-learning type-conversation"> <!-- 대화학습 팝업에는 type-conversation 클래스 추가 -->
+                            <div class="modal-title-wrap">
+                                <div class="badge type1">대화</div>
+                                <strong>표지 편집하기</strong>
+                                <button class="btn-modal-title-close" tabindex="-1"></button>
+                            </div>
+                            <div class="modal-cont-wrap">
+                                <div class="create-step-wrap">
+                                    <div class="scroll-wrap" data-simplebar data-simplebar-auto-hide="false">
+
+                                        <!-- 표지 -->
+                                        <div class="step-wrap step-cover">
+                                            <p class="notice-text">학습을 시작하는 페이지입니다. 학습명과 이미지를 등록해 주세요.</p>
+                                            <div class="modal-input-wrap">
+                                                <div class="modal-subtitle">학습명 <span>*</span></div>
+                                                <div class="input-group-wrap">
+                                                    <div class="input-wrap">
+                                                        <textarea oninput="textareaAutoHeight(this)" placeholder="학습명(영어)을 입력해 주세요."></textarea>    
+                                                    </div>
+                                                    <div class="input-wrap">
+                                                        <textarea oninput="textareaAutoHeight(this)" placeholder="학습명 해석(한국어)을 입력해 주세요."></textarea>  
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-input-wrap type-image">
+                                                <form id="imageFileUploadForm">
+                                                    <div class="modal-subtitle">표지 이미지 <span>*</span></div>
+                                                    <div class="input-group-wrap">
+                                                        <div class="half-box-wrap">
+                                                            <div class="input-wrap">
+                                                                <input class="img-fileName" type="text" placeholder="표지 이미지를 등록해 주세요." readonly value="Default.jpg">
+                                                                <input id="contentsFile" type="file" name="contentsFile"/>
+                                                            </div>
+                                                            <button type="button" for="contentsFile" class="btn-line-dNavy">파일 찾기</button>
+                                                        </div>
+                                                    </div>
+                                                </form>  
+                                            </div>
+                                            <div class="modal-input-wrap type-audio">
+                                                <form id="audioFileUploadForm">
+                                                    <div class="modal-subtitle">오디오 파일</div>
+                                                    <div class="input-group-wrap">
+                                                        <div class="half-box-wrap">
+                                                            <div class="input-wrap">
+                                                                <input class="img-fileName" type="text" placeholder="학습 오디오 파일을 등록해 주세요." readonly value="">
+                                                                <input id="contentsAudioFile" type="file" name="contentsAudioFile"/>
+                                                                <button class="btn-delete-inputFile"></button>
+                                                            </div>
+                                                            <button type="button" for="contentsAudioFile" class="btn-line-dNavy">파일 찾기</button>
+                                                        </div>
+                                                    </div>
+                                                </form>  
+                                            </div>
+                                            <div class="modal-input-wrap">
+                                                <div class="modal-subtitle notice">학습 목표 <span>*</span></div>
+                                                <div class="input-group-wrap">
+                                                    <div class="input-wrap">
+                                                        <textarea oninput="textareaAutoHeight(this)" placeholder="학습 목표(한국어)를 입력해 주세요. (AI음성으로 제공됩니다.)"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="sample-play-wrap type-conversation">
+                                    <!-- 
+                                        대화학습 만들기 : type-conversation
+                                        대화학습 만들기 : type-shortSentence
+                                     -->
+                                    <div class="tab-nav-wrap">
+                                        <ul>
+                                            <li class="on">표지</li> <!-- 활성화 on -->
+                                            <li>대화시도</li>
+                                            <li>대화연습</li>
+                                            <li>롤플레이</li>
+                                        </ul>
+                                    </div>
+                                    <div class="play-area">
+                                        <!-- 활성화 on -->
+                                        <div class="play-item on">
+                                            <img src="../../img/img_create_conv_play_1.png" alt="">
+                                        </div>
+                                        <div class="play-item">
+                                            <img src="../../img/img_create_conv_play_2.png" alt="">
+                                        </div>
+                                        <div class="play-item">
+                                            <img src="../../img/img_create_conv_play_3_1.gif" alt="">
+                                            <!--
+                                                img_create_conv_play_3_1 : 끊어말하기
+                                                img_create_conv_play_3_2 : 2번 끊어 말하기
+                                                img_create_conv_play_3_3 : 빈칸 채우기
+                                                img_create_conv_play_3_4 : 연습 생략
+                                            -->
+                                        </div>
+                                        <div class="play-item">
+                                            <img src="../../img/img_create_conv_play_4.gif" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer-wrap">
+                                <div class="modal-footer-btn-wrap">
+                                    <button class="btn-navy btn-save">저장</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/simplebar.js"></script>
+    <script src="../../js/common.js"></script>
+    <script>
+        
+    </script>
+</body>
+</html>

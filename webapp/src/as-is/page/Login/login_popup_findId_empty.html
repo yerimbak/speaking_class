@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/simplebar.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+    <div id="root">
+        <div class="container">
+                    
+            <div id="contents">
+                <div class="contents-inner">
+
+                    <div id="login">
+                        <div class="slide-cont-wrap">
+                            <div class="bg-circle"></div> 
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="img-wrap">
+                                            <img src="../../img/img_login_slide1.png" alt="">
+                                        </div>
+                                        <div class="text-wrap">
+                                            <div class="title">영어 스피킹 교육,<br>어떻게 하고 계세요?</div>
+                                            <p>SClass Studio에서 오늘 가르친 영어 표현을<br>실감나는 스피킹 학습으로 마스터 시켜 보세요.</p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="img-wrap">
+                                            <img src="../../img/img_login_slide2.png" alt="">
+                                        </div>
+                                        <div class="text-wrap">
+                                            <div class="title">AI 스피킹 학습을 만드는<br>가장 쉬운 방법</div>
+                                            <p>학습할 대화만 알려주세요.<br>SClass Studio가 멋진 스피킹 학습으로 즉시 제작해 드립니다.</p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="img-wrap">
+                                            <img src="../../img/img_login_slide3.png" alt="">
+                                        </div>
+                                        <div class="text-wrap">
+                                            <div class="title">학습 제작부터<br>수강생 관리까지 한 번에</div>
+                                            <p>수강생들의 진도, 학습 성취도까지<br>SClass Studio에서 관리해 드립니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <a class="btn-detail" href="#">알아보기</a>
+                        </div>
+                        <div class="login-box-wrap">
+                            <div class="inner">
+                                <img src="../../img/img_login_logo.png" alt="">
+                                <form action="">
+                                    <div class="input-underline-wrap">
+                                        <input type="text" placeholder="아이디">
+                                        <p class="warning ">아이디를 입력해 주세요.</p>
+                                    </div>
+                                    <div class="input-underline-wrap">
+                                        <input type="password" placeholder="비밀번호">
+                                        <p class="warning ">비밀번호를 입력해 주세요.</p>
+                                    </div>
+                                    <div class="checkBox-wrap">
+                                        <input type="checkbox" id="login-remember-id">
+                                        <label for="login-remember-id">아이디 기억하기</label>
+                                    </div>
+                                    <p class="warning ">등록되지 않은 계정이거나 아이디 또는 비밀번호를 잘못 입력하였습니다.<br>확인 후 다시 시도해 주세요.</p> <!-- show 추가시 보임 -->
+                                    <button class="btn-deepBlue btn-login">로그인</button>
+                                </form>
+                                <div class="link-wrap">
+                                    <a href="#">회원가입</a>
+                                    <div class="bar"></div>
+                                    <a href="#">비밀번호 찾기</a>
+                                    <div class="bar"></div>
+                                    <a href="#">ID 찾기</a>
+                                </div>
+                                <div class="AppDownloadBanner"><a href="#"></a></div>
+                                <div class="copyright-wrap">
+                            <div class="copyright-link-wrap">
+                                <a href="#">이용약관</a>
+                                <a href="#"><strong>개인정보처리방침</strong></a>
+                                <div class="bar"></div>
+                            </div>
+                            <p class="copyright">Copyright ©2020 LG CNS. All right reserved.</p>
+                        </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                    <!-- 팝업 -->
+                    <div class="modal-wrap">
+                        <div class="modal-findId"> 
+                            <div class="modal-title-wrap">
+                                <strong>ID 찾기</strong>
+                                <button class="btn-modal-title-close"></button>
+                            </div>
+                            <div class="modal-cont-wrap">
+                                <div class="top-wrap">
+                                    <div class="modal-input-wrap">
+                                        <input type="text" placeholder="이름을 입력해 주세요.">
+                                    </div>
+                                    <button class="btn-line btn-find">찾기</button>
+                                </div>
+                                <div class="btm-wrap">
+                                    <div class="left-wrap">
+                                        <div class="category-wrap">
+                                            <ul>
+                                                <li class="on"> <!-- 선택된건 on 클래스 추가 -->
+                                                    <dl>
+                                                        <dt>선생님</dt>
+                                                        <dd><b>0</b>명</dd>
+                                                    </dl>
+                                                </li>
+                                                <li>
+                                                    <dl>
+                                                        <dt>학생</dt>
+                                                        <dd><b>0</b>명</dd>
+                                                    </dl>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="right-wrap">
+                                        <div class="search-result-wrap">
+                                            <div class="contents-empty-img-wrap">
+                                                <img src="../../img/img_search_empty.png" alt="">
+                                                <p><strong>검색 결과가 없습니다.</strong></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer-wrap">
+                                <div class="modal-footer-btn-wrap">
+                                    <button class="btn-line">취소</button>
+                                    <button class="btn-navy">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+                    
+        </div>
+    </div>
+    <script src="../../js/simplebar.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/swiper-bundle.min.js"></script>
+    <script>
+
+        simpleBarInit();
+
+        // simplebar 스크롤 생성
+        function simpleBarInit() {
+            $('.scroll-wrap').each(function(index, el) {
+                SimpleBar.removeObserver();
+                new SimpleBar(el, {autoHide: false});
+            });
+        }
+
+        // 팝업 호출시 simplebar 스크롤 최상단으로
+        function simpleBarScrollTop() {
+            $('.scroll-wrap .simplebar-content-wrapper').scrollTop(0);
+        }
+
+        var swiper = new Swiper('.swiper-container', {
+            speed: 500,
+            slidesPerView: 1,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: '.swiper-pagination'
+            }
+        });
+    </script>
+</body>
+</html>

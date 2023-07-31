@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="Class.css">
+    <link rel="stylesheet" href="../../css/simplebar.css">
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/datepicker-ko.js"></script>
+</head>
+<body>
+    <div id="root">
+        <div class="container">
+            <div id="header" class="tab-select"> <!-- 탭이 선택되면 tab-select 추가 (밑줄 사라짐)-->
+                <div class="header-inner">
+                    <div class="logo-wrap">
+                        <h1><a href="#"><img src="../../img/logo_studio.png" alt=""></a></h1>
+                    </div>
+                    <div class="header-tab-wrap">
+                        <div class="inner">
+                            <div class="tab on thema-purple"> <!-- thema-green, pink, orange, purple 로 색변경 / 활성화된건 on -->
+                                <div class="tab-inner">
+                                    <p>생활회화 A반 생활회화 A반</p>
+                                    <button class="btn-header-tab-close"></button>
+                                </div>
+                            </div>
+                            <div class="tab thema-orange">
+                                <div class="tab-inner">
+                                    <p>생활회화 A반 생활회화 A반</p>
+                                    <button class="btn-header-tab-close"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-wrap">
+                        <div class="profile-info-wrap">
+                            <div class="academy">현대영어사</div>
+                            <div class="bar"></div>
+                            <div class="user"><strong>김선생</strong> (선생님)</div> 
+                        </div>
+                        <div class="profile-menu-wrap">
+                            <button class="btn-profile-menu"></button>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contents" class="thema-purple"> <!-- thema-green, pink, orange, purple 로 색변경 -->
+                <div class="contents-inner">
+
+                    <div id="edit">
+                        <div class="class-info-title-wrap">
+                            <div class="title-wrap">
+                                <div class="top-wrap">
+                                    <div class="academy">현대영어사</div>
+                                    <div class="bar"></div>
+                                    <div class="className text-thema-color">생활회화 A반</div>
+                                    <button class="btn-edit"></button>
+                                </div>
+                                <div class="btm-wrap">
+                                    <div class="lang">학습 언어: 영어 - 가이드 언어: 한국어</div>
+                                    <div class="date">2020-09-01 ~ 2020-12-31</div>
+                                </div>
+                            </div>
+                            <div class="publishing-wrap">
+                                <p>최근 퍼블리싱  <strong>2020-11-11 15:30</strong></p>
+                                <button class="btn-navy">앱 퍼블리싱 </button>
+                            </div>
+                        </div>
+                        <div class="edit-cont-wrap">
+                            <div class="edit-tab-wrap">
+                                <div class="btn-thema-color">수강생</div>
+                                <div class="btn-thema-color">학습 콘텐츠</div>
+                                <div class="btn-thema-color on">리포트</div>
+                            </div>
+                            <div class="edit-box-wrap">
+                                <div class="tab-cont-wrap">
+                                    <div class="tab-cont">
+                                        <!-- 수강생-->
+                                    </div>
+                                    <div class="tab-cont">
+                                        <!-- 학습 콘텐츠 -->
+                                    </div>
+                                    <div class="tab-cont on">
+                                        <!-- 리포트 -->
+                                        <div id="edit-report-contents">
+                                            <div class="edit-report-wrap box-wrap">
+                                                <div class="report-download-wrap">
+                                                    <button class="btn-thema-color btn-download">리포트 다운로드</button>
+                                                </div>
+                                                <div class="class-report-wrap">
+                                                    <div class="report-title">클래스 리포트</div>
+                                                    <div class="report-box-wrap">
+                                                        <div class="class-info-wrap">
+                                                            <dl>
+                                                                <dt>수강생</dt>
+                                                                <dd>18명</dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt>레슨</dt>
+                                                                <dd>5개</dd>
+                                                            </dl>
+                                                            <dl>
+                                                                <dt>학습</dt>
+                                                                <dd>30개</dd>
+                                                            </dl>
+                                                        </div>
+                                                        <div class="bar"></div>
+                                                        <div class="average-info-wrap">
+                                                            <div class="progress-rate-wrap">
+                                                                <span>평균 진도율</span>
+                                                                <div class="progress-wrap">
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar bg-thema-color" style="width:50%"></div> <!-- inline 스타일 width로 제어-->
+                                                                    </div>
+                                                                    <strong>88%</strong>
+                                                                </div>
+                                                            </div>
+                                                            <div class="grade-wrap">
+                                                                <span>평균 별점</span>
+                                                                <div class="grade">3.8개</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="student-report-wrap">
+                                                    <div class="report-title">수강생 리포트</div>
+                                                    <div class="report-box-group-wrap">
+                                                        <div class="student-list-wrap report-box-wrap">
+                                                            <div class="list-title">수강생 <strong>18</strong>명</div>
+                                                            <div class="list-wrap">
+                                                                <div class="scroll-wrap" data-simplebar data-simplebar-auto-hide="false">
+                                                                    <ul>
+                                                                        <li class="on"> <!-- 선택된건 on 클래스 -->
+                                                                            <div class="top-text">최학생</div>
+                                                                            <div class="btm-text">student001@aitutor.comd</div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="top-text">최학생</div>
+                                                                            <div class="btm-text">student001@aitutor.comd</div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="top-text">최학생</div>
+                                                                            <div class="btm-text">student001@aitutor.comd</div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="top-text">최학생</div>
+                                                                            <div class="btm-text">student001@aitutor.comd</div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="top-text">최학생</div>
+                                                                            <div class="btm-text">student001@aitutor.comd</div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="top-text">최학생</div>
+                                                                            <div class="btm-text">student001@aitutor.comd</div>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="top-text">최학생</div>
+                                                                            <div class="btm-text">student001@aitutor.comd</div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="student-detail-wrap report-box-wrap">
+                                                            <div class="scroll-wrap" data-simplebar data-simplebar-auto-hide="false">
+                                                                <div class="detail-title-wrap">
+                                                                    <div class="name">최학생</div>
+                                                                    <div class="average-info-wrap">
+                                                                        <div class="progress-rate-wrap">
+                                                                            <span>진도율</span>
+                                                                            <div class="progress-wrap">
+                                                                                <div class="progress">
+                                                                                    <div class="progress-bar bg-thema-color" style="width:50%"></div> <!-- inline 스타일 width로 제어-->
+                                                                                </div>
+                                                                                <strong>50%</strong>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="grade-wrap">
+                                                                            <span>평균 별점</span>
+                                                                            <div class="grade">3.8개</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="checkBox-wrap">
+                                                                        <input type="checkbox" id="sort-complete">
+                                                                        <label for="sort-complete">완료한 학습만 보기</label>
+                                                                    </div>
+                                                                    <div class="sort-select-wrap">
+                                                                        <div class="selectBox-wrap">
+                                                                            <select>
+                                                                                <option value="" selected="">전체 별점</option>
+                                                                                <option value="">1점 이상</option>
+                                                                                <option value="">2점 이상</option>
+                                                                                <option value="">3점 이상</option>
+                                                                                <option value="">4점 이상</option>
+                                                                                <option value="">5점</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="select-date-box-wrap">
+                                                                            <div class="select-date-box-wrap">
+                                                                                <div class="select-date-box">
+                                                                                    <input type="text" class="input-calendar" placeholder="시작 기간 선택" readonly>
+                                                                                </div>
+                                                                                <div class="bar">-</div>
+                                                                                <div class="select-date-box">
+                                                                                    <input type="text" class="input-calendar" placeholder="종료 기간 선택" readonly>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <button class="btn-navy btn-sort-search disable">조회</button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="report-list-wrap">
+                                                                    <div class="list-item-wrap">
+                                                                        <div class="list-item">
+                                                                            <div class="accordion-wrap">
+                                                                                <div class="accordion-title">1주차 스피킹 과제</div>
+                                                                                <div class="accordion-cont-wrap">
+                                                                                    <table>
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th colspan="2">학습</th>
+                                                                                                <th>완료여부</th>
+                                                                                                <th>학습일시</th>
+                                                                                                <th>별점</th>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <th>1</th>
+                                                                                                <td>
+                                                                                                    <div class="top-text"><div class="tag tag-short">단문</div><p>I Want a Cheeseburger.</p></div>
+                                                                                                    <div class="btm-text">치즈버거 하나 주세요.</div>
+                                                                                                </td>
+                                                                                                <td><span>미완료</span></td>
+                                                                                                <td>-</td>
+                                                                                                <td>-</td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <th>2</th>
+                                                                                                <td>
+                                                                                                    <div class="top-text"><div class="tag tag-conv">대화</div><p>I Want a Cheeseburger.</p></div>
+                                                                                                    <div class="btm-text">치즈버거 하나 주세요.</div>
+                                                                                                </td>
+                                                                                                <td><span class="complete">완료</span></td>
+                                                                                                <td>2020-10-22<br>15:20</td>
+                                                                                                <td>
+                                                                                                    <div class="grade">3점</div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="list-item">
+                                                                            <div class="accordion-wrap">
+                                                                                <div class="accordion-title">2주차 스피킹 과제</div>
+                                                                                <div class="accordion-cont-wrap">
+                                                                                    <table>
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th colspan="2">학습</th>
+                                                                                                <th>완료여부</th>
+                                                                                                <th>학습일시</th>
+                                                                                                <th>별점</th>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr class="empty"> <!-- 결과 없는 경우 -->
+                                                                                                <td colspan="5">조회 결과가 없습니다.</td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>  
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="copyright-wrap">
+                            <div class="copyright-link-wrap">
+                                <a href="#">이용약관</a>
+                                <a href="#"><strong>개인정보처리방침</strong></a>
+                                <div class="bar"></div>
+                            </div>
+                            <p class="copyright">Copyright ©2020 LG CNS. All right reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/simplebar.js"></script>
+    <script src="../../js/common.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>

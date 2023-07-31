@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/studio.css" />
+    <link rel="stylesheet" href="Join.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div class="container">
+        <div id="contents">
+          <div class="contents-inner bg-gray">
+            <div class="join-wrap dormant">
+              <div class="user-info-box-wrap">
+                <div class="logo">
+                  <img
+                    src="../../img/img_login_logo_new.png"
+                    alt="스피킹클래스 AI Tutor Platform"
+                  />
+                  <p class="logo-text">
+                    쉽게 만들고 재미있게 학습하는 영어 말하기
+                  </p>
+                </div>
+                <div class="box-wrap type-pswd">
+                    <div class="title">
+                        본인 인증을 통해 휴면 상태를 해제 할 수 있습니다.
+                    </div>
+                    <div class="input-box-wrap">
+                        <div class="input-underline-wrap">
+                            <div class="input-title">휴대폰 번호 <span>*</span></div>
+                            <div class="input-wrap">
+                                <input type="text" placeholder="휴대폰 번호 (-제외)">
+                                <button class="btn-line">인증</button>
+                            </div>
+                            <p class="warningX show">인증번호가 발송되었습니다. (1/5)</p>
+                        </div>
+                        <div class="input-underline-wrap">
+                            <div class="input-title">인증 번호 <span>*</span></div>
+                            <div class="input-wrap">
+                                <input type="text" placeholder="" disabled>
+                                <button class="btn-line disable" disabled>확인</button>
+                            </div>
+                        </div>
+                        <div class="input-underline-wrap">
+                            <div class="input-title">인증 번호 <span>*</span></div>
+                            <div class="input-wrap">
+                                <input type="text" placeholder="">
+                                <span class="certify-number">03:00</span>
+                                <button type="button" class="btn-line">확인</button>
+                            </div>
+                            <p class="confirm chk show">인증되었어요.</p>
+                            <!-- checkbox icon 사용시 chk 클래스명 추가 --></p>
+                        </div>
+                        <p class="mark-text">개인정보 유효기간 설정</p>
+                        <p>
+                            개인정보를 파기 또는 분리 보관해야 하는 서비스 미이용 기간을 설정할 수 있습니다.<br>선택한 기간 동안 서비스를 이용하지 않는 경우 휴면 계정으로 전환됩니다.
+                        </p>
+                    </div>
+                    <div class="gray-box">
+                        <ul class="radio-list">
+                            <li>
+                                <input type="radio" name="rdo-list" id="rdo-list-01" checked >
+                                <label for="rdo-list-01">1년</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="rdo-list" id="rdo-list-02">
+                                <label for="rdo-list-02">3년</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="rdo-list" id="rdo-list-03">
+                                <label for="rdo-list-03">5년</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="rdo-list" id="rdo-list-04">
+                                <label for="rdo-list-04">탈퇴 시까지</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-wrap type-bottom">
+                        <button class="btn-mint"><span>휴면 상태 해제하기</span></button>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../../js/common.js"></script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="Home.css">
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+</head>
+<body class="scroll-hidden">
+    <div id="root">
+        <div class="container">
+            <div id="header" class="tab-select">
+                <div class="header-inner">
+                    <div class="logo-wrap">
+                        <h1><a href="#"><img src="../../img/logo_studio.png" alt=""></a></h1>
+                    </div>
+                    <div class="header-tab-wrap">
+                        <div class="inner"></div>
+                    </div>
+                    <div class="profile-wrap">
+                        <div class="profile-info-wrap">
+                            <div class="academy">현대영어사</div>
+                            <div class="bar"></div>
+                            <div class="user"><strong>김선생</strong> (선생님)</div> 
+                        </div>
+                        <div class="profile-menu-wrap">
+                            <button class="btn-profile-menu"></button>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contents">
+                <div class="contents-inner">
+
+                    <div class="modal-wrap">
+                        <div class="modal-profile">
+                            <div class="modal-title-wrap">
+                                <strong>내 정보 <span>(선생님)</span></strong>
+                                <button class="btn-modal-title-close"></button>
+                            </div>
+                            <div class="modal-cont-wrap">
+                                <div class="user-info-box-wrap">
+                                    <div class="box-wrap">
+                                        <div class="inner">
+                                            <form action="">
+                                                <div class="input-cont-wrap">
+                                                    <div class="input-underline-wrap">
+                                                        <div class="input-title">아이디 <span>*</span></div>
+                                                        <input type="text" placeholder="아이디" value="teacher001" readonly>
+                                                    </div>                         
+                                                    <div class="input-underline-wrap">
+                                                        <div class="input-title">이름 <span>*</span></div>
+                                                        <input type="text" placeholder="10자 이하의 한글" value="김원장">
+                                                    </div>
+                                                    <div class="input-underline-wrap">
+                                                        <div class="input-title">이메일 <span>*</span></div>
+                                                        <div class="email-warning">
+                                                            <p>'비밀번호 찾기' 용도로 사용할 이메일을 입력해주세요.<br><span>공직자 통합메일이나 교육청 이메일로 가입 하시면, 공교육 학습 콘텐츠를 이용하실 수 있습니다.</span></p>
+                                                        </div>
+                                                        <div class="input-wrap">
+                                                            <input type="text" placeholder="이메일" value="teacher001@aitutor.com">
+                                                            <button class="btn-line">중복확인</button>
+                                                        </div>
+                                                    </div>                                                   
+                                                    <div class="academyName-wrap">
+                                                        <div class="input-underline-wrap">
+                                                            <div class="input-title">학교명 <span>*</span></div>
+                                                        </div>
+                                                        <div class="search-dropdown-wrap">
+                                                            <div class="search-input-wrap">
+                                                                <input class="search-input" type="text" placeholder="학교를 선택해 주세요." readonly>
+                                                                <div class="popup-search">
+                                                                    <div class="popup-cont-wrap">
+                                                                        <div class="search-input-wrap">
+                                                                            <input type="text">
+                                                                        </div>
+                                                                        <div class="search-result-list-wrap">
+                                                                            <div class="empty-wrap">
+                                                                                <p>학교를 검색해 주세요</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="popup-footer-wrap">
+                                                                        <button type="button">직접 입력</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="self-input-wrap">
+                                                                <div class="input-underline-wrap">
+                                                                    <input class="selct-input" type="text" placeholder="학교명을 입력해 주세요.">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="btn-secession">회원 탈퇴</button>
+                                                <button class="btn-deepBlue btn-confirm disable">정보 수정</button> <!-- disable 추가시 비활성화 -->                                                
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+    <script src="../../js/common.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="Community.css">
+    <link rel="stylesheet" href="../../css/simplebar.css">
+</head>
+<body>
+    <div id="root">
+        <div class="container">
+            <div id="header">
+                <div class="header-inner">
+                    <div class="logo-wrap">
+                        <h1><a href="#"><img src="../../img/logo_studio.png" alt=""></a></h1>
+                    </div>
+                    <div class="header-title-wrap">
+                        <div class="title-wrap">
+                            <div class="title">커뮤니티</div>
+                        </div>
+                    </div>
+                    <div class="profile-wrap">
+                        <div class="profile-info-wrap">
+                            <div class="academy">현대영어사</div>
+                            <div class="bar"></div>
+                            <div class="user"><strong>김선생</strong> (선생님)</div> 
+                        </div>
+                        <div class="profile-menu-wrap">
+                            <button class="btn-profile-menu"></button>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contents" class="theme-community"> <!-- theme-community 로 색변경 -->
+                <div class="contents-inner">
+
+                    <div id="Community">
+
+                    </div>
+
+                    <div class="modal-wrap">
+                        <div class="modal-community-write">
+                            <div class="modal-title-wrap">
+                                <strong>수정하기</strong>
+                                <button class="btn-modal-title-close"></button>
+                            </div>
+                            <div class="modal-cont-wrap">
+                                <div class="radio-cont-wrap">
+                                    <div class="radio-wrap">
+                                        <input type="radio" name="community-write-type-radio" id="radio-1" checked="" disabled>
+                                        <label for="radio-1">문의</label>
+                                    </div>
+                                    <div class="radio-wrap">
+                                        <input type="radio" name="community-write-type-radio" id="radio-2" disabled>
+                                        <label for="radio-2">개선 제안</label>
+                                    </div>
+                                </div>
+                                <div class="selectBox-wrap">
+                                    <select disabled> 
+                                        <option value="" disabled="" hidden="">카테고리 선택(필수)</option>
+                                        <option value="" selected>카테고리1</option>
+                                        <option value="">카테고리2</option>
+                                    </select>
+                                </div>
+                                <div class="modal-input-wrap">
+                                    <input type="text" placeholder="제목을 입력해주세요." value="서비스에 대한 문의 드립니다. AI기능이 어떤 건지 잘 모르겠어요.">
+                                </div>
+                                <div class="modal-input-wrap">
+                                    <textarea placeholder="질문 내용을 입력해주세요.">서비스에 대한 문의 드립니다. AI기능이 어떤 건지 잘 모르겠어요.</textarea>
+                                </div>
+                                <div class="checkBox-wrap">
+                                    <input type="checkbox" id="write-type-secret">
+                                    <label for="write-type-secret">비밀글로 작성하기</label>
+                                </div>
+                            </div>
+                            <div class="modal-footer-wrap">
+                                <div class="modal-footer-btn-wrap">
+                                    <button class="btn-deepBlue">완료</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/simplebar.js"></script>
+    <script src="../../js/common.js"></script>
+    <script> 
+
+    </script>
+</body>
+</html>

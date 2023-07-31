@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="Class.css">
+    <link rel="stylesheet" href="../../css/simplebar.css">
+</head>
+<body>
+    <div id="root">
+        <div class="container">
+            <div id="header" class="new">
+                <div class="bg-gnb">
+                    <div class="slide-wrap">
+                        <div class="swiper-container gnb-slide">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="img-wrap">
+                                        <img src="../../img/gnb_banner_01.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="img-wrap">
+                                        <img src="../../img/gnb_banner_02.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-inner">
+                    <div class="logo-wrap">
+                        <h1><a href="#"><img src="../../img/logo_studio.png" alt=""></a></h1>
+                    </div>
+                    <div class="gnb">
+                        <div class="gnb-menu">
+                            <a href="#none" class="gnb-main-list">학생 등록하기</a>
+                            <div class="gnb-sub-wrap">
+                                <strong>학생 등록하기</strong>
+                                <ul>
+                                    <li><a href="#none" class="gnb-sub-list on">학생 간편 가입 생성</a></li> <!-- 활성화 gnb 서브 메뉴 클래스 on -->
+                                    <li><a href="#none" class="gnb-sub-list">학생 계정 자동 생성</a></li>
+                                    <li><a href="#none" class="gnb-sub-list">엑셀로 업로드 하기</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="gnb-menu">
+                            <a href="#none" class="gnb-main-list">클래스 만들기</a>
+                            <div class="gnb-sub-wrap">
+                                <strong>클래스 만들기</strong>
+                                <ul>
+                                    <li><a href="#none" class="gnb-sub-list">교과서 클래스 만들기</a></li>
+                                    <li><a href="#none" class="gnb-sub-list">창작 클래스 만들기</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="gnb-menu">
+                            <a href="#none" class="gnb-main-list">커뮤니티</a>
+                            <div class="gnb-sub-wrap">
+                                <strong>커뮤니티</strong>
+                                <ul>
+                                    <li><a href="#none" class="gnb-sub-list">FAQ</a></li>
+                                    <li><a href="#none" class="gnb-sub-list">문의</a></li>
+                                    <li><a href="#none" class="gnb-sub-list">개선 제안</a></li>
+                                    <li><a href="#none" class="gnb-sub-list">이벤트</a></li>
+                                    <li><a href="#none" class="gnb-sub-list">활용 사례</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="gnb-menu">
+                            <a href="#none" class="gnb-main-list solo">이벤트</a>
+                        </div>
+                        <div class="gnb-menu">
+                            <a href="#none" class="gnb-main-list solo">매뉴얼 다운로드</a>
+                        </div>
+                    </div>
+                    <div class="profile-wrap">
+                        <div class="profile-info-wrap">
+                            <div class="academy">자양중학교</div>
+                            <div class="bar"></div>
+                            <div class="user"><strong>김선생</strong> (선생님)</div> 
+                        </div>
+                        <div class="profile-info-wrap">
+                            <button type="button" class="btn mypage">마이페이지</button>
+                            <div class="bar"></div>
+                            <button type="button" class="btn login">로그아웃</button> 
+                        </div>
+                    </div>
+                </div>
+                <div class="mypage-wrap">
+                    <div class="inner">
+                        <a href="#none" class="btn">내정보</a>
+                        <a href="#none" class="btn">비밀번호 변경</a>
+                        <a href="#none" class="btn">내 글 모아보기</a>
+                    </div>
+                </div>
+            </div>
+            <div id="contents" class="thema-pink">  <!-- thema-green, pink, orange, purple 로 색변경 -->
+                <div class="contents-inner">
+
+                    <div id="edit" class="new">
+                        <div class="class-info-title-wrap">
+                            <div class="title-wrap">
+                                <div class="top-wrap">
+                                    <div class="academy">엘지중학교</div>
+                                    <div class="bar"></div>
+                                    <div class="className text-thema-color">중1</div>
+                                    <button class="btn-edit"></button>
+                                </div>
+                                <div class="btm-wrap">
+                                    <div class="type-badge">교과서</div>
+                                    <div><strong>상시 운영</strong></div>
+                                    <div class="lang">학습 언어: 영어 - 가이드 언어: 한국어</div>
+                                    <div class="pass-standard">통과기준(낮음)</div>
+                                </div>
+                                <button class="btn-invite-code btn-thema-color">초대코드 <strong>123456</strong></button> <!-- new : 위치 변경 -->
+                            </div>
+                            <div class="selectBox-wrap">
+                                <select id="selectClass">  <!-- D : 개발 DB에서 정보 불러온후  하단 '다른클래스 셀렉트박스 점점점 처리' 이 이벤트를 실행 시켜 주세요 -->
+                                    <option value="">다른 클래스로 이동하기</option>
+                                    <option value="">다른 클래스로 이동하기다른 클래스 클래스 클래스 클래스</option>
+                                    <option value="">class 2</option>
+                                    <option value="">class 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="edit-cont-wrap">
+                            <div class="edit-tab-wrap">
+                                <div class="btn-thema-color on">학습 콘텐츠</div>
+                                <div class="btn-thema-color">수강생</div>
+                                <div class="btn-thema-color">리포트</div>
+                                <div class="btn-thema-color">배틀</div>
+                                <div class="btn-thema-color">클래스 설정</div>
+                            </div>
+                            <div class="edit-box-wrap">
+                                <div class="tab-cont-wrap">
+                                    <div class="tab-cont">
+                                        <!-- 수강생 -->
+                                    </div>
+                                    <div class="tab-cont on">
+                                        <!-- 학습 콘텐츠 -->
+                                        <div id="edit-learning-contents">
+                                            <div class="edit-lesson-wrap box-wrap">
+                                                <div class="tab-title-wrap">
+                                                    레슨 <strong>5개</strong> / 학습 <strong>30개</strong>
+                                                    <button class="btn-thema-color">레슨/학습 전체 리스트 초기화</button>
+                                                </div>
+                                                <div class="lesson-list-cont-wrap">
+                                                    <div class="scroll-wrap" data-simplebar data-simplebar-auto-hide="false">
+                                                        <div class="lesson-resist-wrap">
+                                                            <input type="text" placeholder="레슨명">
+                                                            <button class="btn-thema-color">+ 레슨 등록</button>
+                                                        </div>
+                                                        <div class="lesson-list-wrap">                                                    
+                                                            <div class="lesson-box-wrap">  <!-- 드래그 하는 커서가 들어오면 drag-enter 클래스 추가 -->
+                                                                <div class="accordion-wrap"> <!-- close 추가시 닫힘 -->
+                                                                    <div class="accordion-title">
+                                                                        <div class="inner">
+                                                                            <input type="text" value="Lesson 1" readonly>
+                                                                            <button class="btn-edit-title-confirm">수정</button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="accordion-edit-btn-wrap">
+                                                                        <button class="btn-edit-title"></button>
+                                                                        <button class="btn-sort-up disable"></button>
+                                                                        <button class="btn-sort-down"></button>
+                                                                        <button class="btn-accordion-delete"></button>
+                                                                    </div>
+                                                                    <div class="accordion-cont-wrap">
+                                                                        <div class="lesson-empty"> <!-- 빈칸 안내문 안보여질땐 empty-hide 추가 -->
+                                                                            <div class="item-empty">
+                                                                                <p><span>레슨에 포함할 학습을 오른쪽 목록에서 마우스로 끌어 담아보세요.</span></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="lesson-box-wrap">
+                                                                <div class="accordion-wrap">
+                                                                    <div class="accordion-title">
+                                                                        <div class="inner">
+                                                                            <input type="text" value="Lesson 2" readonly>
+                                                                            <button class="btn-edit-title-confirm">수정</button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="accordion-edit-btn-wrap">
+                                                                        <button class="btn-edit-title"></button>
+                                                                        <button class="btn-sort-up"></button>
+                                                                        <button class="btn-sort-down"></button>
+                                                                        <button class="btn-accordion-delete"></button>
+                                                                    </div>
+                                                                    <div class="accordion-cont-wrap">
+                                                                        <div class="lesson-empty">
+                                                                            <div class="item-empty">
+                                                                                <p><span>레슨에 포함할 학습을 오른쪽 목록에서 마우스로 끌어 담아보세요.</span></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="lesson-box-wrap">
+                                                                <div class="accordion-wrap">
+                                                                    <div class="accordion-title">
+                                                                        <div class="inner">
+                                                                            <input type="text" value="Lesson 3" readonly>
+                                                                            <button class="btn-edit-title-confirm">수정</button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="accordion-edit-btn-wrap">
+                                                                        <button class="btn-edit-title"></button>
+                                                                        <button class="btn-sort-up"></button>
+                                                                        <button class="btn-sort-down"></button>
+                                                                        <button class="btn-accordion-delete disable"></button>
+                                                                    </div>
+                                                                    <div class="accordion-cont-wrap">
+                                                                        <div class="lesson-empty">
+                                                                            <div class="item-empty">
+                                                                                <p><span>레슨에 포함할 학습을 오른쪽 목록에서 마우스로 끌어 담아보세요.</span></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="common-edit-data-list-wrap box-wrap">
+                                                <div class="top-title-wrap">
+                                                    <strong>교과서 라이브러리</strong>
+                                                </div>
+                                                <div class="data-list-wrap">
+                                                    <div class="data-title-wrap ">
+                                                        <div class="inner">
+                                                            <div class="search-wrap">
+                                                                <div class="search show">
+                                                                    <button class="btn-search"></button>
+                                                                    <input type="text" placeholder="이름, 이메일 등 학생 정보를 입력해주세요.">
+                                                                    <button class="btn-search-close"></button>
+                                                                    <button class="btn-line btn-search-inquire">조회</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="data-title-wrap last">
+                                                        <div class="inner">
+                                                            <div class="fillter-wrap">
+                                                                <div class="selectBox-wrap">
+                                                                    <div class="selectOption">최신순</div>
+                                                                    <div class="optionList">
+                                                                        <ul>
+                                                                            <li class="on">최신순</li> <!-- 선택중인건 on -->
+                                                                            <li>이름순</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="bar"></div>
+                                                                <div class="selectBox-wrap">
+                                                                    <div class="selectOption">전체 수강생</div>
+                                                                    <div class="optionList">
+                                                                        <ul>
+                                                                            <li class="on">전체 수강생</li> <!-- 선택중인건 on -->
+                                                                            <li>클래스 미등록 학습</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="checkBox-wrap label-right">
+                                                                <input type="checkbox" id="data-list-checkAll">
+                                                                <label for="data-list-checkAll">전체 선택</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="search-history-wrap"> <!-- show 추가시 보임 -->
+                                                            <div class="search-history-item"><span>신사동 초등학교 신사동 초등학교 신사동 초등학교 신사동 초등학교</span><button class="btn-delete-search-history"></button></div>
+                                                            <div class="search-history-item"><span>신사동 초등학교</span><button class="btn-delete-search-history"></button></div>
+                                                            <div class="search-history-item"><span>신사동</span><button class="btn-delete-search-history"></button></div>
+                                                            <div class="search-history-item"><span>신사동 초</span><button class="btn-delete-search-history"></button></div>
+                                                            <div class="search-history-item"><span>신사동 초등학교</span><button class="btn-delete-search-history"></button></div>
+                                                            <div class="search-history-item"><span>3학년</span><button class="btn-delete-search-history"></button></div>
+                                                            <div class="search-history-item"><span>2학년 영어</span><button class="btn-delete-search-history"></button></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="data-list">
+                                                        <div class="scroll-wrap" data-simplebar data-simplebar-auto-hide="false">
+                                                            <div class="drag-item-wrap">
+                                                                <div class="drag-item">
+																	<input type="checkbox" id="data-list-check-1">
+																	<label for="data-list-check-1">
+																		<div class="data-info-card "> 
+                                                                            <div class="drag-flag-wrap">
+                                                                                <p class="flag flag-content">교과서</p>
+                                                                                <p class="flag flag-level">중</p>
+                                                                                <p class="flag flag-readonly">읽기 전용</p>
+                                                                                <p class="flag flag-type">대화</p>
+                                                                                <!-- 콘텐츠 flag-content, 난이도 flag-level, 읽기전용 flag-readonly, 콘텐츠타입 flag-type -->
+                                                                            </div>
+																			<div class="text-wrap">
+                                                                                <div class="library-btn_wrap">
+                                                                                    <button type="button" class="btn-card-script"></button>
+                                                                                    <button type="button" class="btn-card-edit"></button>
+                                                                                </div>
+                                                                                <div class="text-area">
+                                                                                    
+                                                                                    <div class="all-text-wrap">
+                                                                                        <div class="top-text-wrap">
+                                                                                            <p>I Want a Cheeseburger.1</p>
+                                                                                        </div>
+                                                                                        <div class="btm-text-wrap">
+                                                                                            <p>치즈버거 하나 주세요.</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+																			</div>
+																		</div>
+																	</label>
+                                                                </div>
+                                                                <div class="drag-item">
+																	<input type="checkbox" id="data-list-check-2">
+																	<label for="data-list-check-2">
+                                                                        <!-- 220927 수정 cardType변경 -->
+																		<div class="data-info-card">
+                                                                            <div class="drag-flag-wrap">
+                                                                                <p class="flag flag-content">스토어</p>
+                                                                                <p class="flag flag-level">상</p>
+                                                                                <p class="flag flag-readonly">읽기 전용</p>
+                                                                                <p class="flag flag-type">패턴</p>
+                                                                                <!-- 콘텐츠 flag-content, 난이도 flag-level, 읽기전용 flag-readonly, 콘텐츠타입 flag-type -->
+                                                                            </div>
+																			<div class="text-wrap">
+                                                                                <div class="library-btn_wrap">
+                                                                                    <button type="button" class="btn-card-script"></button>
+                                                                                    <button type="button" class="btn-card-edit"></button>
+                                                                                </div>
+                                                                                <div class="text-area">
+                                                                                    
+                                                                                    <div class="all-text-wrap">
+                                                                                        <div class="top-text-wrap">
+                                                                                            <p>I Want a Cheeseburger.1</p>
+                                                                                        </div>
+                                                                                        <div class="btm-text-wrap">
+                                                                                            <p>치즈버거 두개 주세요.</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+																			</div>
+																		</div>
+                                                                        <!-- //220927 수정 -->
+																	</label>
+                                                                </div>
+                                                                <div class="drag-item">
+																	<input type="checkbox" id="data-list-check-3">
+																	<label for="data-list-check-3">
+                                                                        <!-- 220927 수정 cardType변경 -->
+																		<div class="data-info-card cardType-contents "> <!-- 대기중은 wait-badge 추가 -->
+                                                                             <div class="drag-flag-wrap">
+                                                                                <p class="flag flag-content">내 콘텐츠</p>
+                                                                                <p class="flag flag-level">하</p>
+                                                                                <p class="flag flag-readonly">읽기 전용</p>
+                                                                                <p class="flag flag-type">대화</p>
+                                                                                <!-- 콘텐츠 flag-content, 난이도 flag-level, 읽기전용 flag-readonly, 콘텐츠타입 flag-type -->
+                                                                            </div>
+																			<div class="text-wrap">
+                                                                                <div class="library-btn_wrap">
+                                                                                    <button type="button" class="btn-card-script"></button>
+                                                                                </div>
+                                                                                <div class="text-area">
+                                                                                    
+                                                                                    <div class="all-text-wrap">
+                                                                                        <div class="top-text-wrap">
+                                                                                            <p>I Want a Cheeseburger.1</p>
+                                                                                        </div>
+                                                                                        <div class="btm-text-wrap">
+                                                                                            <p>치즈버거 하나 주세요.</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+																			</div>
+																		</div>
+                                                                        <!-- //220927 수정 -->
+																	</label>
+                                                                </div>
+                                                                <div class="drag-item">
+																	<input type="checkbox" id="data-list-check-4">
+																	<label for="data-list-check-4">
+                                                                        <!-- 220927 수정 cardType변경 -->
+																		<div class="data-info-card"> <!-- 스토어는 store-badge 추가 -->
+                                                                            <div class="drag-flag-wrap">
+                                                                                <p class="flag flag-content">스토어</p>
+                                                                                <p class="flag flag-level">상</p>
+                                                                                <p class="flag flag-readonly">읽기 전용</p>
+                                                                                <p class="flag flag-type">대화</p>
+                                                                                <!-- 콘텐츠 flag-content, 난이도 flag-level, 읽기전용 flag-readonly, 콘텐츠타입 flag-type -->
+                                                                            </div>
+                                                                            <div class="text-wrap">
+                                                                                <div class="library-btn_wrap create">
+                                                                                    <button type="button" class="btn-card-script"></button>
+                                                                                    <button type="button" class="btn-card-edit"></button>
+                                                                                </div>
+                                                                                <div class="text-area">
+                                                                                    
+                                                                                    <div class="all-text-wrap">
+                                                                                        <div class="top-text-wrap">
+                                                                                            <p>I Want a Cheeseburger.1</p>
+                                                                                        </div>
+                                                                                        <div class="btm-text-wrap">
+                                                                                            <p>치즈버거 하나 주세요.</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- //220927 수정 -->
+																	</label>
+                                                                </div>
+                                                                <div class="drag-item">
+																	<input type="checkbox" id="data-list-check-5">
+																	<label for="data-list-check-5">
+                                                                        <!-- 220927 수정 cardType변경 -->
+																		<div class="data-info-card cardType-contents">
+                                                                            <div class="drag-flag-wrap">
+                                                                                <p class="flag flag-content">스토어</p>
+                                                                                <p class="flag flag-level">상</p>
+                                                                                <p class="flag flag-readonly">읽기 전용</p>
+                                                                                <p class="flag flag-type">대화</p>
+                                                                                <!-- 콘텐츠 flag-content, 난이도 flag-level, 읽기전용 flag-readonly, 콘텐츠타입 flag-type -->
+                                                                            </div>
+																			<div class="text-wrap">
+                                                                                <div class="library-btn_wrap name">
+                                                                                    <button type="button" class="btn-card-script"></button>
+                                                                                    <button type="button" class="btn-card-edit"></button>
+                                                                                </div>
+                                                                                <div class="text-area">                                                           
+                                                                                    <div class="all-text-wra">                                                                              
+                                                                                        <div class="top-text-wrap">
+                                                                                            <p>I Want a Cheeseburger.1</p>
+                                                                                        </div>
+                                                                                        <div class="btm-text-wrap">
+                                                                                            <p>치즈버거 하나 주세요.</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+																			</div>
+																		</div>
+                                                                        <!-- //220927 수정 -->
+																	</label>
+                                                                </div>
+                                                                <div class="drag-item">
+																	<input type="checkbox" id="data-list-check-6">
+																	<label for="data-list-check-6">
+                                                                        <!-- 220927 수정 cardType변경 -->
+																		<div class="data-info-card cardType-contents">
+                                                                            <div class="drag-flag-wrap">
+                                                                                <p class="flag flag-content">스토어</p>
+                                                                                <p class="flag flag-level">상</p>
+                                                                                <p class="flag flag-readonly">읽기 전용</p>
+                                                                                <p class="flag flag-type">대화</p>
+                                                                                <!-- 콘텐츠 flag-content, 난이도 flag-level, 읽기전용 flag-readonly, 콘텐츠타입 flag-type -->
+                                                                            </div>
+																			
+																			<div class="text-wrap">
+                                                                                <div class="library-btn_wrap readonly">
+                                                                                    <button type="button" class="btn-card-script"></button>
+                                                                                    <button type="button" class="btn-card-edit"></button>
+                                                                                </div>
+                                                                                <div class="text-area">      
+                                                                                    <div class="all-text-wrap">                                                                             
+                                                                                        <div class="top-text-wrap">
+                                                                                            <p>I Want a Cheeseburger.1</p>
+                                                                                        </div>
+                                                                                        <div class="btm-text-wrap">
+                                                                                            <p>치즈버거 하나 주세요.</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+																			</div>
+																		</div>
+                                                                        <!-- //220927 수정 -->
+																	</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="drag-all-card-wrap show"> <!-- show 추가시 보임 -->
+                                                            <div class="drag-all-card">
+                                                                <div class="inner btn-thema-color">
+                                                                    <div class="drag-point"></div>
+                                                                    <div class="text-wrap">
+                                                                        <div class="top-text">
+                                                                            <div class="count-badge"><span>0</span>개</div> 학습 선택
+                                                                        </div>
+                                                                        <div class="btm-text">
+                                                                            좌측 레슨으로 이동하세요.
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="bg"></div>
+                                                            </div>
+                                                        </div>                                                        
+                                                        <div class="context-menu-wrap">
+                                                            <button>클래스 등록</button>
+                                                            <button>삭제</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="data-pagination-wrap">
+                                                        <button class="btn-page-prev disable"></button> <!-- 비활성화는 disable 추가 -->
+                                                        <ul>
+                                                            <li class="on">1</li> <!-- 현재 페이지는 on 추가-->
+                                                            <li>2</li> 
+                                                            <li>3</li>
+                                                            <li>4</li>
+                                                            <li>5</li>
+                                                        </ul>
+                                                        <button class="btn-page-next"></button>
+                                                    </div>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+                                    <div class="tab-cont">
+                                        <!-- 리포트 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="copyright-wrap">
+                            <div class="copyright-link-wrap">
+                                <a href="#">이용약관</a>
+                                <a href="#"><strong>개인정보처리방침</strong></a>
+                                <div class="bar"></div>
+                            </div>
+                            <p class="copyright">Copyright ©2020 LG CNS. All right reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/simplebar.js"></script>
+    <script src="../../js/swiper-bundle.min.js"></script>
+    <script src="../../js/common.js"></script>
+    <script>
+        // draggable 과 sortable을 이어줄 data값 2020-12-03 수정
+        var dragData = 0;
+
+        $( "#edit-learning-contents .lesson-list-wrap .accordion-cont-wrap").sortable({
+            placeholder:"drag-enter-bg", // 드래그 들어왔을때 영역 표시
+            handle: ".btn-card-handle",
+            over:function(){
+                // 드래그해서 안에 들어왔을 때
+
+                // 테두리 표시를 위한 drag-enter
+                $(this).parents('.lesson-box-wrap').addClass('drag-enter');                
+
+                // 빈칸 안내문구 잠시 안보이기
+                $(this).find('.lesson-empty').addClass('hide');
+            },            
+            out:function(){
+                // 드래그했다 나갔을 때
+
+                // 테두리 제거
+                $(this).parents('.lesson-box-wrap').removeClass('drag-enter');
+
+                // 빈칸 안내문구 다시 보이기
+                $(this).find('.lesson-empty').removeClass('hide');
+            },
+            update:function(event, ui){
+
+                // 다중 선택된 드래그 구분
+                if(ui.item.hasClass('drag-all-card')){
+                    alert('다중선택 드래그')
+                }
+
+                // 내용 바뀌었을때
+                var text_top = ui.item.find('.top-text-wrap').html();
+                var text_btm = ui.item.find('.btm-text-wrap').html();
+                var item_badge = ui.item.find('.badge').html(); //배지
+                var item_class = ui.item.find('.class').html(); //상중하
+                var item_tag = ui.item.find('.tag').html(); //대화,패턴 태그
+                var item_flagcontent = ui.item.find('.flag-content').html(); // 플래그 0901 추가
+                var item_flaglevel = ui.item.find('.flag-level').html(); // 플래그 0901 추가
+                var item_flagreadonly = ui.item.find('.flag-readonly').html(); // 플래그 0901 추가
+                var item_flagtype = ui.item.find('.flag-type').html(); // 플래그 0901 추가
+
+                // 드래그 된 내용 재생성
+                var html = '';
+                html += '<div class="num"></div>'
+                html += '<div class="data-info-card cardType-contents">'
+                html += '<div class="text-wrap">'
+                
+                // 레슨명 표시됐을때
+                if(ui.item.find('.lessonInfo').length > 0){
+                    var lessonInfo = ui.item.find('.lessonInfo').html();
+                    html += '<div class="lessonInfo">'+ lessonInfo + '</div>'
+                }
+                html += '<div class="card-btn-wrap">'
+                html += '<div class="btn-card-handle"></div>'
+                html += '<div class="btn-card-script"></div>'
+                html += '<div class="btn-card-edit"></div>'
+                html += '<button class="btn-card-delete"></button>'
+                                
+                //배지 변경 0510
+                if(ui.item.find('.badge').hasClass('name-badge')) {
+                    html += '<div class="badge name-badge">' + item_badge + '</div>'
+                }else if(ui.item.find('.badge').hasClass('share-badge')) {
+                    html += '<div class="badge share-badge">' + item_badge + '</div>'
+                }else if(ui.item.find('.badge').hasClass('readonly-badge')) {
+                    html += '<div class="badge readonly-badge">' + item_badge + '</div>'
+                }else if(ui.item.find('.badge').hasClass('create-badge')) {
+                    html += '<div class="badge create-badge">' + item_badge + '</div>'
+                }else{
+                    html += '<div class="badge">' + item_badge + '</div>'
+                }
+                
+                html += '</div>'
+
+                // // 학생이 만든 뱃지 표기시
+                // if(ui.item.find('.make-badge').length > 0){
+                //     var makeBadge = ui.item.find('.make-badge').html();
+                //     html += '<div class="make-badge">'+ makeBadge + '</div>'
+                // }
+
+                html += '<div class="text-wrap">'
+                // html += '<div class="top-info-wrap">'
+                // 플래그 0901 추가
+                html += '<div class="drag-flag-wrap">'
+                    
+                // 플래그 0901 추가
+                html += '<p class="flag flag-content">' + item_flagcontent + '</p>'
+                html += '<p class="flag flag-level">' + item_flaglevel + '</p>'
+                html += '<p class="flag flag-readonly">' + item_flagreadonly + '</p>'
+                html += '<p class="flag flag-type">' + item_flagtype + '</p>'
+                //html += '<div class="tag tag-conv">대화</div>'//대화,패턴 학습 라이브러리와 동일하게 맞춰야함
+                html += '</div>'
+                html += '<div class="all-text-wrap">'
+                html += '<div class="top-text-wrap">' + text_top + '</div>'
+                html += '<div class="btm-text-wrap">' + text_btm + '</div>'				
+                html += '<div class="date-btm">2020-10-22 15:20</div>'
+                html += '</div>'
+                html += '</div>'
+                ui.item.attr('class', 'lesson-item');
+                ui.item.html(html);// 레슨명 표시됐을때 0331 수정
+
+                // 빈칸 안내문구 안보이기
+                $(this).find('.lesson-empty').addClass('empty-hide');
+                
+                // index 
+                $(this).find('.lesson-item').each(function(i, box){
+                    $(box).find(".num").html(i + 1);
+                })
+
+                // 드래그 한것과 드래그 된것을 일치시켜주기 위한 data속성 (2021-06-22)
+                if(!ui.item.is('[data]')){
+                    ui.item.attr('data', dragData);
+                    dragData++;
+                }
+            },
+            receive: function (event, ui) { // 드래그 했던 대상 컨트롤 (2020-12-04)
+                // 드래그 했던 대상은 drag-complete 추가 (비활성화로 보이게)
+                ui.item.addClass('drag-complete');
+
+                // 드래그 한것과 드래그 된것을 일치시켜주기 위한 data속성
+                ui.item.attr('data', dragData);
+            }
+        }); 
+
+        // 우측 공통 데이터 리스트
+        $( ".common-edit-data-list-wrap .data-info-card").draggable({
+            cancel: ".temp-save-wrap, .drag-complete", // (2020-12-04)
+            connectToSortable: "#edit-learning-contents .lesson-list-wrap .accordion-cont-wrap",
+            helper: "clone",
+            appendTo: '#edit-learning-contents',
+            start:function(){
+                contextMenu.hide(); // 드래그 시작할때 contextMenu 나와있으면 숨김
+            },
+        });
+
+        // 우측 다중체크할때 나오는 데이터 박스 (2021-06-22)
+        $( ".common-edit-data-list-wrap .drag-all-card").draggable({
+            cancel: ".temp-save-wrap",
+            connectToSortable: "#edit-learning-contents .lesson-list-wrap .accordion-cont-wrap",
+            helper: "clone",
+            appendTo: '#edit-learning-contents',
+            start:function(){
+                contextMenu.hide(); // 드래그 시작할때 contextMenu 나와있으면 숨김
+            },
+        });
+
+
+        // 삭제버튼 (실제로는 팝업도 떠야합니다.)
+        $('.lesson-list-wrap').on('click', '.btn-card-delete', function(e){
+            var accordion_cont_wrap = $(this).parents('.accordion-cont-wrap');
+
+            $(this).parents('.lesson-item').remove();
+
+            // data일치하는 우측 리스트 활성화 (2020-12-04)
+            var dataNum = $(this).parents('.lesson-item').attr('data');
+            $('#edit-learning-contents .drag-item-wrap').find("[data=" + dataNum + "]").removeClass('drag-complete');
+
+            // index 
+            accordion_cont_wrap.find('.lesson-item').each(function(i, box){
+                $(box).find(".num").html(i + 1);
+            })
+
+            // 빈간 안내문구 표시
+            if(accordion_cont_wrap.find('.lesson-item').length == 0){
+                accordion_cont_wrap.find('.lesson-empty').removeClass('empty-hide')
+            }
+        })
+
+        // 아코디언 닫았을때 버그 수정 (스크롤 관련)
+        $('#edit-learning-contents .accordion-title').on('click', function(){
+            var scrollContainer = document.querySelector('.simplebar-content-wrapper'); 
+            var _scrollTop = scrollContainer.scrollTop;
+            
+            scrollContainer.scrollTop = _scrollTop - 1;
+            scrollContainer.scrollTop = _scrollTop;
+        })
+
+        // 레슨 타이틀 수정 
+        $('.accordion-wrap .btn-edit-title').on('click', function(){
+            var parents_accordion = $(this).parents('.accordion-wrap');
+            parents_accordion.addClass('edit-title');
+            parents_accordion.find('.accordion-title input').attr('readonly', false);
+        })
+        $('.accordion-wrap .btn-edit-title-confirm').on('click', function(e){
+            e.stopPropagation();
+            var parents_accordion = $(this).parents('.accordion-wrap');
+            parents_accordion.removeClass('edit-title');
+            parents_accordion.find('.accordion-title input').attr('readonly', true);
+        })
+
+        // 다른클래스 셀렉트박스 점점점 처리  220826 추가
+        $('#selectClass option').each(function(index){
+            var optionText = this.text;
+            
+            if (index != 0 && optionText.length > 17) {
+                var newOption = optionText.substring(0,17);
+                $(this).text(newOption + '...');
+            }
+        })
+    </script>
+</body>
+</html>

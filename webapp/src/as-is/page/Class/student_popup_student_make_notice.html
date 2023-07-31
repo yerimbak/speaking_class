@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="Class.css">
+    <link rel="stylesheet" href="../../css/simplebar.css">
+</head>
+<body class="scroll-hidden"> <!-- 팝업 나왔을때 scroll-hidden 추가-->
+    <div id="root">
+        <div class="container">
+            <div id="header" class="tab-select"> <!-- 탭이 선택되면 tab-select 추가 (밑줄 사라짐)-->
+                <div class="header-inner">
+                    <div class="logo-wrap">
+                        <h1><a href="#"><img src="../../img/logo_studio.png" alt=""></a></h1>
+                    </div>
+                    <div class="header-tab-wrap">
+                        <div class="inner">
+                            <div class="tab on thema-purple"> <!-- thema-green, pink, orange, purple 로 색변경 / 활성화된건 on -->
+                                <div class="tab-inner">
+                                    <p>생활회화 A반 생활회화 A반</p>
+                                    <button class="btn-header-tab-close"></button>
+                                </div>
+                            </div>
+                            <div class="tab thema-orange">
+                                <div class="tab-inner">
+                                    <p>생활회화 A반 생활회화 A반</p>
+                                    <button class="btn-header-tab-close"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-wrap">
+                        <div class="profile-info-wrap">
+                            <div class="academy">현대영어사</div>
+                            <div class="bar"></div>
+                            <div class="user"><strong>김선생</strong> (선생님)</div> 
+                        </div>
+                        <div class="profile-menu-wrap">
+                            <button class="btn-profile-menu"></button>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contents" class="thema-purple"> <!-- thema-green, pink, orange, purple 로 색변경 -->
+                <div class="contents-inner">
+
+                    <div id="edit">
+                        <div class="class-info-title-wrap">
+                            <div class="title-wrap">
+                                <div class="top-wrap">
+                                    <div class="academy">현대영어사</div>
+                                    <div class="bar"></div>
+                                    <div class="className text-thema-color">생활회화 A반</div>
+                                    <button class="btn-edit"></button>
+                                </div>
+                                <div class="btm-wrap">
+                                    <div class="lang">학습 언어: 영어 - 가이드 언어: 한국어</div>
+                                    <div class="date">2020-09-01 ~ 2020-12-31</div>
+                                </div>
+                            </div>
+                            <div class="publishing-wrap">
+                                <p>최근 퍼블리싱  <strong>2020-11-11 15:30</strong></p>
+                                <button class="btn-navy">앱 퍼블리싱 </button>
+                            </div>
+                        </div>
+                        <div class="edit-cont-wrap">
+                            <div class="edit-tab-wrap">
+                                <div class="btn-thema-color on">수강생</div>
+                                <div class="btn-thema-color">학습 콘텐츠</div>
+                                <div class="btn-thema-color">리포트</div>
+                            </div>
+                            <div class="edit-box-wrap">
+                                <div class="tab-cont-wrap">
+                                    <div class="tab-cont on">
+                                        
+                                    </div>
+                                    <div class="tab-cont">
+                                        
+                                    </div>
+                                    <div class="tab-cont"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="copyright-wrap">
+                            <div class="copyright-link-wrap">
+                                <a href="#">이용약관</a>
+                                <a href="#"><strong>개인정보처리방침</strong></a>
+                                <div class="bar"></div>
+                            </div>
+                            <p class="copyright">Copyright ©2020 LG CNS. All right reserved.</p>
+                        </div>
+                    </div>
+
+                    <!-- 팝업 -->
+                    <div class="modal-wrap">
+                        <div class="modal-student-make-learning">
+                            <div class="modal-title-wrap">
+                                <strong>알림</strong>
+                                <button class="btn-modal-title-close"></button>
+                            </div>
+                            <div class="modal-cont-wrap">
+                                <div class="scroll-wrap" data-simplebar data-simplebar-auto-hide="false">
+									<div class="notice-info-list ">
+										<li>
+											<div class="tag tag-conv">알림</div>
+											<div class="txt-box">
+												<p>조인성 학생님이 '왕초보 어휘' 클래스에서 "일상언어" lesson 에서 "원어민발음유사도" 가 20%에서 55%로 올라갔습니다! 당신은 설마 원어민?</p>
+												<span class="date">22-01-25</span>
+											</div>
+										</li>
+										<li>
+											<div class="tag tag-conv">알림</div>
+											<div class="txt-box">
+												<p>조인성 학생님이 '왕초보 어휘' 클래스에서 "일상언어" lesson 에서 "원어민발음유사도" 가 20%에서 55%로 올라갔습니다! Awesome~</p>
+												<span class="date">22-01-20</span>
+											</div>
+										</li>
+										<li>
+											<div class="tag tag-conv">알림</div>
+											<div class="txt-box">
+												<p>조인성 학생님이 '왕초보 어휘' 클래스에서 "일상언어" lesson 에서 "원어민발음유사도" 가 20%에서 55%로 올라갔습니다! 정말 멋져요~</p>
+												<span class="date">22-01-25</span>
+											</div>
+										</li>
+										<li>
+											<div class="tag tag-conv">알림</div>
+											<div class="txt-box">
+												<p>조인성 학생님이 '왕초보 어휘' 클래스에서 "일상언어" lesson 에서 "원어민발음유사도" 가 20%에서 55%로 올라갔습니다! Great!</p>
+												<span class="date">22-01-25</span>
+											</div>
+										</li>
+										<li>
+											<div class="tag tag-conv">알림</div>
+											<div class="txt-box">
+												<p>조인성 학생님이 '왕초보 어휘' 클래스에서 "일상언어" lesson 에서 "원어민발음유사도" 가 20%에서 55%로 올라갔습니다! Great!</p>
+												<span class="date">22-01-25</span>
+											</div>
+										</li>
+									</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/simplebar.js"></script>
+    <script src="../../js/common.js"></script>
+    <script>
+        
+    </script>
+</body>
+</html>

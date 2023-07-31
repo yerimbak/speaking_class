@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="Join.css">
+</head>
+<body>
+    <div id="root">
+        <div class="container">
+                    
+            <div id="contents">
+                <div class="contents-inner bg-gray">
+                    <div class="join-wrap">
+                        
+                        <div class="user-info-box-wrap">
+                            <div class="logo">
+                                <img src="../../img/img_login_logo_new.png" alt="스피킹클래스 AI Tutor Platform">
+                                <p class="logo-text">쉽게 만들고 재미있게 학습하는 영어 말하기</p>
+                            </div>
+                            <div class="box-wrap">
+                                <ol class="user-info-box-step">
+                                    <!-- D : 활성화 클래스 - on, 완료 클래스 - finish -->
+                                    <li class="on finish"><span class="num">1</span><span class="title">휴대폰 인증</span></li>
+                                    <li class="on"><span class="num">2</span><span class="title">정보 입력</span></li>
+                                </ol>
+                                <div class="join-form">
+                                    <div class="input-underline-wrap">
+                                        <div class="input-title">아이디 <span>*</span></div>
+                                        <div class="input-wrap">
+                                            <input type="text" placeholder="아이디를 입력해주세요." value="121234" disabled>
+                                        </div>
+                                        <p class="warning show">Validaion 영역</p>
+                                    </div>
+                                    <div class="input-underline-wrap">
+                                        <div class="input-title">이름 <span>*</span></div>
+                                        <div class="input-wrap">
+                                            <input type="text" placeholder="이름을 입력해주세요.">
+                                        </div>
+                                        <p class="warning show">Validaion 영역</p>
+                                    </div>
+                                    <div class="input-underline-wrap">
+                                        <div class="input-title">비밀번호 <span>*</span></div>
+                                        <input type="password" placeholder="8~16자 영문 소문자, 숫자, 특수문자">
+                                        <p class="warning show">Validaion 영역</p>
+                                    </div>
+                                    <div class="input-underline-wrap">
+                                        <div class="input-title">
+                                            비밀번호 확인 <span>*</span>
+                                            <div class="checkBox-wrap">
+                                                <input type="checkbox" id="showPwd">
+                                                <label for="showPwd">비밀번호 보기</label>
+                                            </div>
+                                        </div>
+                                        <input type="password" placeholder="8~16자 영문 소문자, 숫자, 특수문자">
+                                        <p class="warning show">Validaion 영역</p>
+                                    </div>
+
+                                    <div class="academyName-wrap">
+                                        <div class="input-underline-wrap">
+                                            <div class="input-title">학교를 지정해 주세요. <span>*</span></div>
+                                        </div>
+                                        <div class="search-dropdown-wrap">
+                                            <div class="search-input-wrap">
+                                                <input class="search-input" type="text" placeholder="학교를 선택해 주세요." readonly>
+                                                <div class="popup-search">
+                                                    <div class="popup-cont-wrap">
+                                                        <div class="search-input-wrap">
+                                                            <input type="text">
+                                                        </div>
+                                                        <div class="search-result-list-wrap">
+                                                            <div class="empty-wrap">
+                                                                <p>학교명을 검색해 주세요</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="popup-footer-wrap">
+                                                        <button type="button">직접 입력</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="self-input-wrap">
+                                                <div class="input-underline-wrap">
+                                                    <input class="selct-input" type="text" placeholder="학교명을 입력해 주세요.">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="input-underline-wrap">
+                                        <div class="input-title">이메일 <span>*</span></div>
+                                        <div class="input-wrap">
+                                            <input type="text" placeholder="이메일을 입력해주세요." >
+                                            <button type="button" class="btn-line">중복확인</button>
+                                            <button type="button" class="btn-line disable">인증하기</button>
+                                            <!-- <button type="button" class="btn-line">재전송</button> -->
+                                        </div>
+                                        <p class="warning show">올바른 이메일 형식을 입력해 주세요.</p>
+                                        <p class="warningX show">이메일로 인증번호가 발송되었습니다.</p>
+                                    </div>
+                                    <div class="input-underline-wrap">
+                                        <div class="input-title">인증번호 <span>*</span></div>
+                                        <div class="input-wrap">
+                                            <input type="text" placeholder="인증번호를 입력해주세요.">
+                                            <span class="certify-number">03:00</span>
+                                            <button type="button" class="btn-line disable">확인</button>
+                                        </div>
+                                        <p class="warning show">인증번호가 일치하지 않습니다. 다시 입력해주세요.</p>
+                                        <p class="warningX show">인증되었습니다.</p>
+                                    </div>
+
+                                    <!-- D : 토글 활성화 클래스 : active -->
+                                    <div class="toggle-wrap active">
+                                        <div class="toggle-btn">추가 정보 입력</div>
+                                        <div class="toggle-cont">
+                                            <div class="input-underline-wrap">
+                                                <div class="input-title">생년월일 <span class="txt-mint">(선택)</span></div>
+                                                <div class="input-wrap">
+                                                    <div class="selectBox-wrap">
+                                                        <select class="placeholder">
+                                                            <option value="" disabled selected hidden>연도</option>
+                                                            <option value="">2022</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="selectBox-wrap">
+                                                        <select class="placeholder">
+                                                            <option value="" disabled selected hidden>월</option>
+                                                            <option value="">01</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="selectBox-wrap">
+                                                        <select class="placeholder">
+                                                            <option value="" disabled selected hidden>일</option>
+                                                            <option value="">01</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <p class="warning show">Validaion 영역</p>
+                                            </div>
+
+                                            <div class="input-underline-wrap">
+                                                <div class="input-title">법정대리인 인증 <span>*</span></div>
+                                                <div class="input-wrap">
+                                                    <input type="text" placeholder="숫자만 입력해주세요.">
+                                                    <button type="button" class="btn-line disable">인증하기</button>
+                                                </div>
+                                                <p class="warning show">올바른 이메일 형식을 입력해 주세요.</p>
+                                                <p class="warningX show">이메일로 인증번호가 발송되었습니다.</p>
+                                            </div>
+                                            <div class="input-underline-wrap">
+                                                <div class="input-title">인증번호 <span>*</span></div>
+                                                <div class="input-wrap">
+                                                    <input type="text" placeholder="인증번호를 입력해주세요.">
+                                                    <span class="certify-number">03:00</span>
+                                                    <button type="button" class="btn-line disable">확인</button>
+                                                </div>
+                                                <p class="warning show">인증번호가 일치하지 않습니다. 다시 입력해주세요.</p>
+                                                <p class="warningX show">인증되었습니다.</p>
+                                                <p class="text">문자가 오지 않았다면 번호를 다시 확인해 주시거나<br>재발송 버튼을 눌러주세요.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="term-wrap" data-agree="agree01">
+                                        <div class="term-wrap-all">
+                                            <div class="checkBox-wrap">
+                                                <input type="checkbox" id="agree-terms-all" data-agree-all="agree01">
+                                                <label for="agree-terms-all">모두 동의합니다.</label>
+                                            </div>
+                                        </div>
+                                        <div class="term-wrap-list">
+                                            <ul>
+                                                <li>
+                                                    <div class="checkBox-wrap">
+                                                        <input type="checkbox" id="agree-terms1" data-agree-list="agree01">
+                                                        <label for="agree-terms1">이용약관 <span>(필수)</span></label>
+                                                        <button type="button" class="btn-text">자세히보기</button>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="checkBox-wrap">
+                                                        <input type="checkbox" id="agree-terms2" data-agree-list="agree01" checked>
+                                                        <label for="agree-terms2">개인정보 수집 및 이용 <span>(필수)</span></label>
+                                                        <button type="button" class="btn-text">자세히보기</button>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="checkBox-wrap">
+                                                        <input type="checkbox" id="agree-terms3" data-agree-list="agree01" checked>
+                                                        <label for="agree-terms3">마케팅 수집 및 이용 <span>(선택)</span></label>
+                                                        <button type="button" class="btn-text">자세히보기</button>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="btn-wrap type-bottom">
+                                    <button class="btn-line"><span>이전</span></button>
+                                    <button class="btn-mint disable"><span>회원가입</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                    
+        </div>
+    </div>
+    <script src="../../js/common.js"></script>
+    <script>
+        $(function(){
+
+            // 추가정보입력 토글
+            $('.toggle-wrap').each(function(index,element){
+                if ($(element).hasClass('active')){
+                    $(element).find('.toggle-cont').show()
+                }
+            })
+            $(document).on('click','.toggle-btn', function(){
+                var $toggleBtn = $(this);
+                if($toggleBtn.next().is(':visible')){
+                    $toggleBtn.next().slideUp()
+                    $toggleBtn.parents('.toggle-wrap').removeClass('active')
+                } else {
+                    $toggleBtn.next().slideDown();
+                    $toggleBtn.parents('.toggle-wrap').addClass('active');
+                }
+            })
+
+            sClass.uiAgreeInit() // 전체동의 실행문  D : 레이어팝업 닫을때 해당 input 에    input.checked = true  해주시고 실행문 한번 더 실행해주세요.
+
+        })
+    </script>
+</body>
+</html>

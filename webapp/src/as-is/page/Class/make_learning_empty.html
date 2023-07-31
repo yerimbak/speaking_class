@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="Class.css">
+    <link rel="stylesheet" href="../../css/simplebar.css">
+</head>
+<body>
+    <div id="root">
+        <div class="container">
+            <div id="header" class="tab-select"> <!-- 탭이 선택되면 tab-select 추가 (밑줄 사라짐)-->
+                <div class="header-inner">
+                    <div class="logo-wrap">
+                        <h1><a href="#"><img src="../../img/logo_studio.png" alt=""></a></h1>
+                    </div>
+                    <div class="header-tab-wrap">
+                        <div class="inner">
+                            <div class="tab on thema-purple"> <!-- thema-green, pink, orange, purple 로 색변경 / 활성화된건 on -->
+                                <div class="tab-inner">
+                                    <p>생활회화 A반 생활회화 A반</p>
+                                    <button class="btn-header-tab-close"></button>
+                                </div>
+                            </div>
+                            <div class="tab thema-orange">
+                                <div class="tab-inner">
+                                    <p>생활회화 A반 생활회화 A반</p>
+                                    <button class="btn-header-tab-close"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-wrap">
+                        <div class="profile-info-wrap">
+                            <div class="user">홍길동</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contents" class="thema-purple"> <!-- thema-green, pink, orange, purple 로 색변경 -->
+                <div class="contents-inner">
+
+                    <div id="edit">
+                        <div class="class-info-title-wrap">
+                            <div class="title-wrap">
+                                <div class="top-wrap">
+                                    <div class="academy">현대영어사</div>
+                                    <div class="bar"></div>
+                                    <div class="className text-thema-color">생활회화 A반</div>
+                                </div>
+                                <div class="btm-wrap">
+                                    <div class="lang">학습 언어: 영어 - 가이드 언어: 한국어</div>
+                                    <div class="date">2020-09-01 ~ 2020-12-31</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edit-cont-wrap">
+                            <div class="edit-box-wrap">
+                                <div class="tab-cont-wrap">
+                                    <div class="tab-cont on">
+
+                                        <!-- 내가 만든 학습 -->
+                                        <div id="make-learning-contents">
+                                            <div class="make-learning-wrap box-wrap"> 
+                                                <button class="btn-navy btn-make-learning">학습 만들기</button>
+                                                <div class="tab-title-wrap">
+                                                    <strong>내가 만든 학습</strong>
+                                                </div>
+                                                <div class="learning-list-wrap">
+                                                    <div class="contents-empty-img-wrap">
+                                                        <img src="../../img/img_lesson_contents_empty.png" alt="">
+                                                        <p><strong>AI 튜터와 대화할 학습을 만들어 보세요.</strong>내가 만든 학습은 Speaking Class App에서 직접 학습해 보실 수 있어요.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="how-to-make-wrap box-wrap">
+                                                <div class="gif-wrap">
+                                                    <div class="top-gif">
+                                                        <img src="../../img/img_make_learning_howToUse_top.gif" alt="">
+                                                    </div>
+                                                    <div class="btm-gif">
+                                                        <img src="../../img/img_make_learning_howToUse_btm.gif" alt="">
+                                                    </div>
+                                                </div>
+                                                <p>만들기 버튼을 눌러 학습을 만들어 보세요.<br>최대 5개까지 만들 수 있습니다.</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="copyright-wrap">
+                            <div class="copyright-link-wrap">
+                                <a href="#">이용약관</a>
+                                <a href="#"><strong>개인정보처리방침</strong></a>
+                                <div class="bar"></div>
+                            </div>
+                            <p class="copyright">Copyright ©2020 LG CNS. All right reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/simplebar.js"></script>
+    <script src="../../js/common.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>

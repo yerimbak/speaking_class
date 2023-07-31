@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="Home.css">
+</head>
+<body>
+    
+    <div id="root">
+        
+        <div class="container">
+            <div id="header" class="new">
+                <div class="bg-gnb">
+                    <div class="slide-wrap">
+                        <div class="swiper-container gnb-slide">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="img-wrap">
+                                        <img src="../../img/gnb_banner_01.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="img-wrap">
+                                        <img src="../../img/gnb_banner_02.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-inner">
+                    <div class="logo-wrap">
+                        <h1><a href="#"><img src="../../img/logo_studio.png" alt=""></a></h1>
+                    </div>
+                    <div class="gnb">
+                        <div class="gnb-menu">
+                            <a href="#none" class="gnb-main-list">학생 등록하기</a>
+                            <div class="gnb-sub-wrap">
+                                <strong>학생 등록하기</strong>
+                                <ul>
+                                    <li><a href="#none" class="gnb-sub-list on">학생 간편 가입 생성</a></li> <!-- 활성화 gnb 서브 메뉴 클래스 on -->
+                                    <li><a href="#none" class="gnb-sub-list">학생 계정 자동 생성</a></li>
+                                    <li><a href="#none" class="gnb-sub-list">엑셀로 업로드 하기</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="gnb-menu">
+                            <a href="#none" class="gnb-main-list">클래스 만들기</a>
+                            <div class="gnb-sub-wrap">
+                                <strong>클래스 만들기</strong>
+                                <ul>
+                                    <li><a href="#none" class="gnb-sub-list">교과서 클래스 만들기</a></li>
+                                    <li><a href="#none" class="gnb-sub-list">창작 클래스 만들기</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="gnb-menu">
+                            <a href="#none" class="gnb-main-list">커뮤니티</a>
+                            <div class="gnb-sub-wrap">
+                                <strong>커뮤니티</strong>
+                                <ul>
+                                    <li><a href="#none" class="gnb-sub-list">FAQ</a></li>
+                                    <li><a href="#none" class="gnb-sub-list">문의</a></li>
+                                    <li><a href="#none" class="gnb-sub-list">개선 제안</a></li>
+                                    <li><a href="#none" class="gnb-sub-list">이벤트</a></li>
+                                    <li><a href="#none" class="gnb-sub-list">활용 사례</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="gnb-menu">
+                            <a href="#none" class="gnb-main-list solo">이벤트</a>
+                        </div>
+                        <div class="gnb-menu">
+                            <a href="#none" class="gnb-main-list solo">매뉴얼 다운로드</a>
+                        </div>
+                    </div>
+                    <div class="profile-wrap">
+                        <div class="profile-info-wrap">
+                            <div class="academy">자양중학교</div>
+                            <div class="bar"></div>
+                            <div class="user"><strong>김선생</strong> (선생님)</div> 
+                        </div>
+                        <div class="profile-info-wrap">
+                            <button type="button" class="btn mypage">마이페이지</button>
+                            <div class="bar"></div>
+                            <button type="button" class="btn login">로그아웃</button> 
+                        </div>
+                    </div>
+                </div>
+                <div class="mypage-wrap size2">
+                    <div class="inner">
+                        <a href="#none" class="btn">내정보</a>
+                        <a href="#none" class="btn">비밀번호 변경</a>
+                        <a href="#none" class="btn">내 글 모아보기</a>
+                        <a href="#none" class="btn btn-ico"><i></i>공직자 이메일 인증</a>
+                    </div>
+                </div>
+            </div>
+            <div id="contents">
+                <div class="contents-inner">
+                    
+                    <div id="home" class="new">  <!-- new 클래스 추가 -->
+                        <div class="home-inner empty"> <!-- 클래스가 없으면 empy 클래스 추가-->
+                            <div class="header-wrap">
+                                <div class="sort-wrap">
+                                    <button class="on"><i class="ico-home-1"></i>전체</button> <!-- 활성화 된건 on -->
+                                    <button><i class="ico-home-2"></i>운영중</button>
+                                    <button ><i class="ico-home-3"></i>미운영중</button>
+                                    <button><i class="ico-home-4"></i>휴지통</button>
+                                </div>
+                            </div>                           
+                            <div class="class-card-wrap">
+                                <!-- <div class="empty-wrap">
+                                    <img src="../../img/img_home_contents_empty.png" alt="">
+                                    <p>클래스가 없습니다.</p>
+                                </div> -->
+                                <div class="card-wrap"> <!-- 다른 카드가 추가되면 해당 구조는 삭제 -->
+                                    <!-- <div class="card create-class">
+                                        <div class="card-inner">
+                                            <div class="create-wrap">
+                                                <img src="../../img/icon_create_class.png" alt="">
+                                                <strong>클래스 만들기</strong>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    <div class="card join-student">
+                                        <div class="card-inner">
+                                            <div class="create-wrap">
+                                                <img src="../../img/icon_create_class.png" alt="">
+                                                <strong>학생 가입시키기</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 220914 수정 start : 카드 유형 -->
+                                    <div class="card contents-class">
+                                        <div class="card-inner">
+                                            <div class="create-wrap">
+                                                <img src="../../img/icon_contents_class.png" alt="">
+                                                <strong>콘텐츠 스토어 둘러보기</strong>
+                                            </div>
+                                        </div>
+                                        <!-- 툴팁 : 해당 화면에서는 상시 노출 -->
+                                        <div class="new-card-bubble">
+                                            <p>다른 선생님들이 만드신 콘텐츠를 둘러보거나<br>
+                                                내 클래스로 콘텐츠를 가져올 수 있어요!</p>
+                                            <button class="bnt-bubble-close"></button>
+                                        </div>
+                                        <!-- //툴팁 : 해당 화면에서는 상시 노출 -->
+                                    </div>
+
+                                    <div class="card textbook-class">
+                                        <div class="card-inner">
+                                            <div class="create-wrap">
+                                                <img src="../../img/icon_textbook_class.png" alt="">
+                                                <strong>교과서 클래스 만들기</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card creation-class">
+                                        <div class="card-inner">
+                                            <div class="create-wrap">
+                                                <img src="../../img/icon_creation_class.png" alt="">
+                                                <strong>창작 클래스 만들기</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //220914 수정 end : 카드 유형 -->
+                                
+                                <!-- 위치 변경 220824 -->
+                                <div class="first-class">
+                                    <div class="title">스피킹클래스가 처음이신가요? 매뉴얼을 다운로드 받아 이용해 보세요.</div>
+                                    <div class="btn-wrap">
+                                        <a href="" class="btn btn-deepBlue"><span>일반클래스 매뉴얼 다운로드</span></a>
+                                        <a href="" class="btn btn-navy"><span>교과서 클래스 매뉴얼 다운로드</span></a>
+                                    </div>
+                                </div>
+                                <!-- //위치 변경 220824 -->
+                                <!-- 배너 추가 220824 -->
+                                <div class="aside-banner-wrap">
+                                    <div class="banner slide">
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="img-wrap">
+                                                        <a href=""><img src="../../img/banner_slide_01.png" alt=""></a>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="img-wrap">
+                                                        <a href=""><img src="../../img/banner_slide_02.png" alt=""></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 배너 추가 220824 -->
+                            </div>
+                        </div>
+                        <p class="copyright">Copyright &copy;2020 LG CNS. All right reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/swiper-bundle.min.js"></script>
+    <script src="../../js/common.js"></script>
+    <script>
+        $( ".home-inner:not(.empty) .class-card-wrap").sortable({
+            placeholder:"drag-enter-bg", // 드래그 들어왔을때 영역 표시
+        }); 
+
+        //배너 스와이퍼 220824 추가
+        var swiperBanner = new Swiper('.banner.slide .swiper-container', {
+            speed: 500,
+            autoplay:false, 
+            slidesPerView: 1,
+            loop: false,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: '.banner.slide .swiper-pagination'
+            }
+        });
+        
+    </script>
+</body>
+</html>

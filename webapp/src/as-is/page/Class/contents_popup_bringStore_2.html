@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="Class.css">
+    <link rel="stylesheet" href="../../css/simplebar.css">
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+</head>
+<body class="scroll-hidden"> <!-- 팝업 나왔을때 scroll-hidden 추가-->
+    <div id="root">
+        <div class="container">
+            <div id="header" class="tab-select"> <!-- 탭이 선택되면 tab-select 추가 (밑줄 사라짐)-->
+                <div class="header-inner">
+                    <div class="logo-wrap">
+                        <h1><a href="#"><img src="../../img/logo_studio.png" alt=""></a></h1>
+                    </div>
+                    <div class="header-tab-wrap">
+                        <div class="inner">
+                            <div class="tab on thema-purple"> <!-- thema-green, pink, orange, purple 로 색변경 / 활성화된건 on -->
+                                <div class="tab-inner">
+                                    <p>생활회화 A반 생활회화 A반</p>
+                                    <button class="btn-header-tab-close"></button>
+                                </div>
+                            </div>
+                            <div class="tab thema-orange">
+                                <div class="tab-inner">
+                                    <p>생활회화 A반 생활회화 A반</p>
+                                    <button class="btn-header-tab-close"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-wrap">
+                        <div class="profile-info-wrap">
+                            <div class="academy">현대영어사</div>
+                            <div class="bar"></div>
+                            <div class="user"><strong>김선생</strong> (선생님)</div> 
+                        </div>
+                        <div class="profile-menu-wrap">
+                            <button class="btn-profile-menu"></button>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contents" class="thema-purple"> <!-- thema-green, pink, orange, purple 로 색변경 -->
+                <div class="contents-inner">
+
+                    <div id="edit">
+                        <div class="class-info-title-wrap">
+                            <div class="title-wrap">
+                                <div class="top-wrap">
+                                    <div class="academy">현대영어사</div>
+                                    <div class="bar"></div>
+                                    <div class="className text-thema-color">생활회화 A반</div>
+                                    <button class="btn-edit"></button>
+                                </div>
+                                <div class="btm-wrap">
+                                    <div class="lang">학습 언어: 영어 - 가이드 언어: 한국어</div>
+                                    <div class="date">2020-09-01 ~ 2020-12-31</div>
+                                </div>
+                            </div>
+                            <div class="publishing-wrap">
+                                <p>최근 퍼블리싱  <strong>2020-11-11 15:30</strong></p>
+                                <button class="btn-navy">앱 퍼블리싱</button>
+                            </div>
+                        </div>
+                        <div class="edit-cont-wrap">
+                            <div class="edit-tab-wrap">
+                                <div class="btn-thema-color">수강생</div>
+                                <div class="btn-thema-color on">학습 콘텐츠</div>
+                                <div class="btn-thema-color">리포트</div>
+                            </div>
+                            <div class="edit-box-wrap">
+                                <div class="tab-cont-wrap">
+                                    <div class="tab-cont on">
+                                        
+                                    </div>
+                                    <div class="tab-cont">
+                                        
+                                    </div>
+                                    <div class="tab-cont">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="copyright-wrap">
+                            <div class="copyright-link-wrap">
+                                <a href="#">이용약관</a>
+                                <a href="#"><strong>개인정보처리방침</strong></a>
+                                <div class="bar"></div>
+                            </div>
+                            <p class="copyright">Copyright ©2020 LG CNS. All right reserved.</p>
+                        </div>
+                    </div>
+
+                    <!-- 팝업 -->
+                    <div class="modal-wrap">
+                        <div class="modal-bringStore step2"> <!-- 2/2는 step2 -->
+                            <div class="modal-title-wrap">
+                                <strong>스토어에서 가져오기 2/2</strong>
+                                <button class="btn-modal-title-close"></button>
+                                <div class="info-wrap">
+                                    <button class="btn-showInfo">스토어 이용 안내</button>
+                                    <div class="info-tooltip-wrap">
+                                        <p><span>읽기 전용</span>은 원작자가 컨텐츠 삭제 시 이용중인 클래스의 모든 컨텐츠도 삭제됩니다.</p>
+                                        <button class="btn-close-tooltip"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-cont-wrap">
+                                <div class="left-wrap">
+                                    <div class="scroll-wrap">
+                                        <div class="class-detail-wrap">
+                                            <div class="title-wrap">
+                                                <span>EBS</span>
+                                                <strong>최고의 대화문 1</strong>
+                                            </div>
+                                            <div class="desc">
+                                                <p>2020-09-01 ~ 2020-12-31</p>
+                                                <p>학습 언어: 영어<br>가이드 언어: 한국어</p>
+                                            </div>
+                                            <div class="btn-wrap">
+                                                <button class="btn-navy"><strong>전체 가져오기</strong><br>클래스를 그대로 가져오기가 가능합니다.</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right-wrap">
+                                    <div class="scroll-wrap">
+                                        <div class="class-detail-detail-wrap">
+                                            <div class="title-wrap">                                                
+                                                <div class="title">레슨 <strong>2개</strong><span class="slash"></span>학습 <strong>1개</strong></div>
+                                                <div class="checkBox-wrap label-right">
+                                                    <input type="checkbox" id="detail-checkAll">
+                                                    <label for="detail-checkAll">전체 선택</label>
+                                                </div>
+                                            </div>
+                                            <div class="data-group-wrap">
+                                                <div class="data-group">
+                                                    <div class="group-title">1과</div>
+                                                    <div class="card-list">
+                                                        <div class="data-info-card readonly-badge">
+                                                            <div class="text-wrap">
+                                                                <div class="top-text-wrap">
+                                                                    <div class="tag tag-conv">대화</div>
+                                                                    <p>I Want a Cheeseburger.1</p>
+                                                                </div>
+                                                                <div class="btm-text-wrap">
+                                                                    <p>치즈버거 하나 주세요.</p>
+                                                                </div>
+                                                            </div>
+                                                            <input type="checkbox" id="check-1">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="data-group">
+                                                    <div class="group-title">2과</div>
+                                                    <div class="card-list">
+                                                        <div class="data-info-card readonly-badge">
+                                                            <div class="text-wrap">
+                                                                <div class="top-text-wrap">
+                                                                    <div class="tag tag-pattern">패턴</div>
+                                                                    <p>I Want a Cheeseburger.1</p>
+                                                                </div>
+                                                                <div class="btm-text-wrap">
+                                                                    <p>치즈버거 하나 주세요.</p>
+                                                                </div>
+                                                            </div>
+                                                            <input type="checkbox" id="check-2">
+                                                        </div>
+                                                        <div class="data-info-card readonly-badge"> 
+                                                            <div class="text-wrap">
+                                                                <div class="top-text-wrap">
+                                                                    <div class="tag tag-short">단문</div>
+                                                                    <p>I Want a Cheeseburger.1</p>
+                                                                </div>
+                                                                <div class="btm-text-wrap">
+                                                                    <p>치즈버거 하나 주세요.</p>
+                                                                </div>
+                                                            </div>
+                                                            <input type="checkbox" id="check-3">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="data-group">
+                                                    <div class="group-title">3과</div>
+                                                    <div class="card-list">
+                                                        <div class="data-info-card readonly-badge">
+                                                            <div class="text-wrap">
+                                                                <div class="top-text-wrap">
+                                                                    <div class="tag tag-pattern">패턴</div>
+                                                                    <p>I Want a Cheeseburger.1</p>
+                                                                </div>
+                                                                <div class="btm-text-wrap">
+                                                                    <p>치즈버거 하나 주세요.</p>
+                                                                </div>
+                                                            </div>
+                                                            <input type="checkbox" id="check-4">
+                                                        </div>
+                                                        <div class="data-info-card readonly-badge">
+                                                            <div class="text-wrap">
+                                                                <div class="top-text-wrap">
+                                                                    <div class="tag tag-short">단문</div>
+                                                                    <p>I Want a Cheeseburger.1</p>
+                                                                </div>
+                                                                <div class="btm-text-wrap">
+                                                                    <p>치즈버거 하나 주세요.</p>
+                                                                </div>
+                                                            </div>
+                                                            <input type="checkbox" id="check-5">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer-wrap">
+                                <button class="btn-deepBlue btn-prev">이전</button>
+                                <div class="modal-footer-btn-wrap">
+                                    <button class="btn-line">취소</button>
+                                    <button class="btn-navy">가져오기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/simplebar.js"></script>
+    <script src="../../js/common.js"></script>
+    <script>
+        var bringStoreStep2_RightScroll = new SimpleBar(document.querySelector('.modal-bringStore.step2 .right-wrap .scroll-wrap'), {autoHide:false});
+        bringStoreStep2_RightScroll.getScrollElement().scrollTop = 0; // 스크롤 최상단으로 (팝업 띄울때 호출)
+
+        // 스토어에서 가져오기 체크박스 - 전체 체크
+        $(".modal-bringStore #detail-checkAll").change(function() {
+            var checkBoxLength = $(".modal-bringStore .data-group-wrap input[type=checkbox]").length;
+
+            if (this.checked) {
+                $(".modal-bringStore .data-group-wrap input[type=checkbox]").each(function() {
+                    this.checked=true;
+                });
+            } else {
+                $(".modal-bringStore .data-group-wrap input[type=checkbox]").each(function() {
+                    this.checked=false;
+                });
+            }
+        });
+         // 스토어에서 가져오기 체크박스 - 개별 체크
+        $(".modal-bringStore .data-group-wrap input[type=checkbox]").click(function () {
+            if ($(this).is(":checked")) {
+                var isAllChecked = 0;
+
+                checkCount ++;
+
+                $(".modal-bringStore .data-group-wrap input[type=checkbox]").each(function() {
+                    if (!this.checked){
+                        if(!$(this).parent().hasClass('drag-complete')){
+                            isAllChecked = 1;
+                        }
+                    }                
+                });
+
+                if (isAllChecked == 0) {
+                    $(".modal-bringStore #detail-checkAll").prop("checked", true);
+                }     
+            }
+            else {
+
+                $(".modal-bringStore #detail-checkAll").prop("checked", false);
+            }
+        });
+
+
+        // 스토어 이용안내 버튼 
+        $('.modal-bringStore .modal-title-wrap .info-wrap .btn-showInfo').on('click', function(){
+            $(this).parents('.info-wrap').toggleClass('on');
+        })
+        $('.modal-bringStore .modal-title-wrap .info-wrap .info-tooltip-wrap .btn-close-tooltip').on('click', function(){
+            $(this).parents('.info-wrap').toggleClass('on');
+        })
+
+    </script>
+</body>
+</html>

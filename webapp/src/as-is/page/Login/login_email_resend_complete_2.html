@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="Login.css">
+    <link rel="stylesheet" href="../../css/simplebar.css">
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+</head>
+<body>
+    <div id="root">
+        <div class="container">
+            
+            <div id="contents">
+                <div class="contents-inner">
+
+                    <div id="">
+                        <div class="user-info-box-wrap type-resend">
+                            <div class="logo">
+                                <a href="#"><img src="../../img/img_login_logo.png" alt=""></a>
+                            </div>
+                            <div class="box-wrap">
+                                <div class="inner">
+                                    <div class="box-title">
+                                        <div class="title">이메일 인증 완료</div>
+                                        <strong>abcd@email.com</strong>
+                                        <p>이미 이메일 인증을 완료한 이메일입니다.</p>
+                                    </div>
+                                    <button class="btn-deepBlue btn-confirm">확인</button> <!-- disable 추가시 비활성화 -->
+                                </div>
+                            </div>
+                            <div class="copyright-wrap">
+                            <div class="copyright-link-wrap">
+                                <a href="#">이용약관</a>
+                                <a href="#"><strong>개인정보처리방침</strong></a>
+                                <div class="bar"></div>
+                            </div>
+                            <p class="copyright">Copyright ©2020 LG CNS. All right reserved.</p>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+                    
+        </div>
+    </div>
+    <script src="../../js/simplebar.js"></script>
+    <script src="../../js/common.js"></script>
+    <script>
+        // 학교 검색
+        $('.input-search-school').on('focus', function(){
+            $(this).next().addClass('show')
+        })
+
+        // 학교 검색 팝업 닫기
+        $('.popup-search-school .btn-popup-close').on('click', function(){
+            $(this).parents('.popup-search-school').removeClass('show');
+        })
+
+        // 리스트 선택
+        $('.popup-search-school .search-result-list-wrap ul li').on('click', function(){
+            var _text = $(this).text();
+
+            $(this).parents('.popup-search-school').removeClass('show');
+            $(this).parents('.academyName-wrap').find('.input-search-school').val(_text);
+
+            $(this).parents('.academyName-wrap').find('.self-input-wrap').removeClass('show');
+            $(this).parents('.academyName-wrap').find('.self-input-wrap input').val('');
+        })
+
+        // 직접 입력
+        $('.popup-search-school .popup-footer-wrap button').on('click', function(){
+            $(this).parents('.popup-search-school').removeClass('show');
+            $(this).parents('.academyName-wrap').find('.input-search-school').val('직접입력');
+
+            $(this).parents('.academyName-wrap').find('.self-input-wrap').addClass('show');
+            $(this).parents('.academyName-wrap').find('.self-input-wrap input').focus();
+        })
+    </script>
+</body>
+</html>

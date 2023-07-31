@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="event_pc.css">
+</head>
+<body>
+  <div id="root">
+
+    <header>
+        <div class="header-inner">
+            <h1>
+                <button data-anchor="#Section1" onclick="anchorMove(this)">
+                  <img src="../../img/img_logo_header.png" alt="">
+                </button>
+            </h1>
+        </div>
+    </header>
+
+    <aside>
+        <div class="banner-list">
+            <ul>
+                <li>
+                    <button class="banner-1" data-anchor="#Section3" onclick="anchorMove(this)">
+                        <div class="banner-bg">1등하고 피자10판 받자!</div>
+                        <div class="banner-txt-btn"></div>
+                    </button>
+                </li>
+                <li>
+                    <button class="banner-2" data-anchor="#Section4" onclick="anchorMove(this)">
+                        <div class="banner-bg">이벤트 소문내고 스벅 아아 받자!</div>
+                        <div class="banner-txt-btn"></div>
+                    </button>
+                </li>
+                <li>
+                    <button class="banner-3 only-txt" data-anchor="#Ranking" onclick="anchorMove(this)">
+                        <div class="banner-bg">실시간 랭킹 확인하러가기</div>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <main>
+        <section id="Section1">
+            <div class="section-inner">
+                <img src="../../img/img_section_1_main.png" class="img-section-main" alt="">
+                <button class="link-1" data-anchor="#Section3" onclick="anchorMove(this)">
+                    <img src="../../img/img_section_1_btn.png" alt="이벤트 하나. 스피킹클래스로 함께 공부하면 피자10판 쏜다! 더 보러 가기">
+                </button>
+
+                <!--<button class="link link-2" data-anchor="#Section4" onclick="anchorMove(this)">이벤트 둘. 이벤트 소문내면 스벅커피 팡팡! 더 보러 가기</button>-->
+
+            </div>
+        </section>
+
+        <section id="Section2">
+            <div class="section-inner">
+                <img src="../../img/img_section_2_1_main.png" class="img-section-main" alt="">
+                <a href="https://www.sclass.ai/sclass/sclassPoster.do" target="_blank" class="link link-1">쉽고 편리한 스피킹 클래스 더 알아보기</a>
+                <a href="https://www.sclass.ai/sclass/" target="_blank" class="link link-2">스피킹클래스 스튜디오 바로가기</a>
+            </div>
+        </section>
+
+        <section id="Section3">
+            <div class="section-inner">
+                <img src="../../img/img_section_3_1_main.png" class="img-section-main" alt="">
+
+                <div class="badge-txt">
+                    <div class="bade-txt-item">
+                        <div class="badge">이벤트 기간</div>
+                        <div class="txt">10/24(월) ~ 11/20(일), 4주간</div>
+                    </div>
+                    <div class="bade-txt-item">
+                        <div class="badge">혜택지급 기간</div>
+                        <div class="txt">12월 초 지급 예정이며 선정된 클래스 선생님께 별도 연락</div>
+                    </div>
+                </div>
+
+                <div id="Ranking">
+                    <div class="ranking-title">
+                      <img src="../../img/img_ranking_table_title.png" alt="실시간 랭킹">
+                    </div>
+                    <!-- 220823 : dim 처리 -->
+                    <!-- <style>
+                        #Ranking table{position:relative;}
+                        #Ranking table::after{content:'실시간 랭킹은 9/1에 공개됩니다.';font-size:35px;position:absolute;top:0;left:0;width:100%;height:100%;
+                    background: rgba(0,0,0,0.9);border-radius: 24px;color: #fff;display: flex;align-items: center;justify-content: center;}
+                    </style> -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>등수</th>
+                                <th>선생님</th>
+                                <th>학교</th>
+                                <th>클래스 명</th>
+                                <th>학생 수</th>
+                                <th>완료 학습 수</th>
+                                <th>인 당 완료 학습 수</th>
+                            </tr>
+                        </thead>
+                        <tbody id="memberRankingList">
+                            <tr class="rank-1">
+                                <td>
+                                    <div class="rank-num">1</div>
+                                </td>
+                                <td>박*숙</td>
+                                <td>
+                                    <span class="ellipsis-1">동래여자중학교</span>
+                                </td>
+                                <td>
+                                    <span class="ellipsis-2">3학년2반</span>
+                                </td>
+                                <td>26</td>
+                                <td>1503</td>
+                                <td>57.8</td>
+                            </tr>
+                            <tr class="rank-2">
+                                <td>
+                                    <div class="rank-num">2</div>
+                                </td>
+                                <td>박*숙</td>
+                                <td>
+                                    <span class="ellipsis-1">동래여자중학교</span>
+                                </td>
+                                <td>
+                                    <span class="ellipsis-2">3학년1반</span>
+                                </td>
+                                <td>26</td>
+                                <td>1322</td>
+                                <td>50.84</td>
+                            </tr>
+                            <tr class="rank-3">
+                                <td>
+                                    <div class="rank-num">3</div>
+                                </td>
+                                <td>최*정</td>
+                                <td> <span class="ellipsis-1">윤선생우리집앞영여교실양림교습소</span> </td>
+                                <td> <span class="ellipsis-2">초등A반</span></td>
+                                <td>18</td>
+                                <td>573</td>
+                                <td>31.83</td>
+                            </tr>
+                            <tr class="rank-in10">
+                                <td>
+                                    <div class="rank-num">4</div>
+                                </td>
+                                <td>박*숙</td>
+                                <td> <span class="ellipsis-1">동래여자중학교</span> </td>
+                                <td> <span class="ellipsis-2">3학년 4반</span></td>
+                                <td>26</td>
+                                <td>788</td>
+                                <td>30.3</td>
+                            </tr>
+                            <tr class="rank-in10">
+                                <td>
+                                    <div class="rank-num">5</div>
+                                </td>
+                                <td>박*숙</td>
+                                <td> <span class="ellipsis-1">동래여자중학교</span> </td>
+                                <td> <span class="ellipsis-2">3학년3반</span></td>
+                                <td>26</td>
+                                <td>749</td>
+                                <td>28.8</td>
+                            </tr>
+                            <tr class="rank-in10">
+                                <td>
+                                    <div class="rank-num">6</div>
+                                </td>
+                                <td>김*아</td>
+                                <td> <span class="ellipsis-1">재송여자중학교</span> </td>
+                                <td> <span class="ellipsis-2">영어 2-1</span></td>
+                                <td>23</td>
+                                <td>607</td>
+                                <td>26.39</td>
+                            </tr>
+                            <tr class="rank-in10">
+                                <td>
+                                    <div class="rank-num">7</div>
+                                </td>
+                                <td>김*아</td>
+                                <td> <span class="ellipsis-1">재송여자중학교</span> </td>
+                                <td> <span class="ellipsis-2">영어 2-4</span></td>
+                                <td>22</td>
+                                <td>559</td>
+                                <td>25.4</td>
+                            </tr>
+                            <tr class="rank-in10">
+                                <td>
+                                    <div class="rank-num">8</div>
+                                </td>
+                                <td>박*숙</td>
+                                <td> <span class="ellipsis-1">동래여자중학교</span> </td>
+                                <td> <span class="ellipsis-2">2학년 7반</span></td>
+                                <td>26</td>
+                                <td>651</td>
+                                <td>25.03</td>
+                            </tr>
+                            <tr class="rank-in10">
+                                <td>
+                                    <div class="rank-num">9</div>
+                                </td>
+                                <td>이*욱</td>
+                                <td> <span class="ellipsis-1">신성중학교</span> </td>
+                                <td> <span class="ellipsis-2">차분하고 생기넘치는 1학년7반</span></td>
+                                <td>33</td>
+                                <td>793</td>
+                                <td>24.03</td>
+                            </tr>
+                            <tr class="rank-in10">
+                                <td>
+                                    <div class="rank-num">10</div>
+                                </td>
+                                <td>김*영</td>
+                                <td> <span class="ellipsis-1">부산국제중학교</span> </td>
+                                <td> <span class="ellipsis-2">BIMS 3-1 능률교과서</span></td>
+                                <td>28</td>
+                                <td>597</td>
+                                <td>21.32</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="pagination">
+                        <button class="btn-arr arr-prev" id="btnPagePrev" disabled="disabled"></button>
+                        <div class="pagination" id="pageSelect">
+                            
+                            
+                            
+                        <button class="btn-page-num on">1</button><button class="btn-page-num">2</button><button class="btn-page-num">3</button><button class="btn-page-num">4</button><button class="btn-page-num">5</button></div>
+                        <button class="btn-arr arr-next" id="btnPageNext" disabled="disabled"></button>
+                    </div>
+                </div>
+
+                <div class="slide-area">
+                    <div class="tit">
+                        <img src="../../img/evt_section3_tit.png" alt="스피킹클래스로 학습하고
+                        전국의 학교 선생님과 학생들이 피자 총 100판을 선물로 받았어요!">
+                    </div>
+                    <div class="slider-wrap">
+                        <div class="slider-slide">
+                            <div class="item">
+                                <div class="img">
+                                    <img src="../../img/evt_thumb_01.png" alt="신성중학교 1-7반">
+                                </div>
+                                <span class="tit">신성중학교 1-7반</span>
+                                <span class="txt">이*욱 선생님</span>
+                            </div>
+                        </div>
+                        <div class="slider-slide">
+                            <div class="item">
+                                <div class="img">
+                                    <img src="../../img/evt_thumb_02.png" alt="신성중학교 1-7반">
+                                </div>
+                                <span class="tit">신성중학교 1-7반</span>
+                                <span class="txt">이*욱 선생님</span>
+                            </div>
+                        </div>
+                        <div class="slider-slide">
+                            <div class="item">
+                                <div class="img">
+                                    <img src="../../img/evt_thumb_03.png" alt="윤선생우리집앞영어교실 양림교습소">
+                                </div>
+                                <span class="tit">윤선생우리집앞영어교실 양림교습소</span>
+                                <span class="txt">최*정 선생님</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+
+            // 우측 배너 앵커
+            function anchorMove(e) {
+                const anchorTarget = e.dataset.anchor;
+                const targetOffsetTop = document.querySelector(anchorTarget).getBoundingClientRect().top + window.scrollY;
+    
+                window.scrollTo(0, targetOffsetTop);
+            }
+    
+        </script>
+        <section id="Section4">
+            <div class="section-inner">
+                <img src="../../img/evt_section4_tit.png" class="" alt="제 1대 스피킹클래스 우수 선생님으로 선정되면
+                신세계 백화점 상품권쏜다! 제 1대 스피킹클래스 우수 선생님으로 선정되면
+                신세계 백화점 상품권쏜다!">
+
+                <div class="badge-txt">
+                    <div class="bade-txt-item">
+                        <div class="badge">이벤트 기간</div>
+                        <div class="txt">10/24(월) ~ 11/20(일), 4주간</div>
+                    </div>
+                    <div class="bade-txt-item">
+                        <div class="badge">선정 조건</div>
+                        <div class="txt">
+                            다음의 3가지 항목을 모두 충족하면 우수 선생님으로 선정<br>
+                            1)  이벤트 기간 내 신규로 클래스 생성<br>
+                            2)  해당 클래스에 등록된 학생이 20명 이상<br>
+                            3)  해당 클래스에 등록된 학생 기준으로 인당 완료 학습 개수가 10개 이상
+                            <span class="s-txt">*한 가지라도 충족하지 않는 경우 우수 선생님 선정에서 제외됩니다</span>
+                        </div>
+                    </div>
+                    <div class="bade-txt-item">
+                        <div class="badge">혜택지급 기간</div>
+                        <div class="txt">12월 중 지급 예정이며 선정된 클래스 선생님께 별도 연락</div>
+                    </div>
+                </div>
+                <img src="../../img/evt_section4_bg.png" class="" alt="우수 선생님 천원증정">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-notice">
+            <div class="notice-item">
+                <div class="notice-title">
+                    피자 간식<br>이벤트 유의사항
+                </div>
+                <div class="notice-list">
+                    <ul>
+                        <li>이벤트 대상 클래스는 등록된 학생이 10명이상인 클래스만 해당되며, 이벤트기간 중(10/24~11/20)에 완료된 학습수만 카운팅 됩니다.</li>
+                        <li>이벤트종료 후 선정된 클래스에 대한 별도 고지는 하지 않으며 선정된 클래스의 선생님께 별도 연락드려 혜택지급 기간에 대해<br>상의 드리오니 스피킹클래스 회원가입시 기재하신 연락처를 다시 한번 확인바랍니다.</li>
+                        <li>인당완료 학습수가 동일한 클래스의 경우 총완료한 학습수&gt;학생수를 고려하여 순위가 산정됩니다.</li>
+                        <li>선정된 클래스의 혜택은 도미노피자 슈퍼디럭스 오리지널(L)+콜라1.25L 10세트 증정 예정이며 이는 제휴사의 사정에 따라 별도 고지없이 변경될 수 있습니다.</li>
+                        <li>순위 산정 기준 : 스피킹클래스의 한 개 클래스는 여러 개의 레슨으로 구성되어 있고, 한 개의 레슨은 여러 개의 학습콘텐츠로 이루어져 있습니다.<br>클래스별로 이벤트 기간 중 시작해서 완료한 학습콘텐츠 수를 합하고 이를 학생수로 나눈 인당 학습완료수 기준으로 순위가 매겨집니다.</li>
+                        <li><span class="highlight">선생님이 아닌 클래스 기준으로 순위가 산정되기 때문에 1명의 선생님께서 여러 개의 클래스를 생성하여 운영할시 합산되지<br> 
+                            않으며 각 클래스별로 인당 학습완료수가 별도 카운팅 됩니다.</span></li>
+                        <li>혜택 지급은 클래스당 1번만 가능하며 중복 혜택은 드리지 않습니다.</li>
+                        <li>실시간 랭킹 순위는 50위까지만 확인이 가능합니다.</li>
+                        <li><span class="highlight">더 많은 선생님과 학생들에게 혜택을 지급해드리고자 선생님 당 상위 3개 클래스로 제한되는 점 양해 바랍니다.</span></li>
+                        <li><span class="highlight">시/도 교육청 별 클래스 순위 선정</span><br>
+                            <div class="f-box">
+                                <span>1) </span>
+                                <span>순위 산정 기준 : 스피킹클래스의 한 개 클래스는 여러 개의 레슨으로 구성되어 있고, 한 개의 레슨은 여러 개의 학습콘텐츠로 이루어져 있습니다.<br>클래스 별로 이벤트 기간 중 시작해서 완료한 학습 콘텐츠 수를 합하여 이를 학생수로 나눈 인당 학습 완료 수 기준으로 순위가 매겨집니다.</span>
+                            </div>
+                            <div class="f-box">
+                                <span>2) </span>
+                                <span>각 시/도 교육청 별로 1-10등 클래스를 선정하여 혜택이 지급되며, 더 많은 선생님과 학생들에게 혜택을 지급해드리고자 선생님 당 상위 3개 클래스로<br>제한되는 점 양해 바랍니다.</span>
+                            </div>
+                            <div class="f-box">
+                                <span>3) </span>
+                                <span>주차 별로 각 시/도 교육청 별 최종 1~10등 클래스는 매주 월요일 스튜디오 [커뮤니티 > 이벤트]에 공지 됩니다.  <a href="https://www.sclass.ai/sclass/community/communityMain.do?topGubun=3" target="_blank" class="highlight">[커뮤니티 > 이벤트]</a></span>
+                            </div>
+                            <div class="f-box">
+                                <span>4) </span>
+                                <span>각 시/도 교육청 별 최종 1~10등 클래스는 이벤트 종료 후 스튜디오 [커뮤니티 > 이벤트]에 공지되며,<br>선정된 선생님께 별도로 연락드려 혜택지급 기간에 대해 상의 드리오니 스피킹클래스 회원가입 시 기재하신 연락처를 다시 한 번 확인 바랍니다.<br>(혜택 지급은 클래스 당 1번만 가능, 중복지급 불가)</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="notice-item">
+                <div class="notice-title">
+                    우수 선생님<br>이벤트 유의사항
+                </div>
+                <div class="notice-list">
+                    <ul>
+                        <li>다음의 세가지 조건을 모두 충족하는 경우에 우수 선생님으로 선정됩니다.<br>한 가지라도 충족하지 않는 경우 우수 선생님 선정 시 제외되니 이 점 유의 바랍니다.<br>
+                        <span class="s-txt">1) 이벤트 기간 내 신규로 클래스 생성<br>
+                        2) 해당 클래스에 등록된 학생이 20명 이상<br>
+                        3) 해당 클래스에 등록된 학생 기준으로 인당 완료 학습 개수가 10개 이상</span></li>
+                        <li>완료 학습 수는 이벤트 기간 중(10/24~ 11/20)에 완료한 학습 수만 카운팅 됩니다.</li>
+                        <li>회원가입 시 기재하신 연락처로 혜택이 지급되니 반드시 올바른 연락처가 기입되었는지 확인 바랍니다.  <a href="https://www.sclass.ai/" target="_blank" class="highlight">[회원정보 수정]</a><br>(연락처 오기입으로 인해 혜택을 수령하지 못한 경우 재 지급은 불가합니다.)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">Copyright © 2022 LG CNS. All rights reserved.</p>
+    </footer>
+
+  </div>
+</body>
+</html>

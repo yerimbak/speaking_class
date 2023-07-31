@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="Home.css">
+</head>
+
+<body>
+    <div id="root">
+        <div class="container">
+            <div id="header" class="new">
+                <div class="bg-gnb">
+                    <div class="slide-wrap">
+                        <div class="swiper-container gnb-slide">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="img-wrap">
+                                        <img src="../../img/gnb_ban.png" alt="이태원 사고 희생자와 
+                                        유가족 여러분께
+                                        깊은 애도를 표합니다.">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="img-wrap">
+                                        <img src="../../img/gnb_banner_01.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-inner">
+                    <div class="logo-wrap">
+                        <h1><a href="#"><img src="../../img/logo_studio.png" alt=""></a></h1>
+                    </div>
+                    <div class="gnb">
+                        <div class="gnb-menu">
+                            <a href="#none" class="gnb-main-list">학생 등록하기</a>
+                            <div class="gnb-sub-wrap">
+                                <strong>학생 등록하기</strong>
+                                <ul>
+                                    <li><a href="#none" class="gnb-sub-list on">학생 간편 가입 생성</a></li>
+                                    <!-- 활성화 gnb 서브 메뉴 클래스 on -->
+                                    <li><a href="#none" class="gnb-sub-list">학생 계정 자동 생성</a></li>
+                                    <li><a href="#none" class="gnb-sub-list">엑셀로 업로드 하기</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="gnb-menu">
+                            <a href="#none" class="gnb-main-list">클래스 만들기</a>
+                            <div class="gnb-sub-wrap">
+                                <strong>클래스 만들기</strong>
+                                <ul>
+                                    <li><a href="#none" class="gnb-sub-list">교과서 클래스 만들기</a></li>
+                                    <li><a href="#none" class="gnb-sub-list">창작 클래스 만들기</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="gnb-menu">
+                            <a href="#none" class="gnb-main-list">커뮤니티</a>
+                            <div class="gnb-sub-wrap">
+                                <strong>커뮤니티</strong>
+                                <ul>
+                                    <li><a href="#none" class="gnb-sub-list">FAQ</a></li>
+                                    <li><a href="#none" class="gnb-sub-list">문의</a></li>
+                                    <li><a href="#none" class="gnb-sub-list">개선 제안</a></li>
+                                    <li><a href="#none" class="gnb-sub-list">이벤트</a></li>
+                                    <li><a href="#none" class="gnb-sub-list">활용 사례</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="gnb-menu">
+                            <a href="#none" class="gnb-main-list solo">이벤트</a>
+                        </div>
+                        <div class="gnb-menu">
+                            <a href="#none" class="gnb-main-list solo">매뉴얼 다운로드</a>
+                        </div>
+                    </div>
+                    <div class="profile-wrap">
+                        <div class="ban">
+                            <img src="../../img/top_ban.png" alt="깊이 애도합니다.">
+                        </div>
+                        <div class="profile-info-wrap">
+                            <div class="academy">자양중학교</div>
+                            <div class="bar"></div>
+                            <div class="user"><strong>김선생</strong> (선생님)</div>
+                        </div>
+                        <div class="profile-info-wrap">
+                            <button type="button" class="btn mypage">마이페이지</button>
+                            <div class="bar"></div>
+                            <button type="button" class="btn login">로그아웃</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mypage-wrap">
+                    <div class="inner">
+                        <a href="#none" class="btn">내정보</a>
+                        <a href="#none" class="btn">비밀번호 변경</a>
+                        <a href="#none" class="btn">내 글 모아보기</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="contents">
+                <div class="contents-inner bg-gray">
+                    <div class="myinfo-wrap">
+                        <div class="user-info-box-wrap">
+                            <div class="box-wrap">
+                                <div class="title">
+                                    내 정보(선생님)
+                                </div>
+                                <div class="myinfo-form">
+                                    <div class="input-underline-wrap">
+                                        <div class="input-title">아이디</div>
+                                        <div class="input-wrap">
+                                            <input type="text" placeholder="아이디를 입력해주세요." value="student****" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="input-underline-wrap">
+                                        <div class="input-title">이름</div>
+                                        <div class="input-wrap">
+                                            <input type="text" placeholder="이름을 입력해주세요." value="김학생">
+                                        </div>
+                                    </div>
+                                    <div class="input-underline-wrap">
+                                        <div class="input-title">생년월일</div>
+                                        <div class="input-wrap">
+                                            <input type="text" value="2008/12/14" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="input-underline-wrap">
+                                        <div class="input-title">비밀번호</div>
+                                        <input type="password" placeholder="현재 비밀번호">
+                                        <p class="warning show">현재 비밀번호를 입력해주세요.</p>
+                                        <input type="password" placeholder="새 비밀번호">
+                                        <input type="password" placeholder="새 비밀번호 확인">                                        
+                                        <p class="mark-text">비밀번호 규칙</p>
+                                        <p>비밀번호는 영문, 숫자, 특수문자(!@#$%^&*)를 포함하여 ~16자로 입력해 주세요.</p>
+                                    </div>
+                                    <div class="input-underline-wrap">
+                                        <div class="input-title">전화번호</div>
+                                        <div class="input-wrap">
+                                            <input type="text" value="010-####-####" disabled>
+                                            <button type="button" class="btn-line">변경</button>
+                                        </div>
+                                    </div>
+                                    <div class="input-underline-wrap">
+                                        <div class="input-title">전화번호</div>
+                                        <div class="input-wrap">
+                                            <input type="text" placeholder="숫자만 입력해주세요.">
+                                            <button type="button" class="btn-line">인증하기</button>
+                                        </div>
+                                        <p class="warningX show">인증번호가 발송되었습니다 (1/5)</p>
+                                        <div class="input-wrap">
+                                            <input type="text" placeholder="숫자 6자리 입력">
+                                            <span class="certify-number">03:00</span>
+                                            <button type="button" class="btn-line disable">확인</button>
+                                        </div>
+                                    </div>
+                                    <div class="input-underline-wrap">
+                                        <div class="input-title">이메일 / 공직자 계정</div>
+                                        <div class="input-wrap">
+                                            <input type="text" placeholder="이메일을 입력해주세요">
+                                            <button type="button" class="btn-line">인증하기</button>
+                                        </div>
+                                        <div class="input-wrap">
+                                            <input type="text" placeholder="숫자 6자리 입력">
+                                            <span class="certify-number">03:00</span>
+                                            <button type="button" class="btn-line disable">확인</button>
+                                        </div>                             
+                                        <p class="mark-text">인증번호가 오지 않아요!</p>
+                                        <p>인증 메일이 오지 않으면 스팸으로 분류 되어 있거나<br>
+                                            휴면 계정일 수 있습니다.<br>계정을 다시 한 번 확인해주세요.</p>
+                                    </div>
+
+                                    <div class="input-underline-wrap">
+                                        <div class="input-title">이메일 / 공직자 계정</div>
+                                        <div class="input-wrap">
+                                            <input type="text" value="#####@email.com" disabled>
+                                            <button type="button" class="btn-line">변경</button>
+                                        </div>
+                                    </div>
+                                    <div class="academyName-wrap">
+                                        <div class="input-underline-wrap">
+                                            <div class="input-title">학원/학교/교습소</div>
+                                        </div>
+                                        <div class="search-dropdown-wrap">
+                                            <div class="search-input-wrap">
+                                                <input class="search-input" type="text" placeholder="학교를 선택해 주세요." readonly>
+                                                <div class="popup-search">
+                                                    <div class="popup-cont-wrap">
+                                                        <div class="search-input-wrap">
+                                                            <input type="text">
+                                                        </div>
+                                                        <div class="search-result-list-wrap">
+                                                            <div class="empty-wrap">
+                                                                <p>학교명을 검색해 주세요</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="popup-footer-wrap">
+                                                        <button type="button">직접 입력</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="self-input-wrap">
+                                                <div class="input-underline-wrap">
+                                                    <input class="selct-input" type="text" placeholder="학교명을 입력해 주세요.">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="term-wrap type-2" data-agree="agree01">
+                                        <div class="term-wrap-all">
+                                            <div class="checkBox-wrap">마케팅 수신 동의 설정</div>
+                                        </div>
+                                        <div class="term-wrap-list">
+                                            <ul>
+                                                <li>
+                                                    <div class="checkBox-wrap">
+                                                        <span>앱 푸시</span>
+                                                        <input type="checkbox" id="agree-terms1"
+                                                            data-agree-list="agree01">
+                                                        <label for="agree-terms1"><i></i></label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="checkBox-wrap">
+                                                        <span>이메일</span>
+                                                        <input type="checkbox" id="agree-terms2"
+                                                            data-agree-list="agree01" checked>
+                                                        <label for="agree-terms2"><i></i></label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="checkBox-wrap">
+                                                        <span>SMS</span>
+                                                        <input type="checkbox" id="agree-terms3"
+                                                            data-agree-list="agree01" checked>
+                                                        <label for="agree-terms3"><i></i></label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-wrap">
+                                        <div class="input-title">개인정보 유효기간 설정</div>
+                                        <p>
+                                            개인정보를 파기 또는 분리 보관해야 하는 서비스 미이용 기간을 설정할 수 있습니다.<br>선택한 기간 동안 서비스를 이용하지 않는 경우 휴면 계정으로 전환됩니다.
+                                        </p>
+                                    </div>
+                                    <div class="gray-box">
+                                        <ul class="radio-list">
+                                            <li>
+                                                <input type="radio" name="rdo-list" id="rdo-list-01" checked="">
+                                                <label for="rdo-list-01">1년</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="rdo-list" id="rdo-list-02">
+                                                <label for="rdo-list-02">3년</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="rdo-list" id="rdo-list-03">
+                                                <label for="rdo-list-03">5년</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" name="rdo-list" id="rdo-list-04">
+                                                <label for="rdo-list-04">탈퇴 시까지</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button class="btn-right btn-underline">회원탈퇴</button>
+                                </div>
+
+                                <div class="btn-wrap">
+                                    <button class="btn-mint"><span>회원정보 수정</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/swiper-bundle.min.js"></script>
+    <script src="../../js/common.js"></script>
+    <script>
+        $(function(){
+
+            // 추가정보입력 토글
+            $('.toggle-wrap').each(function(index,element){
+                if ($(element).hasClass('active')){
+                    $(element).find('.toggle-cont').show()
+                }
+            })
+            $(document).on('click','.toggle-btn', function(){
+                var $toggleBtn = $(this);
+                if($toggleBtn.next().is(':visible')){
+                    $toggleBtn.next().slideUp()
+                    $toggleBtn.parents('.toggle-wrap').removeClass('active')
+                } else {
+                    $toggleBtn.next().slideDown();
+                    $toggleBtn.parents('.toggle-wrap').addClass('active');
+                }
+            })
+
+            sClass.uiAgreeInit() // 전체동의 실행문  D : 레이어팝업 닫을때 해당 input 에    input.checked = true  해주시고 실행문 한번 더 실행해주세요.
+
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+@charset "UTF-8";
+/* 리스닝배틀 추가 22년06월 */
+.d-flex{display: flex;align-items: center;justify-content: center;}
+.ml-auto{margin-left:auto;}
+#speakingBattle-contents.listening-battle .left-box-wrap .tab-nav-wrap.type-02{padding:10px 32px 0;}
+.report-box{padding:16px 32px 0;}
+.report-box .report-box-wrap {border:2px solid rgba(0, 0, 0, 0.08);border-radius:12px;background:#fff;}
+.report-box .report-box-wrap {padding:10px 36px;font-size:0;line-height:24px;}
+.report-box .report-box-wrap > * {display:inline-block;vertical-align:middle;}
+.report-box .report-box-wrap .class-info-wrap {font-size:0;margin-left:100px}
+.report-box .report-box-wrap .class-info-wrap:first-child{margin-left:0;}
+.report-box .report-box-wrap .class-info-wrap dl {display:inline-block;vertical-align:middle;}
+.report-box .report-box-wrap .class-info-wrap dl > * {display:inline-block;font-size:14px;vertical-align:middle;}
+.report-box .report-box-wrap .class-info-wrap dl dt {margin:0 6px 0 0;}
+.report-box .report-box-wrap .class-info-wrap dl dd {position:relative;font-weight:bold;padding-left:10px;margin-left:10px;}
+.report-box .report-box-wrap .class-info-wrap dl dd:before{content:"";position:absolute;top:4px;left:0;width:1px;height:14px;background: #ccc;;}
+.report-box .report-box-wrap .class-info-wrap dl dd:first-of-type{padding-left:0;margin-left:0;}
+.report-box .report-box-wrap .class-info-wrap dl dd:first-of-type:before{display: none;}
+
+/* 결과순위 */
+
+.ranking-wrap .sort-select-wrap{display: flex;align-items: center;margin-top:20px;}
+.ranking-wrap .sort-select-wrap .title{font-size:14px;}
+.ranking-wrap .sort-select-wrap .btn-sort-search {width:60px;height:42px;margin:0 0 0 10px;line-height:24px;border-radius:4px;}
+#speakingBattle-contents.listening-battle .ranking-wrap.type-02{height:90%;}
+#speakingBattle-contents.listening-battle .ranking-wrap.type-02 .ranking-table-wrap{margin-top:20px;}
+#speakingBattle-contents.listening-battle .ranking-wrap .data-list-tab-wrap{margin:30px 0 0 0;padding:0;}
+#speakingBattle-contents.listening-battle .ranking-wrap .ranking-title-wrap{position: absolute;right: 0;top: 82px;}
+#speakingBattle-contents.listening-battle .ranking-wrap .ranking-title-wrap .title{font-size:14px;}
+#speakingBattle-contents.listening-battle .ranking-wrap .ranking-title-wrap .selectBox-wrap .optionList{width:130px;left:0;}
+#speakingBattle-contents.listening-battle .ranking-wrap .ranking-title-wrap .selectBox-wrap .selectOption{font-size:14px;}
+.ranking-wrap .data-list-tab-wrap ul {position:relative; display:flex;}
+.ranking-wrap .data-list-tab-wrap ul:after{content:'';position:absolute;bottom:0;left:0;width:100%;height:1px;background:#ebebeb;}
+.ranking-wrap .data-list-tab-wrap li {position:relative;flex:0 1 auto;height:32px;padding:2px 20px 0;line-height:32px;text-align:center;border-radius:4px 4px 0 0;cursor:pointer;border:1px solid transparent;z-index: 1;}
+.ranking-wrap .data-list-tab-wrap li:before {content:'';position:absolute;bottom:0;left:-1px;width:calc(100% + 2px);height:1px;background:transparent}
+.ranking-wrap .data-list-tab-wrap li.on {font-weight:bold;color:#FA5F07;cursor:default;border-color:#ebebeb;border-bottom:1px solid #fff;}
+.ranking-wrap .data-list-tab-wrap li.on:after {content:none;}
+.ranking-wrap .data-list-tab-wrap li.on:before {background:#fff;}
+#speakingBattle-contents.listening-battle .left-box-wrap .contents-empty-img-wrap{margin-top:40px;}
+#speakingBattle-contents.listening-battle .left-box-wrap .contents-empty-img-wrap.type-rank img{width:158px;}
+
+/* 문제히스토리 */
+
+#speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card{padding:20px 13px; border:1px solid rgba(0, 0, 0, 0.16);background:transparent !important;color:#333 !important;}
+#contents #speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card.type-ing{padding:18px 11px !important;}
+#speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card:hover{padding:18px 11px !important;border:3px solid #4385AA ;}
+
+
+#speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card .top-text-wrap .tag{border:1px solid rgba(0, 0, 0, 0.16);color:#333;}
+#contents #speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card .top-text-wrap .tag.ing{color:#fff;}
+#speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card .btn-wrap .btn-edit{background-image: url(../../img/icon_accordion_edit_edit_title.png);background-size: 58px 19px;background-position: 0 0;}
+
+
+
+/* 스피킹 배틀 - 문제 히스토리 테마 컬러 */
+#contents.thema-purple #speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card.type-ing{border:3px solid #8B72D0;}
+#contents.thema-purple #speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card .top-text-wrap .tag.ing{background:#8B72D0;}
+
+#contents.thema-pink #speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card.type-ing{border:3px solid #F28688;}
+#contents.thema-pink #speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card .top-text-wrap .tag.ing{background:#F28688;}
+
+#contents.thema-green #speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card .top-text-wrap .tag.ing{background:#40A9B1;}
+#contents.thema-green #speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card.type-ing{border:3px solid #40A9B1;}
+
+#contents.thema-orange #speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card .top-text-wrap .tag.ing{background:#F19D5F;}
+#contents.thema-orange #speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card.type-ing{border:3px solid #F19D5F;}
+
+#contents.thema-yellow #speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card .top-text-wrap .tag.ing{background:#FFD370;}
+#contents.thema-yellow #speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card.type-ing{border:3px solid #FFD370;}
+
+#contents.thema-coralred #speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card .top-text-wrap .tag.ing{background:#E85B1F;}
+#contents.thema-coralred #speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card.type-ing{border:3px solid #E85B1F;}
+
+#contents.thema-red #speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card .top-text-wrap .tag.ing{background:#DE1C35;}
+#contents.thema-red #speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card.type-ing{border:3px solid #DE1C35;}
+
+#contents.thema-lightgreen #speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card .top-text-wrap .tag.ing{background:#48BA76;}
+#contents.thema-lightgreen #speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card.type-ing{border:3px solid #48BA76;}
+
+#contents.thema-deepgreen #speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card .top-text-wrap .tag.ing{background:#2D8D6C;}
+#contents.thema-deepgreen #speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card.type-ing{border:3px solid #2D8D6C;}
+
+#contents.thema-lightbrown #speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card .top-text-wrap .tag.ing{background:#B6A385;}
+#contents.thema-lightbrown #speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card.type-ing{border:3px solid #B6A385;}
+
+#contents.thema-brown #speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card .top-text-wrap .tag.ing{background:#A17261;}
+#contents.thema-brown #speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card.type-ing{border:3px solid #A17261;}
+
+#contents.thema-skyblue #speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card .top-text-wrap .tag.ing{background:#ACCFDA;}
+#contents.thema-skyblue #speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card.type-ing{border:3px solid #ACCFDA;}
+
+#contents.thema-ultrablue #speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card .top-text-wrap .tag.ing{background:#52508F;}
+#contents.thema-ultrablue #speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card.type-ing{border:3px solid #52508F;}
+
+#contents.thema-cobaltblue #speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card .top-text-wrap .tag.ing{background:#2469B8;}
+#contents.thema-cobaltblue #speakingBattle-contents.listening-battle .right-box-wrap.qa-library.type-02 .data-info-card.type-ing{border:3px solid #2469B8;}

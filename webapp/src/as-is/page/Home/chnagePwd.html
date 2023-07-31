@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="Home.css">
+</head>
+<body class="scroll-hidden">
+    <div id="root">
+        <div class="container">
+            <div id="header" class="tab-select">
+                <div class="header-inner">
+                    <div class="logo-wrap">
+                        <h1><a href="#"><img src="../../img/logo_studio.png" alt=""></a></h1>
+                    </div>
+                    <div class="header-tab-wrap">
+                        <div class="inner"></div>
+                    </div>
+                    <div class="profile-wrap">
+                        <div class="profile-info-wrap">
+                            <div class="academy">현대영어사</div>
+                            <div class="bar"></div>
+                            <div class="user"><strong>김선생</strong> (선생님)</div> 
+                        </div>
+                        <div class="profile-menu-wrap">
+                            <button class="btn-profile-menu"></button>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contents">
+                <div class="contents-inner">
+
+                    <div class="modal-wrap">
+                        <div class="modal-changePwd">
+                            <div class="modal-title-wrap">
+                                <strong>비밀번호 변경</strong>
+                                <button class="btn-modal-title-close"></button>
+                            </div>
+                            <div class="modal-cont-wrap">
+                                <div class="user-info-box-wrap">
+                                    <div class="box-wrap">
+                                        <div class="inner">
+                                            <form action="">
+                                                <div class="input-cont-wrap">
+                                                    <div class="input-underline-wrap">
+                                                        <div class="input-title">현재 비밀번호 <span>*</span></div>
+                                                        <input type="password" placeholder="8~16자 영문 소문자, 숫자, 특수문자" value="123456789">
+                                                        <p class="warning show">비밀번호를 확인해주세요.</p> <!-- show 추가시 보임-->
+                                                    </div>
+                                                    <div class="input-underline-wrap">
+                                                        <div class="input-title">새 비밀번호 <span>*</span></div>
+                                                        <input type="password" placeholder="비밀번호 확인" value="123456789">
+                                                        <p class="warning show">비밀번호를 확인해주세요.</p>
+                                                    </div>
+                                                    <div class="input-underline-wrap">
+                                                        <div class="input-title">새 비밀번호 확인 <span>*</span></div>
+                                                        <input type="password" placeholder="비밀번호 확인" value="123456789">
+                                                        <p class="warning show">비밀번호를 확인해주세요.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="checkBox-wrap">
+                                                    <input type="checkbox" id="showPwd">
+                                                    <label for="showPwd">비밀번호 보기</label>
+                                                </div>
+                                                <button class="btn-deepBlue btn-confirm disable">비밀번호 변경</button> <!-- disable 추가시 비활성화 -->                                                
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script>
+        var checkBox = $('.modal-changePwd input[type=password]');
+
+        $('#showPwd').on('click', function(){
+            var _this = $(this);
+
+            if(_this.is(':checked')){
+                checkBox.attr('type', 'text');
+            }else {
+                checkBox.attr('type', 'password');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="Class.css">
+    <link rel="stylesheet" href="../../css/simplebar.css">
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+</head>
+<body class="scroll-hidden"> <!-- 팝업 나왔을때 scroll-hidden 추가-->
+    <div id="root">
+        <div class="container">
+            <div id="header" class="tab-select"> <!-- 탭이 선택되면 tab-select 추가 (밑줄 사라짐)-->
+                <div class="header-inner">
+                    <div class="logo-wrap">
+                        <h1><a href="#"><img src="../../img/logo_studio.png" alt=""></a></h1>
+                    </div>
+                    <div class="header-tab-wrap">
+                        <div class="inner">
+                            <div class="tab on thema-purple"> <!-- thema-green, pink, orange, purple 로 색변경 / 활성화된건 on -->
+                                <div class="tab-inner">
+                                    <p>생활회화 A반 생활회화 A반</p>
+                                    <button class="btn-header-tab-close"></button>
+                                </div>
+                            </div>
+                            <div class="tab thema-orange">
+                                <div class="tab-inner">
+                                    <p>생활회화 A반 생활회화 A반</p>
+                                    <button class="btn-header-tab-close"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-wrap">
+                        <div class="profile-info-wrap">
+                            <div class="academy">현대영어사</div>
+                            <div class="bar"></div>
+                            <div class="user"><strong>김선생</strong> (선생님)</div> 
+                        </div>
+                        <div class="profile-menu-wrap">
+                            <button class="btn-profile-menu"></button>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contents" class="thema-purple"> <!-- thema-green, pink, orange, purple 로 색변경 -->
+                <div class="contents-inner">
+
+                    <div id="edit">
+                        <div class="class-info-title-wrap">
+                            <div class="title-wrap">
+                                <div class="top-wrap">
+                                    <div class="academy">현대영어사</div>
+                                    <div class="bar"></div>
+                                    <div class="className text-thema-color">생활회화 A반</div>
+                                    <button class="btn-edit"></button>
+                                </div>
+                                <div class="btm-wrap">
+                                    <div class="lang">학습 언어: 영어 - 가이드 언어: 한국어</div>
+                                    <div class="date">2020-09-01 ~ 2020-12-31</div>
+                                </div>
+                            </div>
+                            <div class="publishing-wrap">
+                                <p>최근 퍼블리싱  <strong>2020-11-11 15:30</strong></p>
+                                <button class="btn-navy">앱 퍼블리싱</button>
+                            </div>
+                        </div>
+                        <div class="edit-cont-wrap">
+                            <div class="edit-tab-wrap">
+                                <div class="btn-thema-color">수강생</div>
+                                <div class="btn-thema-color on">학습 콘텐츠</div>
+                                <div class="btn-thema-color">리포트</div>
+                            </div>
+                            <div class="edit-box-wrap">
+                                <div class="tab-cont-wrap">
+                                    <div class="tab-cont on">
+                                        
+                                    </div>
+                                    <div class="tab-cont">
+                                        
+                                    </div>
+                                    <div class="tab-cont"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="copyright-wrap">
+                            <div class="copyright-link-wrap">
+                                <a href="#">이용약관</a>
+                                <a href="#"><strong>개인정보처리방침</strong></a>
+                                <div class="bar"></div>
+                            </div>
+                            <p class="copyright">Copyright ©2020 LG CNS. All right reserved.</p>
+                        </div>
+                    </div>
+
+                    <!-- 팝업 -->
+                    <div class="modal-wrap">
+                        <div class="modal-create-conversation-learning type-shortSentence"> <!-- 단문학습 팝업에는 type-shortSentence 클래스 추가 -->
+                            <div class="modal-title-wrap">
+                                <div class="badge type2">단문</div>
+                                <strong>콘텐츠 등록하기</strong>
+                                <button class="btn-modal-title-close" tabindex="-1"></button>
+                            </div>
+                            <div class="modal-cont-wrap">
+                                <div class="create-step-wrap">
+                                    <div class="scroll-wrap" data-simplebar data-simplebar-auto-hide="false">
+
+                                        <!-- 콘텐츠 등록하기 (영상) -->
+                                        <div class="step-wrap add-contents-file-input">
+                                            <p class="notice-text">단문학습은 콘텐츠를 보고 질문과 답변을 주고 받으며 학습합니다. 콘텐츠를 먼저 등록해 주세요.</p>
+                                            <div class="modal-input-wrap">
+                                                <form id="imageFileUploadForm">
+                                                    <div class="modal-subtitle">영상 <span>*</span></div>
+                                                    <div class="input-group-wrap">
+                                                        <div class="half-box-wrap">
+                                                            <div class="input-wrap">
+                                                                <input class="img-fileName" type="text" placeholder="영상 파일을 등록해 주세요." readonly="" disabled>
+                                                                <input id="contentsMovie" type="file" name="contentsMovie">
+                                                            </div>
+                                                            <button type="button" for="contentsMovie" class="btn-line-dNavy">파일 찾기</button>
+                                                        </div>
+                                                    </div>
+                                                </form>  
+                                            </div>
+                                            <div class="modal-input-wrap">
+                                                <div class="input-group-wrap">
+                                                    <div class="input-wrap">
+                                                        <textarea class="enterAble" style="min-height:80px;" oninput="textareaAutoHeight(this)" placeholder="등록한 영상의 스크립트(영어)를 입력해 주세요. (선택)"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sample-play-wrap type-shortSentence">
+                                    <div class="tab-nav-wrap">
+                                        <ul>
+                                            <li>표지</li> <!-- 활성화 on -->
+                                            <li class="on">콘텐츠</li>
+                                            <li>답변시도</li>
+                                            <li>답변연습</li>
+                                            <li>실전말하기</li>
+                                        </ul>
+                                    </div>
+                                    <div class="play-area">
+                                        <!-- 활성화 on -->
+                                        <div class="play-item">
+                                            <img src="../../img/img_create_shortSentence_play_1.png" alt="">
+                                        </div>
+                                        <div class="play-item on">
+                                            <img src="../../img/img_create_shortSentence_play_2_1.png" alt="">
+                                            <!--
+                                                img_create_shortSentence_play_2_1 : 단문
+                                                img_create_shortSentence_play_2_2 : 이미지
+                                                img_create_shortSentence_play_2_3 : 영상
+                                                img_create_shortSentence_play_2_4 : 음성
+                                            -->
+                                        </div>
+                                        <div class="play-item">
+                                            <img src="../../img/img_create_shortSentence_play_3.png" alt="">
+                                        </div>
+                                        <div class="play-item play-learn">
+                                            <img src="../../img/img_create_shortSentence_play_4_1.gif" alt="">
+                                            <!--
+                                                img_create_shortSentence_play_4_1 : 끊어말하기
+                                                img_create_shortSentence_play_4_2 : 2번 끊어 말하기
+                                                img_create_shortSentence_play_4_3 : 빈칸 채우기
+                                                img_create_shortSentence_play_4_4 : 연습 생략
+                                            -->
+                                        </div>
+                                        <div class="play-item">
+                                            <img src="../../img/img_create_shortSentence_play_5.gif" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer-wrap">
+                                <button class="btn-line btn-tempsave">임시저장</button>
+                                <div class="modal-footer-btn-wrap">
+                                    <button class="btn-deepBlue btn-prev">이전</button>
+                                    <button class="btn-deepBlue btn-next">다음</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/simplebar.js"></script>
+    <script src="../../js/common.js"></script>
+    <script>
+        
+    </script>
+</body>
+</html>

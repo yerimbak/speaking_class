@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/simplebar.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+    <div id="root">
+        <div class="container">
+                    
+            <div id="contents">
+                <div class="contents-inner">
+
+                    <div id="login">
+
+                    </div>
+
+                    <!-- 팝업 -->
+                    <div class="modal-wrap">
+                        <div class="modal-contentsCompetition"> 
+                            <div class="modal-cont-wrap">
+                                <div class="img-cont-wrap">
+                                    <div class="scroll-wrap">
+                                        <div class="img-wrap">
+                                            <img src="../../img/img_contentsCompetition.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn-wrap">
+                                    <button class="btn-deepBlue btn-application">참가 신청서</button>
+                                    <button class="btn-menual">스피킹클래스 가이드 매뉴얼</button>
+                                    <button class="btn-movie">스피킹클래스 가이드 영상</button>
+                                </div>
+                                <div class="footer-wrap">
+                                    <div class="checkBox-wrap">
+                                        <input type="checkbox" id="noSee">
+                                        <label for="noSee">하루 동안 보지 않기</label>
+                                    </div>
+                                    <button class="btn-close">닫기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+                    
+        </div>
+    </div>
+    <script src="../../js/simplebar.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/swiper-bundle.min.js"></script>
+    <script>
+
+
+        // 스크롤 생성 
+        new SimpleBar(document.querySelector('.modal-contentsCompetition .img-cont-wrap > .scroll-wrap'), {autoHide:false}); 
+
+
+    </script>
+</body>
+</html>

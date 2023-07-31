@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="Class.css">
+    <link rel="stylesheet" href="../../css/simplebar.css">
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+</head>
+<body class="scroll-hidden"> <!-- 팝업 나왔을때 scroll-hidden 추가-->
+    <div id="root">
+        <div class="container">
+            <div id="header" class="tab-select"> <!-- 탭이 선택되면 tab-select 추가 (밑줄 사라짐)-->
+                <div class="header-inner">
+                    <div class="logo-wrap">
+                        <h1><a href="#"><img src="../../img/logo_studio.png" alt=""></a></h1>
+                    </div>
+                    <div class="header-tab-wrap">
+                        <div class="inner">
+                            <div class="tab on thema-purple"> <!-- thema-green, pink, orange, purple 로 색변경 / 활성화된건 on -->
+                                <div class="tab-inner">
+                                    <p>생활회화 A반 생활회화 A반</p>
+                                    <button class="btn-header-tab-close"></button>
+                                </div>
+                            </div>
+                            <div class="tab thema-orange">
+                                <div class="tab-inner">
+                                    <p>생활회화 A반 생활회화 A반</p>
+                                    <button class="btn-header-tab-close"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-wrap">
+                        <div class="profile-info-wrap">
+                            <div class="academy">현대영어사</div>
+                            <div class="bar"></div>
+                            <div class="user"><strong>김선생</strong> (선생님)</div> 
+                        </div>
+                        <div class="profile-menu-wrap">
+                            <button class="btn-profile-menu"></button>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contents" class="thema-purple"> <!-- thema-green, pink, orange, purple 로 색변경 -->
+                <div class="contents-inner">
+
+                    <div id="edit">
+                        <div class="class-info-title-wrap">
+                            <div class="title-wrap">
+                                <div class="top-wrap">
+                                    <div class="academy">현대영어사</div>
+                                    <div class="bar"></div>
+                                    <div class="className text-thema-color">생활회화 A반</div>
+                                    <button class="btn-edit"></button>
+                                </div>
+                                <div class="btm-wrap">
+                                    <div class="lang">학습 언어: 영어 - 가이드 언어: 한국어</div>
+                                    <div class="date">2020-09-01 ~ 2020-12-31</div>
+                                </div>
+                            </div>
+                            <div class="publishing-wrap">
+                                <p>최근 퍼블리싱  <strong>2020-11-11 15:30</strong></p>
+                                <button class="btn-navy">앱 퍼블리싱</button>
+                            </div>
+                        </div>
+                        <div class="edit-cont-wrap">
+                            <div class="edit-tab-wrap">
+                                <div class="btn-thema-color">수강생</div>
+                                <div class="btn-thema-color on">학습 콘텐츠</div>
+                                <div class="btn-thema-color">리포트</div>
+                            </div>
+                            <div class="edit-box-wrap">
+                                <div class="tab-cont-wrap">
+                                    <div class="tab-cont on">
+                                        
+                                    </div>
+                                    <div class="tab-cont">
+                                        
+                                    </div>
+                                    <div class="tab-cont"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="copyright-wrap">
+                            <div class="copyright-link-wrap">
+                                <a href="#">이용약관</a>
+                                <a href="#"><strong>개인정보처리방침</strong></a>
+                                <div class="bar"></div>
+                            </div>
+                            <p class="copyright">Copyright ©2020 LG CNS. All right reserved.</p>
+                        </div>
+                    </div>
+
+                    <!-- 팝업 -->
+                    <div class="modal-wrap">
+                        <div class="modal-create-conversation-learning type-pattern"> <!-- 패턴학습이면 type-pattern 추가-->
+                            <div class="modal-title-wrap">
+                                <div class="badge type3">패턴</div>
+                                <strong>학습 만들기</strong>
+                                <button class="btn-modal-title-close" tabindex="-1"></button>
+                            </div>
+                            <div class="modal-cont-wrap">
+                                <div class="create-step-wrap">
+                                    <div class="scroll-wrap" data-simplebar data-simplebar-auto-hide="false">
+
+                                        <!-- 대표예문. 학습 만들기 -->
+                                        <div class="step-wrap step-create-learning">
+                                            <p class="notice-text">입력한 패턴과 예문으로 단계별 학습이 자동으로 생성되었습니다. 각 항목은 학습 의도에 맞춰 편집할 수 있습니다.</p>
+                                            <div class="learning-cont-box-wrap">
+                                                <div class="box-item">
+                                                    <div class="box-title">패턴소개 <span>Let’s Talk</span></div>
+                                                    <div class="box-wrap">
+                                                        <div class="qa-wrap">
+                                                            <dl class="type-pattern">
+                                                                <dt>패턴</dt>
+                                                                <dd>The first ten people<br>선착순 10명</dd>
+                                                            </dl>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="box-item">
+                                                    <div class="box-title">패턴연습 <span>Pattern Practice</span></div>
+                                                    <div class="box-wrap">
+                                                        <div class="qa-wrap">
+                                                            <dl class="type-example">
+                                                                <dt>대표</dt>
+                                                                <dd>The first ten people in line will get the "door crasher" prizes.<br>줄 수 있는 선착순 10명이 '도어 크래셔' 상을 받을 것이다.</dd>
+                                                            </dl>
+                                                        </div>
+                                                        <div class="learn-wrap">
+                                                            <div class="subtitle-wrap">
+                                                                <div class="subtitle">익히기 <span>*</span></div>
+                                                                <p>대화를 연습할 방법과 꼭 배워야 하는 중요 표현을 선택해 주세요. (1개 단어 또는 연결된 단어만 선택 가능합니다.)</p>
+                                                            </div>
+                                                            <div class="select-type-wrap">
+                                                                <div class="type-nav-wrap">
+                                                                    <ul>
+                                                                        <li class="on">끊어 말하기</li>
+                                                                        <li>2번 끊어 말하기</li>
+                                                                        <li>빈칸 채우기</li>
+                                                                        <li>힌트 보고 말하기</li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="type-detail-wrap">
+                                                                    <div class="detail-item on">
+                                                                        <div class="type-img-wrap">
+                                                                            <!-- 임시 이미지 -->
+                                                                            <img src="../../img/img_learn_type_1.png" alt="">
+                                                                        </div>
+                                                                        <div class="important-expression-wrap">
+                                                                            <div class="item-wrap">
+                                                                                <p>중요 표현</p>
+                                                                                <div class="select-word">
+                                                                                    <!-- span에 on 추가시 활성화 -->
+                                                                                    <p><span class="on">The</span><span>first</span><span>ten</span><span>people</span><span>in</span><span>line</span><span>will</span><span>get</span><span>the</span><span>door</span><span>crasher</span><span>prize</span> .</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="detail-item">
+                                                                        <div class="type-img-wrap">
+                                                                            <!-- 임시 이미지 -->
+                                                                            <img src="../../img/img_learn_type_2.png" alt="">
+                                                                        </div>
+                                                                        <div class="important-expression-wrap">
+                                                                            <div class="item-wrap">
+                                                                                <p>중요 표현 1</p>
+                                                                                <div class="select-word">
+                                                                                    <!-- span에 on 추가시 활성화 -->
+                                                                                    <p><span class="on">The</span><span>first</span><span>ten</span><span>people</span><span>in</span><span>line</span><span>will</span><span>get</span><span>the</span><span>door</span><span>crasher</span><span>prize</span> .</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="item-wrap">
+                                                                                <p>중요 표현 2</p>
+                                                                                <div class="select-word">
+                                                                                    <!-- span에 on 추가시 활성화 -->
+                                                                                    <p><span class="on">The</span><span>first</span><span>ten</span><span>people</span><span>in</span><span>line</span><span>will</span><span>get</span><span>the</span><span>door</span><span>crasher</span><span>prize</span> .</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="detail-item">
+                                                                        <div class="type-img-wrap">
+                                                                            <!-- 임시 이미지 -->
+                                                                            <img src="../../img/img_learn_type_3.png" alt="">
+                                                                        </div>
+                                                                        <div class="important-expression-wrap">
+                                                                            <div class="item-wrap">
+                                                                                <p>중요 표현</p>
+                                                                                <div class="select-word">
+                                                                                    <!-- span에 on 추가시 활성화 -->
+                                                                                    <p><span class="on">The</span><span>first</span><span>ten</span><span>people</span><span>in</span><span>line</span><span>will</span><span>get</span><span>the</span><span>door</span><span>crasher</span><span>prize</span> .</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="detail-item">
+                                                                        <div class="type-img-wrap">
+                                                                            <!-- 임시 이미지 -->
+                                                                            <img src="../../img/img_learn_type_4.png" alt="">
+                                                                        </div>
+                                                                        <div class="important-expression-wrap">
+                                                                            <div class="item-wrap">
+                                                                                <p>힌트</p>
+                                                                                <div class="select-word">
+                                                                                    <!-- span에 on 추가시 활성화 -->
+                                                                                    <p><span class="on">The</span><span>first</span><span>ten</span><span>people</span><span>in</span><span>line</span><span>will</span><span>get</span><span>the</span><span>door</span><span>crasher</span><span>prize</span> .</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-wrap">
+                                                        <div class="qa-wrap">
+                                                            <dl class="type-example">
+                                                                <dt>응용1</dt>
+                                                                <dd>The first five people to call win a free toaster.<br>호명된 선착순 5명이 토스터기를 무료로 받는다.</dd>
+                                                            </dl>
+                                                        </div>
+                                                        <div class="learn-wrap">
+                                                            <div class="subtitle-wrap">
+                                                                <div class="subtitle">익히기 <span>*</span></div>
+                                                                <p>문장을 연습할 방법과 꼭 배워야 하는 중요 표현/힌트를 선택해 주세요. (1개 또는 연결된 단어만 선택 가능합니다.)</p>
+                                                            </div>
+                                                            <div class="select-type-wrap">
+                                                                <div class="type-nav-wrap">
+                                                                    <ul>
+                                                                        <li class="on">끊어 말하기</li>
+                                                                        <li>2번 끊어 말하기</li>
+                                                                        <li>빈칸 채우기</li>
+                                                                        <li>힌트 보고 말하기</li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="type-detail-wrap">
+                                                                    <div class="detail-item on">
+                                                                        <div class="type-img-wrap">
+                                                                            <!-- 임시 이미지 -->
+                                                                            <img src="../../img/img_learn_type_1.png" alt="">
+                                                                        </div>
+                                                                        <div class="important-expression-wrap">
+                                                                            <div class="item-wrap">
+                                                                                <p>중요 표현</p>
+                                                                                <div class="select-word">
+                                                                                    <!-- span에 on 추가시 활성화 -->
+                                                                                    <p><span class="on">The</span><span>first</span><span>five</span><span>people</span><span>to</span><span>call</span><span>win</span><span>a</span><span>free</span><span>toaster</span> .</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="detail-item">
+                                                                        <div class="type-img-wrap">
+                                                                            <!-- 임시 이미지 -->
+                                                                            <img src="../../img/img_learn_type_2.png" alt="">
+                                                                        </div>
+                                                                        <div class="important-expression-wrap">
+                                                                            <div class="item-wrap">
+                                                                                <p>중요 표현 1</p>
+                                                                                <div class="select-word">
+                                                                                    <!-- span에 on 추가시 활성화 -->
+                                                                                    <p><span class="on">The</span><span>first</span><span>five</span><span>people</span><span>to</span><span>call</span><span>win</span><span>a</span><span>free</span><span>toaster</span> .</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="item-wrap">
+                                                                                <p>중요 표현 2</p>
+                                                                                <div class="select-word">
+                                                                                    <!-- span에 on 추가시 활성화 -->
+                                                                                    <p><span class="on">The</span><span>first</span><span>five</span><span>people</span><span>to</span><span>call</span><span>win</span><span>a</span><span>free</span><span>toaster</span> .</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="detail-item">
+                                                                        <div class="type-img-wrap">
+                                                                            <!-- 임시 이미지 -->
+                                                                            <img src="../../img/img_learn_type_3.png" alt="">
+                                                                        </div>
+                                                                        <div class="important-expression-wrap">
+                                                                            <div class="item-wrap">
+                                                                                <p>중요 표현</p>
+                                                                                <div class="select-word">
+                                                                                    <!-- span에 on 추가시 활성화 -->
+                                                                                    <p><span class="on">The</span><span>first</span><span>five</span><span>people</span><span>to</span><span>call</span><span>win</span><span>a</span><span>free</span><span>toaster</span> .</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="detail-item">
+                                                                        <div class="type-img-wrap">
+                                                                            <!-- 임시 이미지 -->
+                                                                            <img src="../../img/img_learn_type_4.png" alt="">
+                                                                        </div>
+                                                                        <div class="important-expression-wrap">
+                                                                            <div class="item-wrap">
+                                                                                <p>중요 표현</p>
+                                                                                <div class="select-word">
+                                                                                    <!-- span에 on 추가시 활성화 -->
+                                                                                    <p><span class="on">The</span><span>first</span><span>five</span><span>people</span><span>to</span><span>call</span><span>win</span><span>a</span><span>free</span><span>toaster</span> .</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-wrap">
+                                                        <div class="qa-wrap">
+                                                            <dl class="type-example">
+                                                                <dt>응용2</dt>
+                                                                <dd>The first five people to call win a free toaster.<br>호명된 선착순 5명이 토스터기를 무료로 받는다.</dd>
+                                                            </dl>
+                                                        </div>
+                                                        <div class="learn-wrap">
+                                                            <div class="subtitle-wrap">
+                                                                <div class="subtitle">익히기 <span>*</span></div>
+                                                                <p>문장을 연습할 방법과 꼭 배워야 하는 중요 표현/힌트를 선택해 주세요. (1개 또는 연결된 단어만 선택 가능합니다.)</p>
+                                                            </div>
+                                                            <div class="select-type-wrap">
+                                                                <div class="type-nav-wrap">
+                                                                    <ul>
+                                                                        <li class="on">끊어 말하기</li>
+                                                                        <li>2번 끊어 말하기</li>
+                                                                        <li>빈칸 채우기</li>
+                                                                        <li>힌트 보고 말하기</li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="type-detail-wrap">
+                                                                    <div class="detail-item on">
+                                                                        <div class="type-img-wrap">
+                                                                            <!-- 임시 이미지 -->
+                                                                            <img src="../../img/img_learn_type_1.png" alt="">
+                                                                        </div>
+                                                                        <div class="important-expression-wrap">
+                                                                            <div class="item-wrap">
+                                                                                <p>중요 표현</p>
+                                                                                <div class="select-word">
+                                                                                    <!-- span에 on 추가시 활성화 -->
+                                                                                    <p><span class="on">The</span><span>first</span><span>five</span><span>people</span><span>to</span><span>call</span><span>win</span><span>a</span><span>free</span><span>toaster</span> .</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="detail-item">
+                                                                        <div class="type-img-wrap">
+                                                                            <!-- 임시 이미지 -->
+                                                                            <img src="../../img/img_learn_type_2.png" alt="">
+                                                                        </div>
+                                                                        <div class="important-expression-wrap">
+                                                                            <div class="item-wrap">
+                                                                                <p>중요 표현 1</p>
+                                                                                <div class="select-word">
+                                                                                    <!-- span에 on 추가시 활성화 -->
+                                                                                    <p><span class="on">The</span><span>first</span><span>five</span><span>people</span><span>to</span><span>call</span><span>win</span><span>a</span><span>free</span><span>toaster</span> .</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="item-wrap">
+                                                                                <p>중요 표현 2</p>
+                                                                                <div class="select-word">
+                                                                                    <!-- span에 on 추가시 활성화 -->
+                                                                                    <p><span class="on">The</span><span>first</span><span>five</span><span>people</span><span>to</span><span>call</span><span>win</span><span>a</span><span>free</span><span>toaster</span> .</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="detail-item">
+                                                                        <div class="type-img-wrap">
+                                                                            <!-- 임시 이미지 -->
+                                                                            <img src="../../img/img_learn_type_3.png" alt="">
+                                                                        </div>
+                                                                        <div class="important-expression-wrap">
+                                                                            <div class="item-wrap">
+                                                                                <p>중요 표현</p>
+                                                                                <div class="select-word">
+                                                                                    <!-- span에 on 추가시 활성화 -->
+                                                                                    <p><span class="on">The</span><span>first</span><span>five</span><span>people</span><span>to</span><span>call</span><span>win</span><span>a</span><span>free</span><span>toaster</span> .</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="detail-item">
+                                                                        <div class="type-img-wrap">
+                                                                            <!-- 임시 이미지 -->
+                                                                            <img src="../../img/img_learn_type_4.png" alt="">
+                                                                        </div>
+                                                                        <div class="important-expression-wrap">
+                                                                            <div class="item-wrap">
+                                                                                <p>중요 표현</p>
+                                                                                <div class="select-word">
+                                                                                    <!-- span에 on 추가시 활성화 -->
+                                                                                    <p><span class="on">The</span><span>first</span><span>five</span><span>people</span><span>to</span><span>call</span><span>win</span><span>a</span><span>free</span><span>toaster</span> .</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="box-item">
+                                                    <div class="box-title">패턴대화 <span>Pattern Dialogue</span></div>
+                                                    <div class="box-wrap">
+                                                        <div class="qa-wrap">
+                                                            <dl class="type-question">
+                                                                <dt>질문1</dt>
+                                                                <dd>Hurry up. I don't want to be late. I really want to go to this concert.</dd>
+                                                            </dl>
+                                                            <dl class="type-answer">
+                                                                <dt>답변1</dt>
+                                                                <dd>I'm coming, I'm coming. Don't worry. The first 100 people in line will get tickets.</dd>
+                                                            </dl>
+                                                        </div>
+                                                        <div class="word-hint-wrap">
+                                                            <div class="subtitle-wrap">
+                                                                <div class="subtitle">단어 힌트 <span>*</span></div>
+                                                                <p>수강생이 오답을 말할 경우 정답을 떠올리도록 단어를 힌트로 제공해 주세요.</p>
+                                                            </div>
+                                                            <div class="word-hint-list-wrap">
+                                                                <dl>
+                                                                    <dd>
+                                                                        <div class="input-group-wrap">
+                                                                            <div class="half-box-wrap">
+                                                                                <div class="input-subtitle-wrap">
+                                                                                    <div class="input-subtitle">1차 힌트</div>
+                                                                                    <div class="input-wrap">
+                                                                                        <textarea oninput="textareaAutoHeight(this)" placeholder="1차 힌트를 입력해 주세요.">cheese</textarea>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="input-subtitle-wrap">
+                                                                                    <div class="input-subtitle">2차 힌트</div>
+                                                                                    <div class="input-wrap">
+                                                                                        <div class="readonly-hint">cheese</div>
+                                                                                    </div>
+                                                                                    <div class="slash">/</div>                                                                                             
+                                                                                    <div class="input-wrap">
+                                                                                        <textarea oninput="textareaAutoHeight(this)" placeholder="2차 힌트를 입력해 주세요.">please</textarea>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </dd>
+                                                                </dl>
+                                                                <dl>
+                                                                    <dd>
+                                                                        <div class="input-group-wrap">
+                                                                            <div class="half-box-wrap">
+                                                                                <div class="input-subtitle-wrap">
+                                                                                    <div class="input-subtitle">1차 힌트</div>
+                                                                                    <div class="input-wrap">
+                                                                                        <textarea oninput="textareaAutoHeight(this)" placeholder="1차 힌트를 입력해 주세요.">cheese</textarea>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="input-subtitle-wrap">
+                                                                                    <div class="input-subtitle">2차 힌트</div>
+                                                                                    <div class="input-wrap">
+                                                                                        <div class="readonly-hint">cheese</div>
+                                                                                    </div>
+                                                                                    <div class="slash">/</div>                                                                                             
+                                                                                    <div class="input-wrap">
+                                                                                        <textarea oninput="textareaAutoHeight(this)" placeholder="2차 힌트를 입력해 주세요.">please</textarea>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </dd>
+                                                                </dl>
+                                                                <dl>
+                                                                    <dd>
+                                                                        <div class="input-group-wrap">
+                                                                            <div class="half-box-wrap">
+                                                                                <div class="input-subtitle-wrap">
+                                                                                    <div class="input-subtitle">1차 힌트</div>
+                                                                                    <div class="input-wrap">
+                                                                                        <textarea oninput="textareaAutoHeight(this)" placeholder="1차 힌트를 입력해 주세요.">cheese</textarea>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="input-subtitle-wrap">
+                                                                                    <div class="input-subtitle">2차 힌트</div>
+                                                                                    <div class="input-wrap">
+                                                                                        <div class="readonly-hint">cheese</div>
+                                                                                    </div>
+                                                                                    <div class="slash">/</div>                                                                                             
+                                                                                    <div class="input-wrap">
+                                                                                        <textarea oninput="textareaAutoHeight(this)" placeholder="2차 힌트를 입력해 주세요.">please</textarea>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </dd>
+                                                                </dl>
+                                                            </div>
+                                                        </div>
+                                                        <div class="sentence-hint-wrap">
+                                                            <div class="subtitle-wrap">
+                                                                <div class="subtitle notice">문장 힌트</div>
+                                                                <p>수강생이 오답을 말할 경우 정답을 떠올리도록 단어를 힌트로 제공해 주세요. (AI 음성으로 제공됩니다.)</p>
+                                                            </div>
+                                                            <div class="sentence-hint-list-wrap">
+                                                                <dl>
+                                                                    <dt>1차 힌트</dt>
+                                                                    <dd>
+                                                                        <p>I’m sorry,<br>(랜덤)</p>
+                                                                        <div class="plus">+</div>
+                                                                        <div class="input-wrap">
+                                                                            <textarea oninput="textareaAutoHeight(this)" placeholder="Are you saying ~ ? 형식으로 입력해 보세요. (선택)"></textarea>
+                                                                            <div class="input-validation-tooltip show"> <!-- show 추가시 출력 -->
+                                                                                <p>영어만 입력 가능합니다.</p>
+                                                                                <button class="btn-validation-close"></button>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="plus">+</div>
+                                                                        <p>Could you speak more loudly?<br>(랜덤)</p>
+                                                                    </dd>
+                                                                </dl>
+                                                                <dl>
+                                                                    <dt>2차 힌트</dt>
+                                                                    <dd>
+                                                                        <p>sorry?<br>(랜덤)</p>
+                                                                        <div class="plus">+</div>
+                                                                        <div class="input-wrap">
+                                                                            <textarea oninput="textareaAutoHeight(this)" placeholder="You mean ~ ? 형식으로 입력해 보세요. (선택)"></textarea>
+                                                                            <div class="input-validation-tooltip"> <!-- show 추가시 출력 -->
+                                                                                <p>영어만 입력 가능합니다.</p>
+                                                                                <button class="btn-validation-close"></button>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="plus">+</div>
+                                                                        <p>Could you speak up, please?<br>(랜덤)</p>
+                                                                    </dd>
+                                                                </dl>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-wrap">
+                                                        <div class="qa-wrap">
+                                                            <dl class="type-question">
+                                                                <dt>질문2</dt>
+                                                                <dd>How many people do they give out coupons?</dd>
+                                                            </dl>
+                                                            <dl class="type-answer">
+                                                                <dt>답변2</dt>
+                                                                <dd>Only 30 people can get it on a first-come, first-served basis.</dd>
+                                                            </dl>
+                                                        </div>
+                                                        <div class="word-hint-wrap">
+                                                            <div class="subtitle-wrap">
+                                                                <div class="subtitle">단어 힌트 <span>*</span></div>
+                                                                <p>수강생이 오답을 말할 경우 정답을 떠올리도록 단어를 힌트로 제공해 주세요.</p>
+                                                            </div>
+                                                            <div class="word-hint-list-wrap">
+                                                                <dl>
+                                                                    <dd>
+                                                                        <div class="input-group-wrap">
+                                                                            <div class="half-box-wrap">
+                                                                                <div class="input-subtitle-wrap">
+                                                                                    <div class="input-subtitle">1차 힌트</div>
+                                                                                    <div class="input-wrap">
+                                                                                        <textarea oninput="textareaAutoHeight(this)" placeholder="1차 힌트를 입력해 주세요.">cheese</textarea>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="input-subtitle-wrap">
+                                                                                    <div class="input-subtitle">2차 힌트</div>
+                                                                                    <div class="input-wrap">
+                                                                                        <div class="readonly-hint">cheese</div>
+                                                                                    </div>
+                                                                                    <div class="slash">/</div>                                                                                             
+                                                                                    <div class="input-wrap">
+                                                                                        <textarea oninput="textareaAutoHeight(this)" placeholder="2차 힌트를 입력해 주세요.">please</textarea>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </dd>
+                                                                </dl>
+                                                                <dl>
+                                                                    <dd>
+                                                                        <div class="input-group-wrap">
+                                                                            <div class="half-box-wrap">
+                                                                                <div class="input-subtitle-wrap">
+                                                                                    <div class="input-subtitle">1차 힌트</div>
+                                                                                    <div class="input-wrap">
+                                                                                        <textarea oninput="textareaAutoHeight(this)" placeholder="1차 힌트를 입력해 주세요.">cheese</textarea>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="input-subtitle-wrap">
+                                                                                    <div class="input-subtitle">2차 힌트</div>
+                                                                                    <div class="input-wrap">
+                                                                                        <div class="readonly-hint">cheese</div>
+                                                                                    </div>
+                                                                                    <div class="slash">/</div>                                                                                             
+                                                                                    <div class="input-wrap">
+                                                                                        <textarea oninput="textareaAutoHeight(this)" placeholder="2차 힌트를 입력해 주세요.">please</textarea>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </dd>
+                                                                </dl>
+                                                                <dl>
+                                                                    <dd>
+                                                                        <div class="input-group-wrap">
+                                                                            <div class="half-box-wrap">
+                                                                                <div class="input-subtitle-wrap">
+                                                                                    <div class="input-subtitle">1차 힌트</div>
+                                                                                    <div class="input-wrap">
+                                                                                        <textarea oninput="textareaAutoHeight(this)" placeholder="1차 힌트를 입력해 주세요.">cheese</textarea>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="input-subtitle-wrap">
+                                                                                    <div class="input-subtitle">2차 힌트</div>
+                                                                                    <div class="input-wrap">
+                                                                                        <div class="readonly-hint">cheese</div>
+                                                                                    </div>
+                                                                                    <div class="slash">/</div>                                                                                             
+                                                                                    <div class="input-wrap">
+                                                                                        <textarea oninput="textareaAutoHeight(this)" placeholder="2차 힌트를 입력해 주세요.">please</textarea>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </dd>
+                                                                </dl>
+                                                            </div>
+                                                        </div>
+                                                        <div class="sentence-hint-wrap">
+                                                            <div class="subtitle-wrap">
+                                                                <div class="subtitle notice">문장 힌트</div>
+                                                                <p>수강생이 오답을 말할 경우 정답을 떠올리도록 단어를 힌트로 제공해 주세요. (AI 음성으로 제공됩니다.)</p>
+                                                            </div>
+                                                            <div class="sentence-hint-list-wrap">
+                                                                <dl>
+                                                                    <dt>1차 힌트</dt>
+                                                                    <dd>
+                                                                        <p>I’m sorry,<br>(랜덤)</p>
+                                                                        <div class="plus">+</div>
+                                                                        <div class="input-wrap">
+                                                                            <textarea oninput="textareaAutoHeight(this)" placeholder="Are you saying ~ ? 형식으로 입력해 보세요. (선택)"></textarea>
+                                                                            <div class="input-validation-tooltip show"> <!-- show 추가시 출력 -->
+                                                                                <p>영어만 입력 가능합니다.</p>
+                                                                                <button class="btn-validation-close"></button>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="plus">+</div>
+                                                                        <p>Could you speak more loudly?<br>(랜덤)</p>
+                                                                    </dd>
+                                                                </dl>
+                                                                <dl>
+                                                                    <dt>2차 힌트</dt>
+                                                                    <dd>
+                                                                        <p>sorry?<br>(랜덤)</p>
+                                                                        <div class="plus">+</div>
+                                                                        <div class="input-wrap">
+                                                                            <textarea oninput="textareaAutoHeight(this)" placeholder="You mean ~ ? 형식으로 입력해 보세요. (선택)"></textarea>
+                                                                            <div class="input-validation-tooltip"> <!-- show 추가시 출력 -->
+                                                                                <p>영어만 입력 가능합니다.</p>
+                                                                                <button class="btn-validation-close"></button>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="plus">+</div>
+                                                                        <p>Could you speak up, please?<br>(랜덤)</p>
+                                                                    </dd>
+                                                                </dl>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="sample-play-wrap">
+                                    <div class="tab-nav-wrap">
+                                        <ul>
+                                            <li>표지</li> <!-- 활성화 on -->
+                                            <li>패턴소개</li>
+                                            <li class="on">패턴연습</li>
+                                            <li>패턴대화</li>
+                                        </ul>
+                                    </div>
+                                    <div class="play-area">
+                                        <!-- 활성화 on -->
+                                        <div class="play-item">
+                                            <img src="../../img/img_create_pattern_play_1.png" alt="">
+                                        </div>
+                                        <div class="play-item">
+                                            <img src="../../img/img_create_pattern_play_2.png" alt="">
+                                        </div>
+                                        <div class="play-item on">
+                                            <img src="../../img/img_create_pattern_play_3.gif" alt="">
+                                        </div>
+                                        <div class="play-item">
+                                            <img src="../../img/img_create_pattern_play_4.gif" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer-wrap">
+                                <button class="btn-line btn-tempsave">임시저장</button>
+                                <div class="modal-footer-btn-wrap">
+                                    <button class="btn-deepBlue btn-prev">이전</button>
+                                    <button class="btn-navy btn-save">저장</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/simplebar.js"></script>
+    <script src="../../js/common.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>

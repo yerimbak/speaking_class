@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="Home.css">
+</head>
+<body>
+    <div id="root">
+        <div class="container">
+            <div id="header">
+                <div class="header-inner">
+                    <div class="logo-wrap">
+                        <h1><a href="#"><img src="../../img/logo_studio.png" alt=""></a></h1>
+                    </div>
+                    <div class="header-tab-wrap">
+                        <div class="inner"></div>
+                    </div>
+                    <div class="profile-wrap">
+                        <div class="profile-info-wrap">
+                            <div class="academy">창문여자중학교</div>
+                            <div class="bar"></div>
+                            <div class="user"><strong>김학생</strong> (학생)</div>
+                        </div>
+                        <div class="profile-menu-wrap">
+                            <button class="btn-profile-menu"></button>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contents">
+                <div class="contents-inner">
+                    
+                    <div id="home">
+                        <div class="home-inner empty"> <!-- 클래스가 없으면 empy 클래스 추가-->
+                            <div class="header-wrap">
+                                <div class="sort-wrap">
+                                    <button class="on">전체</button> <!-- 활성화 된건 on -->
+                                    <div class="bar"></div>
+                                    <button>수강중</button>
+                                </div>
+                            </div>                            
+                            <div class="class-card-wrap">
+                                <div class="empty-wrap">
+                                    <img src="../../img/img_lesson_contents_empty.png" alt="">
+                                    <p>수강중인 클래스가 없습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="copyright">Copyright &copy;2020 LG CNS. All right reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/common.js"></script>
+    <script>
+        $( ".home-inner:not(.empty) .class-card-wrap").sortable({
+            placeholder:"drag-enter-bg", // 드래그 들어왔을때 영역 표시
+            over:function(){
+                // 드래그해서 안에 들어왔을 때 (손 안땜)
+            },            
+            out:function(){
+                // 드래그했다 나갔을 때 (손 안땜)
+            },
+            update:function(event, ui){
+                // 영역에 드랍
+            },
+            receive: function (event, ui) {
+                // 드래그 했던 대상
+            }
+        }); 
+    </script>
+</body>
+</html>

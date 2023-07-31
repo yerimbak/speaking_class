@@ -1,0 +1,15 @@
+#poster section {min-width:1280px;margin:0 auto;padding:0 42px;background-size:cover;background-position:top center;box-sizing:content-box;}
+#poster .section-inner {position:relative;width:1280px;margin:0 auto;}
+#poster .section-inner img {width:100%;}
+#poster .link-wrap {position:absolute;left:0;width:100%;}
+#poster .link-wrap a {display:block;margin:0 auto;}
+#poster .section1 {background-image:url('../../img/poster_1_bg.png');}
+#poster .section2 {background-image:url('../../img/poster_2_bg.png');}
+#poster .section2 .link-wrap {bottom:48px;}
+#poster .section2 .link-wrap a {width:530px;height:81px;background-image:url('../../img/poster_web_link.png');background-size:auto 81px;}
+#poster .section2 .link-wrap a:hover {background-position:-530px 0;}
+#poster .section3 {background-image:url('../../img/poster_3_bg.png');}
+#poster .section3 .link-wrap {bottom:60px;}
+#poster .section3 .link-wrap a {width:805px;height:143px;background-image:url('../../img/poster_app_banner.png');background-size:100%;}
+#poster .btn-back {position:fixed;top:48px;left:90px;width:108px;height:108px;padding:67px 0 0 0;border-radius:50%;background-color:rgba(111,103,203,0.9);background-image:url('../../img/poster_arr_left.png');background-size:48px;background-position:top 19px center;background-repeat:no-repeat;text-align:center;color:#fff;font-weight:bold;font-size:14px;line-height:14px;letter-spacing:-0.04em;box-shadow:0px 12px 30px rgba(111, 103, 203, 0.48);}
+#poster .btn-back:hover {background-color:#6A579E;}

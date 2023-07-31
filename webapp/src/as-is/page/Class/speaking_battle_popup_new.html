@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/studio.css">
+    <link rel="stylesheet" href="../../css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="Class.css">
+    <link rel="stylesheet" href="../../css/simplebar.css">
+</head>
+<body>
+    <div id="root">
+        <div class="container">
+            <div id="header" class="new">
+                <div class="bg-gnb">
+                    <div class="slide-wrap">
+                        <div class="swiper-container gnb-slide">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="img-wrap">
+                                        <img src="../../img/gnb_banner_01.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="img-wrap">
+                                        <img src="../../img/gnb_banner_02.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-inner">
+                    <div class="logo-wrap">
+                        <h1><a href="#"><img src="../../img/logo_studio.png" alt=""></a></h1>
+                    </div>
+                    <div class="gnb">
+                        <div class="gnb-menu">
+                            <a href="#none" class="gnb-main-list">학생 등록하기</a>
+                            <div class="gnb-sub-wrap">
+                                <strong>학생 등록하기</strong>
+                                <ul>
+                                    <li><a href="#none" class="gnb-sub-list on">학생 간편 가입 생성</a></li> <!-- 활성화 gnb 서브 메뉴 클래스 on -->
+                                    <li><a href="#none" class="gnb-sub-list">학생 계정 자동 생성</a></li>
+                                    <li><a href="#none" class="gnb-sub-list">엑셀로 업로드 하기</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="gnb-menu">
+                            <a href="#none" class="gnb-main-list">클래스 만들기</a>
+                            <div class="gnb-sub-wrap">
+                                <strong>클래스 만들기</strong>
+                                <ul>
+                                    <li><a href="#none" class="gnb-sub-list">교과서 클래스 만들기</a></li>
+                                    <li><a href="#none" class="gnb-sub-list">창작 클래스 만들기</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="gnb-menu">
+                            <a href="#none" class="gnb-main-list">커뮤니티</a>
+                            <div class="gnb-sub-wrap">
+                                <strong>커뮤니티</strong>
+                                <ul>
+                                    <li><a href="#none" class="gnb-sub-list">FAQ</a></li>
+                                    <li><a href="#none" class="gnb-sub-list">문의</a></li>
+                                    <li><a href="#none" class="gnb-sub-list">개선 제안</a></li>
+                                    <li><a href="#none" class="gnb-sub-list">이벤트</a></li>
+                                    <li><a href="#none" class="gnb-sub-list">활용 사례</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="gnb-menu">
+                            <a href="#none" class="gnb-main-list solo">이벤트</a>
+                        </div>
+                        <div class="gnb-menu">
+                            <a href="#none" class="gnb-main-list solo">매뉴얼 다운로드</a>
+                        </div>
+                    </div>
+                    <div class="profile-wrap">
+                        <div class="profile-info-wrap">
+                            <div class="academy">자양중학교</div>
+                            <div class="bar"></div>
+                            <div class="user"><strong>김선생</strong> (선생님)</div> 
+                        </div>
+                        <div class="profile-info-wrap">
+                            <button type="button" class="btn mypage">마이페이지</button>
+                            <div class="bar"></div>
+                            <button type="button" class="btn login">로그아웃</button> 
+                        </div>
+                    </div>
+                </div>
+                <div class="mypage-wrap">
+                    <div class="inner">
+                        <a href="#none" class="btn">내정보</a>
+                        <a href="#none" class="btn">비밀번호 변경</a>
+                        <a href="#none" class="btn">내 글 모아보기</a>
+                    </div>
+                </div>
+            </div>
+            <div id="contents" class="thema-purple"> <!-- thema-green, pink, orange, purple 로 색변경 -->
+                <div class="contents-inner">
+
+                    <div id="edit" class="new">
+                        <div class="class-info-title-wrap">
+                            <div class="title-wrap">
+                                <div class="top-wrap">
+                                    <div class="academy">현대영어사</div>
+                                    <div class="bar"></div>
+                                    <div class="className text-thema-color">생활회화 A반</div>
+                                    <button class="btn-edit"></button>
+                                </div>
+                                <div class="btm-wrap">
+                                    <div class="lang">학습 언어: 영어 - 가이드 언어: 한국어</div>
+                                    <div class="date">2020-09-01 ~ 2020-12-31</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edit-cont-wrap">
+                            <div class="edit-tab-wrap">
+                                <div class="btn-thema-color">수강생</div>
+                                <div class="btn-thema-color">학습 콘텐츠</div>
+                                <div class="btn-thema-color">리포트</div>
+                                <div class="btn-thema-color on">스피킹 배틀</div> <!-- on 추가시 해당 탭 활성화-->
+                            </div>
+                            <div class="edit-box-wrap">
+                                <div class="tab-cont-wrap">
+                                    <div class="tab-cont"></div>
+                                    <div class="tab-cont"></div>
+                                    <div class="tab-cont"></div>
+                                    <div class="tab-cont on"> <!-- on 추가시 해당 탭 활성화-->
+
+                                        <!-- 스피킹 배틀 -->
+                                        <div id="speakingBattle-contents">
+                                            <div class="left-box-wrap">
+                                                <div class="question-title-wrap">
+                                                    <i class="ico_battle"></i>
+                                                    <strong>모둠반 간식 대항 스피킹 배틀</strong>
+                                                </div>
+                                                <div class="tab-nav-wrap type-02">
+                                                    <ul>
+                                                        <li class="on">문제 보기</li> <!-- 활성화 on -->
+                                                        <li>결과 순위</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="tab-cont-wrap">
+                                                    <div class="tab-cont on"> <!-- on 추가시 해당 tab-cont 표시 -->
+                                                        <!-- 문제 보기 -->
+                                                        <div class="learning-regist-wrap">
+                                                            <div class="scroll-wrap" data-simplebar data-simplebar-auto-hide="false"> 
+                                                                <div class="btm-section">                       
+                                                                    <div class="question-list-wrap type-half">
+                                                                        <p class="question-title">속도 느림(12개) - 문장이 느린 속도로 내려옵니다.</p>
+                                                                        <div class="question-half-wrap">
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <div class="num">1</div>
+                                                                                    <div class="text-wrap">
+                                                                                        <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="num">2</div>
+                                                                                    <div class="text-wrap">
+                                                                                        <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="num">3</div>
+                                                                                    <div class="text-wrap">
+                                                                                        <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="num">4</div>
+                                                                                    <div class="text-wrap">
+                                                                                        <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="num">5</div>
+                                                                                    <div class="text-wrap">
+                                                                                        <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    </div>
+                                                                                </li>
+                                                                            </ul>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <div class="num">6</div>
+                                                                                    <div class="text-wrap">
+                                                                                        <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="num">7</div>
+                                                                                    <div class="text-wrap">
+                                                                                        <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="num">8</div>
+                                                                                    <div class="text-wrap">
+                                                                                        <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="num">9</div>
+                                                                                    <div class="text-wrap">
+                                                                                        <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="num">10</div>
+                                                                                    <div class="text-wrap">
+                                                                                        <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    </div>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="question-list-wrap type-half">
+                                                                        <p class="question-title">속도 보통(08개) - 문장이 보통 속도로 내려옵니다.</p>
+                                                                        <div class="question-half-wrap">
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <div class="num">1</div>
+                                                                                    <div class="text-wrap">
+                                                                                        <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="num">2</div>
+                                                                                    <div class="text-wrap">
+                                                                                        <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="num">3</div>
+                                                                                    <div class="text-wrap">
+                                                                                        <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="num">4</div>
+                                                                                    <div class="text-wrap">
+                                                                                        <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="num">5</div>
+                                                                                    <div class="text-wrap">
+                                                                                        <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    </div>
+                                                                                </li>
+                                                                            </ul>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <div class="num">6</div>
+                                                                                    <div class="text-wrap">
+                                                                                        <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="num">7</div>
+                                                                                    <div class="text-wrap">
+                                                                                        <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="num">8</div>
+                                                                                    <div class="text-wrap">
+                                                                                        <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="num">9</div>
+                                                                                    <div class="text-wrap">
+                                                                                        <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="num">10</div>
+                                                                                    <div class="text-wrap">
+                                                                                        <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    </div>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="question-list-wrap type-half">
+                                                                        <p class="question-title">속도 빠름(08개) - 문장이 빠른 속도로 내려옵니다.</p>
+                                                                        <div class="question-half-wrap">
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <div class="num">1</div>
+                                                                                    <div class="text-wrap">
+                                                                                        <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="num">2</div>
+                                                                                    <div class="text-wrap">
+                                                                                        <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="num">3</div>
+                                                                                    <div class="text-wrap">
+                                                                                        <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="num">4</div>
+                                                                                    <div class="text-wrap">
+                                                                                        <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="num">5</div>
+                                                                                    <div class="text-wrap">
+                                                                                        <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    </div>
+                                                                                </li>
+                                                                            </ul>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <div class="num">6</div>
+                                                                                    <div class="text-wrap">
+                                                                                        <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="num">7</div>
+                                                                                    <div class="text-wrap">
+                                                                                        <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="num">8</div>
+                                                                                    <div class="text-wrap">
+                                                                                        <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="num">9</div>
+                                                                                    <div class="text-wrap">
+                                                                                        <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="num">10</div>
+                                                                                    <div class="text-wrap">
+                                                                                        <div class="top-text">I Want a Cheeseburger.</div>
+                                                                                    </div>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-cont">                                                        
+                                                        <!-- 결과 순위 -->
+                                                        <div class="ranking-wrap">
+                                                            <div class="ranking-title-wrap">
+                                                                <div class="title">참가자 <strong>35</strong>명</div>
+                                                                <div class="bar"></div>
+                                                                <div class="selectBox-wrap">
+                                                                    <div class="selectOption">랭킹순</div>
+                                                                    <div class="optionList">
+                                                                        <ul>
+                                                                            <li class="on">랭킹순</li> <!-- 선택중인건 on -->
+                                                                            <li>이름순</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ranking-table-wrap">
+                                                                <div class="header-table">
+                                                                    <table>
+                                                                        <tr>
+                                                                            <th>순위</th>
+                                                                            <th>이름</th>
+                                                                            <th>아이디</th>
+                                                                            <th>참가일</th>
+                                                                            <th>소요시간</th>
+                                                                            <th>재시도 횟수</th>
+                                                                            <th>맞은 개수</th>
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
+                                                                <div class="body-table">
+                                                                    <div class="scroll-wrap" data-simplebar data-simplebar-auto-hide="false"> 
+                                                                        <table>
+                                                                            <tr class="complete"> <!-- 학습 완료된 행은 complete 추가 -->
+                                                                                <td class="num">1</td>
+                                                                                <td class="student-name">가학생</td>
+                                                                                <td class="student-id">student001</td>
+                                                                                <td class="date">2020-10-22 15:20</td>
+                                                                                <td class="time">60초</td>
+                                                                                <td class="retry-count">6</td>
+                                                                                <td class="correct-count">
+                                                                                    <strong>30</strong>/30
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr class="complete"> <!-- 학습 완료된 행은 complete 추가 -->
+                                                                                <td class="num">2</td>
+                                                                                <td class="student-name">가학생</td>
+                                                                                <td class="student-id">student001</td>
+                                                                                <td class="date">2020-10-22 15:20</td>
+                                                                                <td class="time">60초</td>
+                                                                                <td class="retry-count">6</td>
+                                                                                <td class="correct-count">
+                                                                                    <strong>30</strong>/30
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr class="complete"> <!-- 학습 완료된 행은 complete 추가 -->
+                                                                                <td class="num">3</td>
+                                                                                <td class="student-name">가학생</td>
+                                                                                <td class="student-id">student001</td>
+                                                                                <td class="date">2020-10-22 15:20</td>
+                                                                                <td class="time">60초</td>
+                                                                                <td class="retry-count">6</td>
+                                                                                <td class="correct-count">
+                                                                                    <strong>30</strong>/30
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr class="complete"> <!-- 학습 완료된 행은 complete 추가 -->
+                                                                                <td class="num">4</td>
+                                                                                <td class="student-name">가학생</td>
+                                                                                <td class="student-id">student001</td>
+                                                                                <td class="date">2020-10-22 15:20</td>
+                                                                                <td class="time">60초</td>
+                                                                                <td class="retry-count">6</td>
+                                                                                <td class="correct-count">
+                                                                                    <strong>30</strong>/30
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr class="complete"> <!-- 학습 완료된 행은 complete 추가 -->
+                                                                                <td class="num">5</td>
+                                                                                <td class="student-name">가학생</td>
+                                                                                <td class="student-id">student001</td>
+                                                                                <td class="date">2020-10-22 15:20</td>
+                                                                                <td class="time">60초</td>
+                                                                                <td class="retry-count">6</td>
+                                                                                <td class="correct-count">
+                                                                                    <strong>30</strong>/30
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr class="complete"> <!-- 학습 완료된 행은 complete 추가 -->
+                                                                                <td class="num">6</td>
+                                                                                <td class="student-name">가학생</td>
+                                                                                <td class="student-id">student001</td>
+                                                                                <td class="date">2020-10-22 15:20</td>
+                                                                                <td class="time">60초</td>
+                                                                                <td class="retry-count">6</td>
+                                                                                <td class="correct-count">
+                                                                                    <strong>30</strong>/30
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="num">-</td>
+                                                                                <td class="student-name">가학생</td>
+                                                                                <td class="student-id">student001</td>
+                                                                                <td class="date">미완료</td>
+                                                                                <td class="time">-</td>
+                                                                                <td class="retry-count">-</td>
+                                                                                <td class="correct-count">-</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="num">-</td>
+                                                                                <td class="student-name">가학생</td>
+                                                                                <td class="student-id">student001</td>
+                                                                                <td class="date">미완료</td>
+                                                                                <td class="time">-</td>
+                                                                                <td class="retry-count">-</td>
+                                                                                <td class="correct-count">-</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="num">-</td>
+                                                                                <td class="student-name">가학생</td>
+                                                                                <td class="student-id">student001</td>
+                                                                                <td class="date">미완료</td>
+                                                                                <td class="time">-</td>
+                                                                                <td class="retry-count">-</td>
+                                                                                <td class="correct-count">-</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="num">-</td>
+                                                                                <td class="student-name">가학생</td>
+                                                                                <td class="student-id">student001</td>
+                                                                                <td class="date">미완료</td>
+                                                                                <td class="time">-</td>
+                                                                                <td class="retry-count">-</td>
+                                                                                <td class="correct-count">-</td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="contents-empty-img-wrap type-rank" style="display: none;"> <!-- 순위가 없을 때 노출 -->
+                                                            <img src="../../img/img_speaking_battle_empty_02.png" alt="">
+                                                            <p><strong>참여한 학생이 없습니다.</strong></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="right-box-wrap qa-library type-02">
+                                                <div class="top-title-wrap type-border">
+                                                    <strong>문제 히스토리</strong>
+                                                    <button class="btn btn-join btn-thema-color"><span>+</span> 새로운 배틀 만들기</button>
+                                                </div>
+                                                <div class="data-list">
+                                                    <div class="scroll-wrap" data-simplebar data-simplebar-auto-hide="false">
+                                                        <div class="data-item-wrap">
+                                                            <div class="data-info-card type-ing"> <!-- 진행중 type-ing 클래스 추가 -->
+                                                                <div class="text-wrap">
+                                                                    <div class="top-text-wrap">
+                                                                        <div class="tag tag-shor ing">진행중</div> <!-- 진행중 ing 클래스 추가 -->
+                                                                        <p>모둠반 간식 대항 스피킹 배틀</p>
+                                                                    </div>
+                                                                    <div class="btm-text-wrap">
+                                                                        <span>참여현황: 25/30</span>
+                                                                        <span>기간: 상시운영</span>
+                                                                    </div>
+                                                                    <div class="btm-date-wrap">
+                                                                        <p>등록일: 22.06.07</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="btn-wrap">
+                                                                    <button type="button" class="btn btn-edit-delete">삭제</button>
+                                                                    <button type="button" class="btn btn-edit">수정</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-info-card type-edit"> <!-- 편집중 type-edit 클래스 추가 -->
+                                                                <div class="text-wrap">
+                                                                    <div class="top-text-wrap">
+                                                                        <div class="tag edit">편집중</div> <!-- 편집중 edit 클래스 추가 -->
+                                                                        <p>모둠반 간식 대항 스피킹 배틀</p>
+                                                                    </div>
+                                                                    <div class="btm-text-wrap">
+                                                                        <span>참여현황: 25/30</span>
+                                                                        <span>기간: 상시운영</span>
+                                                                    </div>
+                                                                    <div class="btm-date-wrap">
+                                                                        <p>등록일: 22.06.07</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="btn-wrap">
+                                                                    <button type="button" class="btn btn-edit-delete">삭제</button>
+                                                                    <button type="button" class="btn btn-edit">수정</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="data-info-card type-end"> <!-- 종료 type-end 클래스 추가 -->
+                                                                <div class="text-wrap">
+                                                                    <div class="top-text-wrap">
+                                                                        <div class="tag end">종료</div> <!-- 종료 end 클래스 추가 -->
+                                                                        <p>모둠반 간식 대항 스피킹 배틀</p>
+                                                                    </div>
+                                                                    <div class="btm-text-wrap">
+                                                                        <span>참여현황: 25/30</span>
+                                                                        <span>기간: 상시운영</span>
+                                                                    </div>
+                                                                    <div class="btm-date-wrap">
+                                                                        <p>등록일: 22.06.07</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="btn-wrap">
+                                                                    <button type="button" class="btn btn-edit-delete">삭제</button>
+                                                                    <button type="button" class="btn btn-copy">복사</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="copyright-wrap">
+                            <div class="copyright-link-wrap">
+                                <a href="#">이용약관</a>
+                                <a href="#"><strong>개인정보처리방침</strong></a>
+                                <div class="bar"></div>
+                            </div>
+                            <p class="copyright">Copyright ©2020 LG CNS. All right reserved.</p>
+                        </div>
+                        <!-- 220831 추가 : 모달팝업 -->
+                        <div class="modal-wrap">
+                            <div class="modal-confirm size-w">
+                                <div class="title-wrap">
+                                    <strong>스피킹 &amp; 리스닝 배틀 신규 생성</strong>
+                                    <button class="btn-modal-title-close"></button>
+                                </div>
+                                <div class="text-wrap">
+                                    <p>현재 진행중인 배틀 {현재진행중인 배틀 명}은 종료됩니다. 새로운 배틀을 생성하시겠습니까?</p>
+                                </div>
+                                <div class="modal-footer-btn-wrap">
+                                    <button class="btn-line">취소</button>
+                                    <button class="btn-navy">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //220831 추가 : 모달팝업 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/simplebar.js"></script>
+    <script src="../../js/swiper-bundle.min.js"></script>
+    <script src="../../js/common.js"></script>
+    <script>
+
+        // 문제등록, 결과순위 탭
+        $('#speakingBattle-contents .tab-nav-wrap ul li').on('click', function(){
+            var _index = $(this).index();
+
+            $(this).addClass('on').siblings().removeClass('on');
+            $('#speakingBattle-contents .left-box-wrap .tab-cont-wrap .tab-cont').eq(_index).addClass('on').siblings().removeClass('on');
+        })
+    </script>
+</body>
+</html>
